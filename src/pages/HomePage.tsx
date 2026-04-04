@@ -4,7 +4,7 @@ import { layerRoots } from '@/data/index'
 export function HomePage() {
   return (
     <main className="max-w-[860px] mx-auto px-6 py-16">
-      <div className="mb-14">
+      <div className="mb-8">
         <h1 className="text-4xl font-semibold text-zinc-900 tracking-tight leading-tight">
           What to Build with AI?
         </h1>
@@ -12,6 +12,13 @@ export function HomePage() {
           A structured overview of the AI ecosystem — from consumer-facing products down to the APIs and tooling that power them.
           Find where to build, contribute, and create. Click on a layer to explore.
         </p>
+        <div className="mt-6 flex items-center gap-2">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+          </span>
+          <span className="text-xs text-zinc-400">Research last updated 05 April 2026</span>
+        </div>
       </div>
 
       <div id="layers" className="relative">
