@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# ai-opportunities
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive map of the outer five layers of the AI ecosystem — built for developers, indie hackers, and researchers who want to find where to contribute, build products, or serve the public good.
 
-Currently, two official plugins are available:
+**Live:** [nc1z.github.io/ai-opportunities](https://nc1z.github.io/ai-opportunities)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it is
 
-## React Compiler
+The AI stack has many layers. Most coverage focuses on the flashy top (consumer apps) or the deep bottom (foundation models, hardware). This project maps the five layers in between where builders can actually move:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Application Layer** — user-facing AI products and services
+2. **Agent / Workflow Layer** — multi-step AI coordination and autonomous task execution
+3. **Harness / Runtime Layer** — toolcalling, memory, session state, and routing
+4. **Developer Tooling Layer** — evals, tracing, observability, SDKs, IDE integrations
+5. **Model Consumption Layer** — APIs for text, image, audio, and embeddings
 
-## Expanding the ESLint configuration
+Each layer is broken down into categories, with tagged opportunities across three lenses: **Contribute**, **Build**, and **Public Good**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Views
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Stack** — expandable layer rows with category cards and opportunity details
+- **Graph** — React Flow relationship map showing cross-layer dependencies
+- **Outline** — collapsible text hierarchy for quick scanning
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Running locally
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 18 + TypeScript + Vite
+- Tailwind CSS v4
+- @xyflow/react (React Flow)
+- Zustand
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
