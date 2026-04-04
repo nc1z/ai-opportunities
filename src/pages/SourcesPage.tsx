@@ -3,7 +3,7 @@ export function SourcesPage() {
     <main className="max-w-[860px] mx-auto px-6 py-16">
       <h1 className="text-2xl font-semibold text-zinc-900 mb-4">References</h1>
       <p className="text-zinc-500 text-sm leading-relaxed mb-12 max-w-2xl">
-        This industry map was built on deep research conducted by state-of-the-art AI research agents —{' '}
+        This industry scan was built on deep research conducted by state-of-the-art AI research agents —{' '}
         <strong className="text-zinc-700">OpenAI Deep Research</strong>,{' '}
         <strong className="text-zinc-700">Google Gemini Deep Research</strong>,{' '}
         <strong className="text-zinc-700">Perplexity AI Deep Research</strong>,{' '}

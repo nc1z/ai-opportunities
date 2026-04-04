@@ -5,9 +5,9 @@ export function AboutPage() {
 
       <section className="mb-14 max-w-2xl">
         <p className="text-zinc-600 text-sm leading-relaxed mb-4">
-          The AI ecosystem is moving faster than any map can keep up with. This project exists to help builders
-          orient themselves — to see the full shape of the landscape, identify where the real opportunities are,
-          and find the layer they want to work in.
+          This is an industry scan of the AI ecosystem — a structured overview of where the field stands, what's
+          being built, and where the gaps are. It exists to help builders orient themselves, identify where the real
+          opportunities are, and find the layer they want to work in.
         </p>
         <p className="text-zinc-600 text-sm leading-relaxed mb-4">
           The focus is deliberately above the infrastructure and research level. The taxonomy covers application

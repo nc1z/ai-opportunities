@@ -2,7 +2,7 @@ export function PageFooter() {
   return (
     <footer className="border-t border-zinc-200 pt-8 mt-8">
       <p className="text-xs text-zinc-400 leading-relaxed max-w-2xl">
-        This map focuses on the outer five layers of the AI stack where product builders,
+        This scan covers the outer five layers of the AI stack where product builders,
         indie developers, and researchers can have impact. The three inner layers —
         foundation model training, compute hardware, and physical infrastructure — are not
         covered here. They require different capital structures, longer timelines, and operate

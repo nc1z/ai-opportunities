@@ -20,7 +20,7 @@ export function PageHeader() {
           AI Ecosystem Layers
         </h1>
         <p className="mt-3 text-zinc-600 max-w-2xl leading-relaxed">
-          A structured map of where builders can contribute, create products, or serve the
+          A structured industry scan of where builders can contribute, create products, or serve the
           public good across the outer layers of the AI stack. Start here to orient yourself
           before choosing where to focus.
         </p>
@@ -28,7 +28,7 @@ export function PageHeader() {
 
       <div className="border-l-2 border-zinc-200 pl-4 py-1">
         <p className="text-sm text-zinc-500 leading-relaxed">
-          <span className="font-medium text-zinc-700">Scope note:</span> This map covers the
+          <span className="font-medium text-zinc-700">Scope note:</span> This scan covers the
           five outer layers of the AI stack — from user-facing applications down to model
           consumption APIs. It intentionally excludes deep infrastructure: physical compute,
           energy systems, semiconductor fabrication, and foundation model training. Those

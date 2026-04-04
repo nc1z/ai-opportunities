@@ -9,7 +9,7 @@ export function HomePage() {
           What to Build with AI?
         </h1>
         <p className="mt-4 text-zinc-500 max-w-xl leading-relaxed text-base">
-          A structured map of the AI ecosystem — from consumer-facing products down to the APIs and tooling that power them.
+          A structured overview of the AI ecosystem — from consumer-facing products down to the APIs and tooling that power them.
           Find where to build, contribute, and create. Click on a layer to explore.
         </p>
       </div>
