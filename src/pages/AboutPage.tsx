@@ -41,7 +41,9 @@ export function AboutPage() {
               DeepResearch-Bench
             </a>{' '}
             leaderboard — an independent benchmark evaluating the ability of AI agents to conduct deep, multi-step
-            research tasks. Agents were selected from the top of the rankings as of April 2026.
+            research tasks. The agents used span a range of positions on that leaderboard, from top-ranked to
+            well-established — chosen for their research depth, breadth of coverage, and complementary perspectives
+            rather than rank alone.
           </p>
           <p>
             This research represented a meaningful personal financial investment — made deliberately to ensure the
