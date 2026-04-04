@@ -1,6 +1,13 @@
+import { Link } from 'react-router-dom'
+
 export function AboutPage() {
   return (
     <main className="max-w-[860px] mx-auto px-6 py-16">
+      <nav className="flex items-center gap-1.5 text-sm text-zinc-400 mb-10">
+        <Link to="/" className="hover:text-zinc-700 transition-colors">Home</Link>
+        <span className="text-zinc-300">›</span>
+        <span className="text-zinc-700">About</span>
+      </nav>
       <h1 className="text-2xl font-semibold text-zinc-900 mb-3">About</h1>
       <p className="text-xs text-zinc-400 mb-6">
         Built by{' '}
