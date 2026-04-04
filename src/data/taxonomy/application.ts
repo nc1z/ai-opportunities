@@ -9,7 +9,7 @@ export const applicationNodes: TaxonomyNode[] = [
     depth: 0,
     depthLabel: 'layer',
     name: 'Application Layer',
-    description: 'The outermost layer where AI capabilities are packaged into products people actually use. This includes consumer apps, enterprise copilots, vertical SaaS, and creative tools. The majority of near-term commercial value is captured here — the moat is product, distribution, and deep domain knowledge, not the model itself.',
+    description: 'The outermost layer where AI capabilities are packaged into products people actually use. This includes consumer apps, enterprise copilots, vertical SaaS, creative tools, and developer tools. The majority of near-term commercial value is captured here — the moat is product, distribution, and deep domain knowledge, not the model itself.',
     order: 1,
   },
 

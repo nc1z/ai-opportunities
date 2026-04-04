@@ -9,7 +9,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
     depth: 0,
     depthLabel: 'layer',
     name: 'Developer Tooling Layer',
-    description: 'Everything that helps developers build, debug, and ship AI systems confidently. Evaluation frameworks, distributed tracing, prompt management, and IDE integrations all live here. As AI systems grow more complex, the need for reliable, reproducible development infrastructure becomes critical.',
+    description: 'Everything that helps developers build, debug, and ship AI systems confidently. Evaluation frameworks, observability, prompt management, AI IDEs, guardrails, fine-tuning pipelines, and dataset tooling all live here. As AI systems grow more complex, the need for reliable, reproducible development infrastructure becomes critical.',
     order: 4,
   },
 

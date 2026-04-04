@@ -9,7 +9,7 @@ export const harnessRuntimeNodes: TaxonomyNode[] = [
     depth: 0,
     depthLabel: 'layer',
     name: 'Harness / Runtime Layer',
-    description: 'The infrastructure directly around the model call: context assembly, memory systems, tool-call orchestration, safety gates, and execution sandboxes. This layer determines whether agents work reliably in production. Often underbuilt and underappreciated — the gap between a demo and a production agent usually lives here.',
+    description: 'The infrastructure directly around the model call: context assembly, memory systems, tool orchestration, safety gates, execution sandboxes, observability, and model gateway. This layer determines whether agents work reliably in production. Often underbuilt and underappreciated — the gap between a demo and a production agent usually lives here.',
     order: 3,
   },
 
