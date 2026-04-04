@@ -41,7 +41,7 @@ export const applicationNodes: TaxonomyNode[] = [
     depth: 1,
     depthLabel: 'group',
     name: 'Vertical SaaS',
-    description: 'Domain-specific AI products built for narrow professional verticals where deep context, compliance requirements, and regulatory awareness create strong defensibility. Healthcare, legal, construction, and agriculture are prime examples.',
+    description: 'Domain-specific AI products built for narrow professional verticals where deep context, compliance requirements, and regulatory awareness create strong defensibility. Healthcare, legal, construction, and financial services are prime examples.',
     order: 3,
   },
   {
@@ -61,31 +61,31 @@ export const applicationNodes: TaxonomyNode[] = [
     depth: 1,
     depthLabel: 'group',
     name: 'Civic & Public Good',
-    description: 'AI applications designed for public benefit: accessibility tools, civic information, open educational resources, and humanitarian applications. Often open-source or nonprofit-funded, with impact measured in reach and equity rather than revenue.',
+    description: 'AI applications designed for public benefit: accessibility tools, civic information, open educational resources, and AI governance. Includes both nonprofit-funded public good work and enterprise-facing compliance tooling.',
     order: 5,
   },
   {
-    id: 'app-ai-assistants',
+    id: 'app-general-purpose-ai',
     parentId: 'application',
     layerId: 'application',
     depth: 1,
     depthLabel: 'group',
-    name: 'AI Assistants',
-    description: 'General-purpose AI companions that help end users with a broad range of daily tasks — research, scheduling, writing, and question answering. The category is rapidly expanding from text chat to voice-first and multimodal interfaces.',
+    name: 'General-Purpose AI Platforms',
+    description: 'Intelligence-as-a-product: general-purpose chat, AI-native search, reasoning assistants, and multimodal platforms. This category is rapidly expanding from text chat to voice-first and always-on interfaces. Dominated by foundation model providers but with meaningful room for specialised entrants.',
     order: 6,
+  },
+  {
+    id: 'app-developer-tools',
+    parentId: 'application',
+    layerId: 'application',
+    depth: 1,
+    depthLabel: 'group',
+    name: 'Developer Tools',
+    description: 'AI for software development: code generation, intelligent editors, autonomous coding agents, and AI-augmented DevOps. The single largest application subcategory by enterprise spend — coding assistants alone account for over half of departmental AI budget in engineering teams.',
+    order: 7,
   },
 
   // ─── Domains under Consumer Apps (depth 2) ───────────────────────────────
-  {
-    id: 'app-consumer-productivity',
-    parentId: 'app-consumer',
-    layerId: 'application',
-    depth: 2,
-    depthLabel: 'domain',
-    name: 'Productivity & Knowledge',
-    description: 'Tools that help individuals work and think more effectively — writing, searching, summarising, and managing time. This is the densest consumer AI category today.',
-    order: 1,
-  },
   {
     id: 'app-consumer-education',
     parentId: 'app-consumer',
@@ -94,17 +94,17 @@ export const applicationNodes: TaxonomyNode[] = [
     depthLabel: 'domain',
     name: 'Education & Learning',
     description: 'AI-powered learning experiences ranging from personalised tutoring to study tools. The long-term potential is significant given how poorly traditional education scales to individual learning needs.',
-    order: 2,
+    order: 1,
   },
   {
-    id: 'app-consumer-health',
+    id: 'app-consumer-health-wellness',
     parentId: 'app-consumer',
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Health & Wellness',
+    name: 'Personal Health & Wellness',
     description: 'Consumer-facing applications for physical and mental wellbeing. Constrained by regulatory complexity at the clinical end but wide open at the wellness and coaching end.',
-    order: 3,
+    order: 2,
   },
   {
     id: 'app-consumer-entertainment',
@@ -113,8 +113,38 @@ export const applicationNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Entertainment & Social',
-    description: 'AI companions, interactive fiction, gaming, and social applications. Character-based AI and interactive narrative are emerging as distinct product categories.',
+    description: 'Interactive fiction, gaming, and social applications. Character-based AI and interactive narrative are emerging as distinct product categories.',
+    order: 3,
+  },
+  {
+    id: 'app-consumer-companions',
+    parentId: 'app-consumer',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI Companions & Social',
+    description: 'Persistent companion AI for emotional connection, roleplay, and daily interaction. Character.AI and Replika established the category; consumer spending is significant at scale ($221M+). Long-term memory and consistent personality are the key differentiators.',
     order: 4,
+  },
+  {
+    id: 'app-consumer-personal-finance',
+    parentId: 'app-consumer',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Personal Finance AI',
+    description: 'Consumer-facing AI for budgeting, spending analysis, debt management, and financial coaching. Cleo has demonstrated significant scale ($250M ARR). The opportunity is in personalised financial guidance that banks have historically failed to provide at the individual level.',
+    order: 5,
+  },
+  {
+    id: 'app-consumer-photo-video',
+    parentId: 'app-consumer',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Photo & Video Editing',
+    description: 'Consumer-facing AI photo enhancement, background removal, and video editing tools. Remini, PhotoRoom, and Lightricks have built large audiences on a proposition distinct from professional creative tools — instant, accessible results for non-designers.',
+    order: 6,
   },
 
   // ─── Domains under B2B Copilots (depth 2) ────────────────────────────────
@@ -129,13 +159,13 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 1,
   },
   {
-    id: 'app-b2b-support',
+    id: 'app-b2b-customer-ops',
     parentId: 'app-b2b-copilots',
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Customer Support',
-    description: 'AI-powered deflection, resolution, and agent-assist tools for customer service teams. Cost reduction is direct and measurable, making this one of the highest-ROI enterprise AI categories.',
+    name: 'Customer Operations',
+    description: 'AI-powered autonomous customer operations — ticket resolution, agent assist, and end-to-end customer lifecycle management. Sierra ($10B), Decagon ($1.5B), and Intercom Fin are building this as a standalone category with per-resolution pricing models.',
     order: 2,
   },
   {
@@ -157,6 +187,26 @@ export const applicationNodes: TaxonomyNode[] = [
     name: 'Finance & Accounting',
     description: 'AI copilots for FP&A, AP/AR automation, reconciliation, and financial reporting. High-stakes domain requiring accuracy guarantees and audit trails.',
     order: 4,
+  },
+  {
+    id: 'app-b2b-security-risk',
+    parentId: 'app-b2b-copilots',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Security & Risk AI',
+    description: 'AI applied to cybersecurity, fraud prevention, and risk management in enterprise settings. Abnormal Security ($5.1B) and Sardine demonstrate the scale of this category. Increasingly includes securing AI systems themselves from prompt injection and adversarial use.',
+    order: 5,
+  },
+  {
+    id: 'app-b2b-finance-ops',
+    parentId: 'app-b2b-copilots',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Financial Back-Office AI',
+    description: 'AI for spend management, tax compliance, and KYC/AML operations. Ramp and Anrok represent the new wave of AI-native financial operations tooling that goes beyond simple automation into intelligent policy enforcement and anomaly detection.',
+    order: 6,
   },
 
   // ─── Domains under Vertical SaaS (depth 2) ───────────────────────────────
@@ -197,7 +247,7 @@ export const applicationNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Construction & AEC',
-    description: 'AI for cost estimation, safety monitoring, project management, and site operations in the built environment. A notoriously paper-heavy industry ripe for automation.',
+    description: 'AI for cost estimation, safety monitoring, project management, and site operations across architecture, engineering, and construction. A notoriously paper-heavy industry ripe for automation — Higharc, Augmenta, and Parspec are building the digital infrastructure layer.',
     order: 4,
   },
   {
@@ -206,9 +256,29 @@ export const applicationNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Agriculture',
-    description: 'Precision farming, crop monitoring, irrigation optimisation, and supply chain AI for agricultural operations. Satellite imagery and sensor data are key inputs.',
+    name: 'Agriculture & Climate Tech',
+    description: 'Precision farming, crop monitoring, irrigation optimisation, and climate-aware supply chain AI. Satellite imagery and sensor data are key inputs. Increasingly paired with climate adaptation use cases as environmental volatility reshapes agricultural operations.',
     order: 5,
+  },
+  {
+    id: 'app-vsaas-manufacturing',
+    parentId: 'app-vertical-saas',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Manufacturing & Supply Chain',
+    description: 'AI applied to warehouse operations, robotics coordination, demand forecasting, and logistics optimisation. Gather AI, Aera Technology, and FourKites demonstrate the category. Strong pull from operations leaders under pressure to reduce inventory costs and increase throughput.',
+    order: 6,
+  },
+  {
+    id: 'app-vsaas-financial-services',
+    parentId: 'app-vertical-saas',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Financial Services',
+    description: 'AI for fraud detection, underwriting, wealth management, and capital markets operations. One of the three most funded vertical AI categories — 91% of financial services firms are actively deploying AI. Defensibility comes from proprietary data and regulatory expertise.',
+    order: 7,
   },
 
   // ─── Domains under Creative Tools (depth 2) ──────────────────────────────
@@ -249,7 +319,7 @@ export const applicationNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Writing & Storytelling',
-    description: 'Fiction writing, screenwriting, worldbuilding, and narrative tools. AI as a creative collaborator rather than a replacement for the writer.',
+    description: 'Fiction writing, screenwriting, worldbuilding, and narrative tools. AI as a creative collaborator rather than a replacement for the writer. Note: standalone writing tools face commoditisation pressure as foundation models improve; the durable opportunity is in workflow-integrated or genre-specific tools.',
     order: 4,
   },
   {
@@ -275,24 +345,14 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 1,
   },
   {
-    id: 'app-civic-government',
+    id: 'app-civic-govtech',
     parentId: 'app-civic',
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Government & Civic Tech',
+    name: 'Government Tech & Public Services',
     description: 'AI applications that improve access to government services, increase transparency, and help citizens navigate bureaucracy. Benefits navigation and FOIA assistance are strong use cases.',
     order: 2,
-  },
-  {
-    id: 'app-civic-humanitarian',
-    parentId: 'app-civic',
-    layerId: 'application',
-    depth: 2,
-    depthLabel: 'domain',
-    name: 'Humanitarian & Disaster',
-    description: 'AI for disaster response coordination, refugee navigation, and humanitarian aid. High-stakes applications where reliability and multilingual capability are critical.',
-    order: 3,
   },
   {
     id: 'app-civic-openedu',
@@ -302,13 +362,33 @@ export const applicationNodes: TaxonomyNode[] = [
     depthLabel: 'domain',
     name: 'Open Education',
     description: 'Open educational resources, AI curriculum generation, and multilingual content adaptation. Aimed at democratising access to high-quality learning materials globally.',
+    order: 3,
+  },
+  {
+    id: 'app-civic-ai-governance',
+    parentId: 'app-civic',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI Safety & Governance',
+    description: 'Platforms for LLM reliability testing, bias detection, and regulatory compliance (EU AI Act, NIST AI RMF). Patronus AI, Arthur AI, and Guardrails AI operate here. Enterprise-facing with real procurement budgets — $230M+ invested in Q3 2025 alone. Every AI-deploying organisation needs this layer.',
     order: 4,
   },
+  {
+    id: 'app-civic-digital-integrity',
+    parentId: 'app-civic',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Misinformation & Digital Integrity',
+    description: 'Detection and attribution of deepfakes, synthetic media, and AI-generated disinformation. Logically, Alethea, and Reality Defender operate here. As generative AI lowers the cost of synthetic content creation, this category becomes infrastructure-grade.',
+    order: 5,
+  },
 
-  // ─── Domains under AI Assistants (depth 2) ───────────────────────────────
+  // ─── Domains under General-Purpose AI Platforms (depth 2) ────────────────
   {
     id: 'app-assistants-personal',
-    parentId: 'app-ai-assistants',
+    parentId: 'app-general-purpose-ai',
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
@@ -318,7 +398,7 @@ export const applicationNodes: TaxonomyNode[] = [
   },
   {
     id: 'app-assistants-professional',
-    parentId: 'app-ai-assistants',
+    parentId: 'app-general-purpose-ai',
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
@@ -328,7 +408,7 @@ export const applicationNodes: TaxonomyNode[] = [
   },
   {
     id: 'app-assistants-multimodal',
-    parentId: 'app-ai-assistants',
+    parentId: 'app-general-purpose-ai',
     layerId: 'application',
     depth: 2,
     depthLabel: 'domain',
@@ -336,46 +416,56 @@ export const applicationNodes: TaxonomyNode[] = [
     description: 'Assistants that understand images, documents, and screens — not just text. Photo interpreters, document understanding, and cross-device continuity are defining features.',
     order: 3,
   },
-
-  // ─── Niches under Productivity (depth 3) ─────────────────────────────────
   {
-    id: 'app-consumer-productivity-writing',
-    parentId: 'app-consumer-productivity',
+    id: 'app-gp-ai-native-search',
+    parentId: 'app-general-purpose-ai',
     layerId: 'application',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'Writing & Editing',
-    description: 'Applications for drafting, editing, and improving written content across formats — from email to long-form.',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI-Native Search',
+    description: 'Search engines that synthesise answers from multiple sources rather than returning ranked links. Perplexity ($14-20B valuation, $150M ARR) has demonstrated this is a standalone product category. The open question is whether it becomes a feature of foundation model platforms or an independent moat.',
+    order: 4,
+  },
+
+  // ─── Domains under Developer Tools (depth 2) ─────────────────────────────
+  {
+    id: 'app-dt-ai-code-editors',
+    parentId: 'app-developer-tools',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI Code Editors',
+    description: 'IDE-integrated development environments with full codebase understanding, inline suggestion, and multi-file editing. Cursor ($29.3B) redefined the category; GitHub Copilot established enterprise distribution. The moat is deep editor integration and codebase context.',
     order: 1,
   },
   {
-    id: 'app-consumer-productivity-search',
-    parentId: 'app-consumer-productivity',
+    id: 'app-dt-autonomous-coding-agents',
+    parentId: 'app-developer-tools',
     layerId: 'application',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'AI-Powered Search',
-    description: 'Search experiences that synthesise answers from multiple sources rather than returning a list of links.',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Autonomous Coding Agents',
+    description: 'Agents that independently decompose software tasks, make multi-file changes, run tests, and iterate toward a specification. Devin/Cognition ($9.8B) is the benchmark. Distinct from copilots in that they operate without continuous human steering.',
     order: 2,
   },
   {
-    id: 'app-consumer-productivity-summarisation',
-    parentId: 'app-consumer-productivity',
+    id: 'app-dt-code-assistants',
+    parentId: 'app-developer-tools',
     layerId: 'application',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'Summarisation & Briefing',
-    description: 'Tools that condense long-form content — articles, meetings, reports — into actionable summaries.',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Code Completion Assistants',
+    description: 'Lighter-weight autocompletion and code suggestion tools that integrate into existing editors without replacing them. Codeium and Tabnine serve teams that want AI assistance with lower switching cost than a full editor replacement.',
     order: 3,
   },
   {
-    id: 'app-consumer-productivity-scheduling',
-    parentId: 'app-consumer-productivity',
+    id: 'app-dt-testing-devops',
+    parentId: 'app-developer-tools',
     layerId: 'application',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'Scheduling & Calendar',
-    description: 'AI-powered time management, meeting scheduling, and calendar optimisation for individuals.',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Testing & DevOps AI',
+    description: 'AI for automated test generation, deployment pipelines, infrastructure management, and SRE operations. Reduces the engineering overhead of software quality and reliability at scale.',
     order: 4,
   },
 
@@ -401,10 +491,10 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // ─── Niches under Health (depth 3) ───────────────────────────────────────
+  // ─── Niches under Personal Health & Wellness (depth 3) ───────────────────
   {
     id: 'app-consumer-health-mental',
-    parentId: 'app-consumer-health',
+    parentId: 'app-consumer-health-wellness',
     layerId: 'application',
     depth: 3,
     depthLabel: 'niche',
@@ -414,7 +504,7 @@ export const applicationNodes: TaxonomyNode[] = [
   },
   {
     id: 'app-consumer-health-fitness',
-    parentId: 'app-consumer-health',
+    parentId: 'app-consumer-health-wellness',
     layerId: 'application',
     depth: 3,
     depthLabel: 'niche',
@@ -467,10 +557,10 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // ─── Niches under B2B Support (depth 3) ──────────────────────────────────
+  // ─── Niches under Customer Operations (depth 3) ──────────────────────────
   {
     id: 'app-b2b-support-deflection',
-    parentId: 'app-b2b-support',
+    parentId: 'app-b2b-customer-ops',
     layerId: 'application',
     depth: 3,
     depthLabel: 'niche',
@@ -480,7 +570,7 @@ export const applicationNodes: TaxonomyNode[] = [
   },
   {
     id: 'app-b2b-support-agent-assist',
-    parentId: 'app-b2b-support',
+    parentId: 'app-b2b-customer-ops',
     layerId: 'application',
     depth: 3,
     depthLabel: 'niche',
@@ -530,6 +620,60 @@ export const applicationNodes: TaxonomyNode[] = [
     depthLabel: 'niche',
     name: 'AP/AR Automation',
     description: 'Invoice processing, reconciliation, and payment matching automation for accounts payable and receivable.',
+    order: 2,
+  },
+
+  // ─── Niches under Security & Risk AI (depth 3) ───────────────────────────
+  {
+    id: 'app-b2b-sr-cybersecurity',
+    parentId: 'app-b2b-security-risk',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Cybersecurity AI',
+    description: 'AI for threat detection, SOC automation, account takeover prevention, and email security. Abnormal Security has demonstrated enterprise-scale ROI on AI-native email threat detection.',
+    order: 1,
+  },
+  {
+    id: 'app-b2b-sr-ai-security',
+    parentId: 'app-b2b-security-risk',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'AI System Security',
+    description: 'Securing AI deployments themselves: prompt injection prevention, shadow AI detection, agent behaviour monitoring, and adversarial input filtering. An emerging niche as enterprise AI adoption creates new attack surfaces.',
+    order: 2,
+  },
+  {
+    id: 'app-b2b-sr-fraud-aml',
+    parentId: 'app-b2b-security-risk',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Fraud & AML',
+    description: 'Financial fraud detection, anti-money laundering, KYC automation, and dispute management. Sardine operates across multiple of these domains simultaneously, demonstrating the advantage of a unified risk signal.',
+    order: 3,
+  },
+
+  // ─── Niches under Financial Back-Office AI (depth 3) ─────────────────────
+  {
+    id: 'app-b2b-fo-spend-management',
+    parentId: 'app-b2b-finance-ops',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Spend Management',
+    description: 'AI-powered corporate card and expense management that enforces policy in real time rather than after-the-fact. Ramp represents the category-defining product.',
+    order: 1,
+  },
+  {
+    id: 'app-b2b-fo-tax-compliance',
+    parentId: 'app-b2b-finance-ops',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Tax & Compliance Automation',
+    description: 'Automated multi-jurisdiction tax calculation, filing preparation, and regulatory compliance monitoring. Anrok handles international sales tax for software companies — a use case that becomes meaningfully complex at scale.',
     order: 2,
   },
 
@@ -621,7 +765,7 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // ─── Niches under Vertical Agriculture (depth 3) ─────────────────────────
+  // ─── Niches under Vertical Agriculture & Climate Tech (depth 3) ──────────
   {
     id: 'app-vsaas-agriculture-precision',
     parentId: 'app-vsaas-agriculture',
@@ -641,6 +785,70 @@ export const applicationNodes: TaxonomyNode[] = [
     name: 'Supply Chain & Logistics',
     description: 'Yield forecasting, demand prediction, and logistics optimisation for agricultural supply chains.',
     order: 2,
+  },
+
+  // ─── Niches under Manufacturing & Supply Chain (depth 3) ─────────────────
+  {
+    id: 'app-vs-mfg-warehouse',
+    parentId: 'app-vsaas-manufacturing',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Warehouse & Inventory AI',
+    description: 'AI for warehouse picking optimisation, inventory management, and robotic coordination. Gather AI demonstrates the opportunity in visual inspection and autonomous inventory counting.',
+    order: 1,
+  },
+  {
+    id: 'app-vs-mfg-supply-chain',
+    parentId: 'app-vsaas-manufacturing',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Demand Forecasting & Route Optimisation',
+    description: 'AI models that predict demand across SKUs and optimise logistics routing to reduce overstock and delivery cost. FourKites and Aera Technology operate at scale in this space.',
+    order: 2,
+  },
+
+  // ─── Niches under Financial Services Vertical (depth 3) ──────────────────
+  {
+    id: 'app-vsaas-finserv-fraud',
+    parentId: 'app-vsaas-financial-services',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Fraud Detection & Risk Modelling',
+    description: 'Real-time transaction fraud detection, credit risk scoring, and portfolio risk assessment using ML models trained on financial patterns.',
+    order: 1,
+  },
+  {
+    id: 'app-vsaas-finserv-underwriting',
+    parentId: 'app-vsaas-financial-services',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'AI Underwriting',
+    description: 'Automated underwriting for insurance, lending, and credit products using alternative data sources and ML-based risk models.',
+    order: 2,
+  },
+  {
+    id: 'app-vsaas-finserv-wealth',
+    parentId: 'app-vsaas-financial-services',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Wealth Management AI',
+    description: 'AI-powered portfolio construction, rebalancing, and personalised financial planning at the advisor and direct-to-consumer level.',
+    order: 3,
+  },
+  {
+    id: 'app-vsaas-finserv-capital-markets',
+    parentId: 'app-vsaas-financial-services',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Capital Markets & Trading',
+    description: 'AI for earnings call analysis, market signal extraction, trade execution optimisation, and research report generation for institutional finance.',
+    order: 4,
   },
 
   // ─── Niches under Creative Visual (depth 3) ──────────────────────────────
@@ -775,10 +983,10 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // ─── Niches under Civic Government (depth 3) ─────────────────────────────
+  // ─── Niches under GovTech & Public Services (depth 3) ────────────────────
   {
     id: 'app-civic-government-services',
-    parentId: 'app-civic-government',
+    parentId: 'app-civic-govtech',
     layerId: 'application',
     depth: 3,
     depthLabel: 'niche',
@@ -788,7 +996,7 @@ export const applicationNodes: TaxonomyNode[] = [
   },
   {
     id: 'app-civic-government-transparency',
-    parentId: 'app-civic-government',
+    parentId: 'app-civic-govtech',
     layerId: 'application',
     depth: 3,
     depthLabel: 'niche',
@@ -797,29 +1005,7 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // ─── Niches under Civic Humanitarian (depth 3) ───────────────────────────
-  {
-    id: 'app-civic-humanitarian-disaster',
-    parentId: 'app-civic-humanitarian',
-    layerId: 'application',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'Disaster Response',
-    description: 'Early warning systems and aid coordination tools for disaster response organisations.',
-    order: 1,
-  },
-  {
-    id: 'app-civic-humanitarian-refugee',
-    parentId: 'app-civic-humanitarian',
-    layerId: 'application',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'Refugee & Migration',
-    description: 'Multilingual information and navigation assistants for displaced populations.',
-    order: 2,
-  },
-
-  // ─── Niches under Civic Open Education (depth 3) ─────────────────────────
+  // ─── Niches under Open Education (depth 3) ───────────────────────────────
   {
     id: 'app-civic-openedu-oer',
     parentId: 'app-civic-openedu',
@@ -831,7 +1017,7 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 1,
   },
 
-  // ─── Niches under Assistants Personal (depth 3) ──────────────────────────
+  // ─── Niches under General-Purpose AI Platforms (depth 3) ─────────────────
   {
     id: 'app-assistants-personal-general',
     parentId: 'app-assistants-personal',
@@ -852,8 +1038,6 @@ export const applicationNodes: TaxonomyNode[] = [
     description: 'Smart home, wearable, and ambient voice AI that operates without a screen.',
     order: 2,
   },
-
-  // ─── Niches under Assistants Professional (depth 3) ──────────────────────
   {
     id: 'app-assistants-professional-exec',
     parentId: 'app-assistants-professional',
@@ -874,8 +1058,6 @@ export const applicationNodes: TaxonomyNode[] = [
     description: 'Data analysis copilots and report drafting tools for business and data analysts.',
     order: 2,
   },
-
-  // ─── Niches under Assistants Multimodal (depth 3) ────────────────────────
   {
     id: 'app-assistants-multimodal-visual',
     parentId: 'app-assistants-multimodal',
@@ -897,15 +1079,69 @@ export const applicationNodes: TaxonomyNode[] = [
     order: 2,
   },
 
+  // ─── Niches under Developer Tools (depth 3) ──────────────────────────────
+  {
+    id: 'app-dt-editors-inline',
+    parentId: 'app-dt-ai-code-editors',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Inline Completion & Chat',
+    description: 'Real-time code suggestions, inline edits, and sidebar chat with full codebase context. The core interaction model of AI code editors.',
+    order: 1,
+  },
+  {
+    id: 'app-dt-editors-multifile',
+    parentId: 'app-dt-ai-code-editors',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Multi-File Editing',
+    description: 'AI that orchestrates changes across multiple files simultaneously — refactors, renames, and architectural shifts that span an entire codebase.',
+    order: 2,
+  },
+  {
+    id: 'app-dt-agents-task',
+    parentId: 'app-dt-autonomous-coding-agents',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Task-Level Coding Agents',
+    description: 'Agents that accept a specification and independently implement it across files, run tests, and iterate. Devin and Cognition are the reference implementations.',
+    order: 1,
+  },
+  {
+    id: 'app-dt-agents-pr',
+    parentId: 'app-dt-autonomous-coding-agents',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Automated PR & Code Review',
+    description: 'Agents that autonomously open pull requests, respond to review feedback, and fix CI failures without human steering.',
+    order: 2,
+  },
+  {
+    id: 'app-dt-testing-generation',
+    parentId: 'app-dt-testing-devops',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Test Generation',
+    description: 'AI that automatically writes unit, integration, and end-to-end tests from source code or specifications.',
+    order: 1,
+  },
+  {
+    id: 'app-dt-testing-sre',
+    parentId: 'app-dt-testing-devops',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'AI-Assisted SRE & Incident Response',
+    description: 'AI that diagnoses production incidents, suggests root causes, and drafts runbooks from observability signals.',
+    order: 2,
+  },
+
   // ─── Focus nodes (depth 4) ────────────────────────────────────────────────
-  { id: 'app-focus-longform', parentId: 'app-consumer-productivity-writing', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Long-form Content Authoring', description: 'AI tools for writing extended essays, articles, reports, and books with outline generation and iterative drafting.', order: 1 },
-  { id: 'app-focus-email', parentId: 'app-consumer-productivity-writing', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Email Drafting & Reply', description: 'Assistants that draft, improve, and contextually reply to emails with appropriate tone and brevity.', order: 2 },
-  { id: 'app-focus-copywriting', parentId: 'app-consumer-productivity-writing', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Marketing Copy & Ad Text', description: 'AI generators for headlines, ad copy, landing page text, and social media posts.', order: 3 },
-  { id: 'app-focus-personal-search', parentId: 'app-consumer-productivity-search', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Personal Knowledge Search', description: 'Search over personal notes, files, and email that synthesises answers rather than listing documents.', order: 1 },
-  { id: 'app-focus-web-search', parentId: 'app-consumer-productivity-search', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'AI Web Search Engines', description: 'General-purpose web search with AI-synthesised answers, citations, and follow-up questions.', order: 2 },
-  { id: 'app-focus-news-digest', parentId: 'app-consumer-productivity-summarisation', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'News & Article Digests', description: 'Personalised daily news summaries and newsletter digests generated from a user\'s reading interests.', order: 1 },
-  { id: 'app-focus-meeting-summary', parentId: 'app-consumer-productivity-summarisation', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Meeting Summaries', description: 'Automatic transcription and summarisation of meetings with action item extraction.', order: 2 },
-  { id: 'app-focus-auto-scheduling', parentId: 'app-consumer-productivity-scheduling', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Auto-Scheduling Assistants', description: 'AI that negotiates meeting times, blocks focus time, and optimises calendars based on priorities.', order: 1 },
   { id: 'app-focus-k12-tutoring', parentId: 'app-consumer-education-tutoring', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'K-12 Tutoring', description: 'Subject-specific tutoring for school-age students with adaptive difficulty and curriculum alignment.', order: 1 },
   { id: 'app-focus-test-prep', parentId: 'app-consumer-education-tutoring', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Test Prep & Exam Coaching', description: 'AI tutors for standardised tests — SAT, GRE, bar exam — with practice questions and weakness analysis.', order: 2 },
   { id: 'app-focus-language-learning', parentId: 'app-consumer-education-tutoring', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Language Learning', description: 'Conversational language practice, grammar correction, and vocabulary building for language learners.', order: 3 },
@@ -972,9 +1208,6 @@ export const applicationNodes: TaxonomyNode[] = [
   { id: 'app-focus-benefits-nav', parentId: 'app-civic-government-services', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Benefits Navigator Bots', description: 'Conversational tools that help citizens identify which benefits they qualify for and how to apply.', order: 1 },
   { id: 'app-focus-foia-assist', parentId: 'app-civic-government-services', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'FOIA & Records Assistants', description: 'Tools that help citizens draft FOIA requests and navigate public records access processes.', order: 2 },
   { id: 'app-focus-budget-analysis', parentId: 'app-civic-government-transparency', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Budget Analysis Tools', description: 'Open tools that parse and visualise government budgets for journalists and civic researchers.', order: 1 },
-  { id: 'app-focus-early-warning', parentId: 'app-civic-humanitarian-disaster', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Early Warning Systems', description: 'AI models that predict and communicate natural disaster risk to at-risk communities.', order: 1 },
-  { id: 'app-focus-aid-coordination', parentId: 'app-civic-humanitarian-disaster', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Aid Coordination Tools', description: 'Logistics and communication tools for NGOs coordinating disaster relief operations.', order: 2 },
-  { id: 'app-focus-refugee-info', parentId: 'app-civic-humanitarian-refugee', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Information & Navigation Assistants', description: 'Multilingual chatbots that help refugees understand legal status, services, and rights.', order: 1 },
   { id: 'app-focus-oer-curriculum', parentId: 'app-civic-openedu-oer', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'AI Curriculum Generators', description: 'Tools that generate structured course content and lesson plans aligned to learning standards.', order: 1 },
   { id: 'app-focus-multilingual-edu', parentId: 'app-civic-openedu-oer', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Multilingual Content Adaptation', description: 'AI translation and cultural adaptation of educational materials for global learners.', order: 2 },
   { id: 'app-focus-research-qa', parentId: 'app-assistants-personal-general', layerId: 'application', depth: 4, depthLabel: 'focus', name: 'Research & Q&A Assistants', description: 'Conversational assistants that answer questions with sourced, accurate information across any topic.', order: 1 },
