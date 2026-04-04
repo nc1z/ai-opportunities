@@ -6,14 +6,15 @@ export function HomePage() {
     <main className="max-w-[860px] mx-auto px-6 py-16">
       <div className="mb-14">
         <h1 className="text-4xl font-semibold text-zinc-900 tracking-tight leading-tight">
-          Where to Build with AI?
+          What to Build with AI?
         </h1>
-        <p className="mt-4 text-zinc-500 max-w-lg leading-relaxed text-base">
-          Five layers. Dozens of categories. Hundreds of ideas. A structured map of where to build in AI.
+        <p className="mt-4 text-zinc-500 max-w-xl leading-relaxed text-base">
+          A structured map of the AI ecosystem — from consumer-facing products down to the APIs and tooling that power them.
+          Find where to build, contribute, and create. Click on a layer to explore.
         </p>
       </div>
 
-      <div className="relative">
+      <div id="layers" className="relative">
         <div className="absolute left-5 top-6 bottom-6 w-px bg-zinc-150" style={{ backgroundColor: '#e8e8e8' }} />
 
         <div className="space-y-1">
