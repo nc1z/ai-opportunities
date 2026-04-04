@@ -86,6 +86,34 @@ export function NodePage() {
           <p className="text-sm text-zinc-400">No further breakdown available.</p>
         </div>
       )}
+
+      <div className="mt-10 flex items-start gap-3 text-xs text-zinc-400 border border-zinc-100 rounded-lg px-4 py-3">
+          <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 shrink-0 mt-0.5 text-zinc-300">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z" />
+          </svg>
+          <p>
+            Spot something missing or incorrect?{' '}
+            <a
+              href="https://github.com/nc1z/ai-opportunities/issues/new"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-zinc-300 hover:text-zinc-600 hover:decoration-zinc-500 transition-colors"
+            >
+              Open an issue
+            </a>
+            {' '}or{' '}
+            <a
+              href="https://github.com/nc1z/ai-opportunities/compare"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-zinc-300 hover:text-zinc-600 hover:decoration-zinc-500 transition-colors"
+            >
+              submit a PR
+            </a>
+            {' '}— contributions welcome.
+          </p>
+      </div>
     </main>
   )
 }
