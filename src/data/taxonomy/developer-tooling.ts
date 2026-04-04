@@ -45,23 +45,23 @@ export const developerToolingNodes: TaxonomyNode[] = [
     order: 3,
   },
   {
-    id: 'devtool-sdks',
+    id: 'dt-sdks-frameworks',
     parentId: 'developer-tooling',
     layerId: 'developer-tooling',
     depth: 1,
     depthLabel: 'group',
-    name: 'SDKs & Libraries',
-    description: 'Provider SDKs, agent frameworks, structured output libraries, and utility packages that form the building blocks of AI application development.',
+    name: 'SDKs, Frameworks & Libraries',
+    description: 'Provider SDKs, agent orchestration frameworks, structured output libraries, fine-tuning tooling, and utility packages that form the building blocks of AI application development.',
     order: 4,
   },
   {
-    id: 'devtool-ide',
+    id: 'dt-ai-ides',
     parentId: 'developer-tooling',
     layerId: 'developer-tooling',
     depth: 1,
     depthLabel: 'group',
-    name: 'IDE Integrations',
-    description: 'Code completion, agentic coding assistants, and test generation tools embedded in developer environments. The fastest-growing segment of developer tooling, reshaping how software is written.',
+    name: 'AI IDEs & Coding Assistants',
+    description: 'Full AI-native editors (Cursor, Windsurf) and embedded coding assistants that reshape how software is written. The distinction between a plugin and a product has collapsed — Cursor at $29.3B valuation is a software category in itself.',
     order: 5,
   },
   {
@@ -81,7 +81,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
     depth: 1,
     depthLabel: 'group',
     name: 'Data & Dataset Tooling',
-    description: 'Synthetic data generation, labelling infrastructure, and annotation quality tools for building training and evaluation datasets.',
+    description: 'Synthetic data generation, labelling infrastructure, annotation quality, eval dataset management, and vector store infrastructure for building training and evaluation datasets.',
     order: 7,
   },
 
@@ -107,14 +107,24 @@ export const developerToolingNodes: TaxonomyNode[] = [
     order: 2,
   },
   {
-    id: 'devtool-evals-ci',
+    id: 'dt-evals-cicd',
     parentId: 'devtool-evals',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
-    name: 'CI/CD Integration',
-    description: 'Eval pipelines embedded in CI/CD workflows that gate deployments on quality checks automatically.',
+    name: 'AI-Specific CI/CD & Release Management',
+    description: 'Eval-gated deployments that block merges when quality thresholds fail, canary prompt rollouts, and automatic rollback on regression. Hard gates (policy violations) vs soft gates (quality dips that alert but don\'t block). Braintrust GitHub Action, DeepEval CI, Promptfoo CI integration.',
     order: 3,
+  },
+  {
+    id: 'dt-evals-rag-agent',
+    parentId: 'devtool-evals',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'RAG & Agent-Specific Evals',
+    description: 'Specialised metrics for context faithfulness, retrieval quality, and multi-step agent behaviour that go beyond single-turn LLM quality. Ragas (standard for RAG eval), Confident AI, DeepEval agent metrics.',
+    order: 4,
   },
 
   // ─── Domains under Observability (depth 2) ────────────────────────────────
@@ -180,11 +190,21 @@ export const developerToolingNodes: TaxonomyNode[] = [
     description: 'Prompt playgrounds, multi-model comparison tools, and review workflows for team-based prompt development.',
     order: 3,
   },
+  {
+    id: 'dt-prompt-programmatic',
+    parentId: 'devtool-prompt-mgmt',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Programmatic & Compiled Prompting',
+    description: 'Treating prompts as type-safe compiled programs rather than static strings — DSPy (Stanford) auto-optimises prompt instructions and demonstrations, PydanticAI enforces structured typed outputs. A qualitative shift from prompt tuning to prompt engineering as software.',
+    order: 4,
+  },
 
-  // ─── Domains under SDKs & Libraries (depth 2) ────────────────────────────
+  // ─── Domains under SDKs, Frameworks & Libraries (depth 2) ────────────────
   {
     id: 'devtool-sdk-provider',
-    parentId: 'devtool-sdks',
+    parentId: 'dt-sdks-frameworks',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
@@ -194,7 +214,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
   },
   {
     id: 'devtool-sdk-frameworks',
-    parentId: 'devtool-sdks',
+    parentId: 'dt-sdks-frameworks',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
@@ -204,7 +224,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
   },
   {
     id: 'devtool-sdk-utilities',
-    parentId: 'devtool-sdks',
+    parentId: 'dt-sdks-frameworks',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
@@ -212,11 +232,31 @@ export const developerToolingNodes: TaxonomyNode[] = [
     description: 'Tokenisation, caching, and other utility packages that solve common AI development problems.',
     order: 3,
   },
+  {
+    id: 'dt-sdks-agent-orchestration',
+    parentId: 'dt-sdks-frameworks',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Agent Orchestration Frameworks',
+    description: 'Graph-based, role-based, and conversational multi-agent coordination frameworks that are distinct decision-making surfaces from base LLM SDKs. LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, Google Agent Developer Kit.',
+    order: 4,
+  },
+  {
+    id: 'dt-fine-tuning',
+    parentId: 'dt-sdks-frameworks',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Fine-Tuning & Training Pipelines',
+    description: 'Parameter-efficient fine-tuning (LoRA/QLoRA), experiment tracking, and managed tuning platforms. "Tuning-as-a-Service" (TaaS) is emerging as a product category — Unsloth, Axolotl, HF AutoTrain, MLflow LLMOps.',
+    order: 5,
+  },
 
-  // ─── Domains under IDE Integrations (depth 2) ────────────────────────────
+  // ─── Domains under AI IDEs & Coding Assistants (depth 2) ─────────────────
   {
     id: 'devtool-ide-assist',
-    parentId: 'devtool-ide',
+    parentId: 'dt-ai-ides',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
@@ -226,7 +266,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
   },
   {
     id: 'devtool-ide-agentic',
-    parentId: 'devtool-ide',
+    parentId: 'dt-ai-ides',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
@@ -236,7 +276,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
   },
   {
     id: 'devtool-ide-testing',
-    parentId: 'devtool-ide',
+    parentId: 'dt-ai-ides',
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
@@ -273,7 +313,7 @@ export const developerToolingNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Red-Teaming',
-    description: 'Automated adversarial testing and manual red-team frameworks for finding safety vulnerabilities before deployment.',
+    description: 'Automated adversarial testing and manual red-team frameworks for finding safety vulnerabilities before deployment. Includes the emerging threat surface introduced by the MCP ecosystem.',
     order: 3,
   },
 
@@ -284,8 +324,8 @@ export const developerToolingNodes: TaxonomyNode[] = [
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Synthetic Data Generation',
-    description: 'AI-generated training and evaluation datasets for fine-tuning, benchmarking, and red-teaming — without manual curation.',
+    name: 'Synthetic Data Engines',
+    description: 'LLM-driven synthetic QA pair and conversation dataset generation for fine-tuning and benchmarking — growing rapidly as real labelled data becomes harder to collect and more regulated. Maxim AI Data Engine, Gretel AI, RAGSynth.',
     order: 1,
   },
   {
@@ -294,9 +334,29 @@ export const developerToolingNodes: TaxonomyNode[] = [
     layerId: 'developer-tooling',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Labelling & Annotation',
-    description: 'AI-assisted labelling platforms and annotation quality tools for building high-quality supervised datasets.',
+    name: 'Labelling & Human Evaluation',
+    description: 'RLHF/SFT data collection, human annotation platforms, and preference arenas with GenAI-specific capabilities. Scale AI, Labelbox, Argilla.',
     order: 2,
+  },
+  {
+    id: 'dt-data-eval-datasets',
+    parentId: 'devtool-data',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Eval Dataset Management',
+    description: 'Curating and versioning evaluation datasets from production traces, managing leaderboards, and bridging real usage into structured test sets. Braintrust datasets, Maxim datasets, Labelbox leaderboards.',
+    order: 3,
+  },
+  {
+    id: 'dt-data-vector-stores',
+    parentId: 'devtool-data',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Vector Stores & Retrieval Infrastructure',
+    description: 'Dedicated vector databases and retrieval infrastructure that underpin RAG systems. Retriever choice has outsized impact on RAG system behaviour — Pinecone, Weaviate, Qdrant, Milvus, Chroma.',
+    order: 4,
   },
 
   // ─── Niches under Automated Evaluation (depth 3) ─────────────────────────
@@ -353,16 +413,36 @@ export const developerToolingNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // ─── Niches under CI/CD (depth 3) ────────────────────────────────────────
+  // ─── Niches under AI-Specific CI/CD (depth 3) ────────────────────────────
   {
     id: 'devtool-evals-pipeline',
-    parentId: 'devtool-evals-ci',
+    parentId: 'dt-evals-cicd',
     layerId: 'developer-tooling',
     depth: 3,
     depthLabel: 'niche',
     name: 'Pipeline Eval Steps',
     description: 'Quality gate checks and eval report generation embedded as CI/CD pipeline steps.',
     order: 1,
+  },
+  {
+    id: 'dt-evals-cicd-gates',
+    parentId: 'dt-evals-cicd',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Hard & Soft Quality Gates',
+    description: 'Hard gates that block deploys on policy violations; soft gates that alert but allow deployment on quality dips. Configurable thresholds per metric.',
+    order: 2,
+  },
+  {
+    id: 'dt-evals-cicd-canary',
+    parentId: 'dt-evals-cicd',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Canary Prompt Rollouts',
+    description: 'Rolling out new prompts or models to a small traffic slice with automated regression detection before full promotion.',
+    order: 3,
   },
 
   // ─── Niches under Distributed Tracing (depth 3) ──────────────────────────
@@ -573,6 +653,70 @@ export const developerToolingNodes: TaxonomyNode[] = [
     order: 2,
   },
 
+  // ─── Niches under Agent Orchestration Frameworks (depth 3) ───────────────
+  {
+    id: 'dt-sdks-ao-graph',
+    parentId: 'dt-sdks-agent-orchestration',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Graph-Based Orchestration',
+    description: 'Durable state machine frameworks for agent workflows — LangGraph with checkpointers, cyclic graphs, pause/resume. The foundation for reliable long-running agents.',
+    order: 1,
+  },
+  {
+    id: 'dt-sdks-ao-role',
+    parentId: 'dt-sdks-agent-orchestration',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Role-Based Agent Crews',
+    description: 'CrewAI-style orchestration where agents are assigned fixed roles (researcher, writer, reviewer) and collaborate on tasks.',
+    order: 2,
+  },
+  {
+    id: 'dt-sdks-ao-conversational',
+    parentId: 'dt-sdks-agent-orchestration',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Conversational Multi-Agent',
+    description: 'AutoGen group-chat-style coordination where agents communicate in a shared conversation thread to solve problems collectively.',
+    order: 3,
+  },
+
+  // ─── Niches under Fine-Tuning & Training Pipelines (depth 3) ─────────────
+  {
+    id: 'dt-ft-peft',
+    parentId: 'dt-fine-tuning',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Parameter-Efficient Fine-Tuning',
+    description: 'LoRA, QLoRA, and related PEFT methods that fine-tune large models with a fraction of the compute. Unsloth (2x faster training), Axolotl, Hugging Face PEFT.',
+    order: 1,
+  },
+  {
+    id: 'dt-ft-experiment-tracking',
+    parentId: 'dt-fine-tuning',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'LLM Experiment Tracking',
+    description: 'ML experiment tracking adapted for LLM training runs — MLflow LLMOps, W&B, Hugging Face AutoTrain.',
+    order: 2,
+  },
+  {
+    id: 'dt-ft-taas',
+    parentId: 'dt-fine-tuning',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Tuning-as-a-Service',
+    description: 'Managed fine-tuning platforms that handle data prep, training, and deployment — abstracting the infrastructure from the ML workflow.',
+    order: 3,
+  },
+
   // ─── Niches under Code Assistance (depth 3) ──────────────────────────────
   {
     id: 'devtool-ide-completion',
@@ -703,6 +847,16 @@ export const developerToolingNodes: TaxonomyNode[] = [
     name: 'Manual Red-Team Frameworks',
     description: 'Structured playbooks and checklists for human red-teamers systematically testing AI systems.',
     order: 2,
+  },
+  {
+    id: 'dt-guardrails-mcp-security',
+    parentId: 'devtool-guard-redteam',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'MCP & Agent Security',
+    description: 'Tool poisoning detection, cross-server tool shadowing, and malicious MCP server scanning. With 36,000+ MCP servers largely unaudited, this is a fast-emerging attack surface — Cisco MCP Scanner.',
+    order: 3,
   },
 
   // ─── Niches under Synthetic Data (depth 3) ───────────────────────────────
