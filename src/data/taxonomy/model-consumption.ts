@@ -9,7 +9,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depth: 0,
     depthLabel: 'layer',
     name: 'Model Consumption',
-    description: 'APIs, SDKs, and abstractions for accessing foundation models across text, image, audio, and embedding modalities. Native multimodality is converging — GPT-4o, Gemini, and Claude 4 handle text/image/audio through unified endpoints — but the modality buckets remain useful for builder discovery.',
+    description: 'APIs, SDKs, and abstractions for accessing foundation models across text, image, audio, and embedding modalities. Leading models now handle multiple modalities through unified endpoints, but the modality buckets remain a useful lens for builder discovery.',
     order: 5,
   },
 
