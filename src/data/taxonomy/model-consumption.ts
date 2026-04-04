@@ -9,7 +9,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depth: 0,
     depthLabel: 'layer',
     name: 'Model Consumption',
-    description: 'APIs, SDKs, and abstractions for accessing foundation models across text, image, audio, and embedding modalities.',
+    description: 'APIs, SDKs, and abstractions for accessing foundation models across text, image, audio, and embedding modalities. Native multimodality is converging — GPT-4o, Gemini, and Claude 4 handle text/image/audio through unified endpoints — but the modality buckets remain useful for builder discovery.',
     order: 5,
   },
 
@@ -31,7 +31,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depth: 1,
     depthLabel: 'group',
     name: 'Image & Video',
-    description: 'Generative and understanding APIs for visual content — image synthesis, editing, and video generation.',
+    description: 'Generative and understanding APIs for visual content — image synthesis, editing, video generation, and video understanding.',
     order: 2,
   },
   {
@@ -55,13 +55,13 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     order: 4,
   },
   {
-    id: 'mc-provider-abstraction',
+    id: 'mc-access-infrastructure',
     parentId: 'model-consumption',
     layerId: 'model-consumption',
     depth: 1,
     depthLabel: 'group',
-    name: 'Provider Abstraction',
-    description: 'Unified APIs and routers that sit above individual model providers to enable switching, fallback, and cost optimisation.',
+    name: 'Access Infrastructure & Abstraction',
+    description: 'The full access layer above individual model providers: unified APIs, intelligent routing, caching, real-time streaming sessions, on-device inference, and fine-tuning services. This group has expanded from simple "unified APIs" into a complete infrastructure layer.',
     order: 5,
   },
 
@@ -125,7 +125,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Image Editing & Manipulation',
-    description: 'Inpainting, outpainting, style transfer, and instruction-based image editing APIs.',
+    description: 'Inpainting, outpainting, style transfer, and instruction-based editing APIs — natural language instructions that modify specific elements of an existing image.',
     order: 2,
   },
   {
@@ -147,6 +147,16 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     name: 'Vision Understanding',
     description: 'Multimodal LLM APIs for image captioning, visual QA, OCR, and object detection.',
     order: 4,
+  },
+  {
+    id: 'mc-iv-video-understanding',
+    parentId: 'mc-image-video',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Video Understanding',
+    description: 'Semantic search and Q&A over video content — a major 2024-2025 growth area distinct from video generation. Twelve Labs, Gemini video understanding, AWS Bedrock Nova.',
+    order: 5,
   },
 
   // Depth 2 — Domains: Audio & Speech
@@ -199,7 +209,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Multimodal Embeddings',
-    description: 'Shared embedding spaces for text, image, and audio enabling cross-modal retrieval.',
+    description: 'Shared embedding spaces for text, image, audio, and video enabling cross-modal retrieval.',
     order: 2,
   },
   {
@@ -213,10 +223,10 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     order: 3,
   },
 
-  // Depth 2 — Domains: Provider Abstraction
+  // Depth 2 — Domains: Access Infrastructure & Abstraction
   {
     id: 'mc-pa-unified-api',
-    parentId: 'mc-provider-abstraction',
+    parentId: 'mc-access-infrastructure',
     layerId: 'model-consumption',
     depth: 2,
     depthLabel: 'domain',
@@ -226,7 +236,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
   },
   {
     id: 'mc-pa-routing',
-    parentId: 'mc-provider-abstraction',
+    parentId: 'mc-access-infrastructure',
     layerId: 'model-consumption',
     depth: 2,
     depthLabel: 'domain',
@@ -235,14 +245,44 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     order: 2,
   },
   {
-    id: 'mc-pa-local-inference',
-    parentId: 'mc-provider-abstraction',
+    id: 'mc-pa-private-inference',
+    parentId: 'mc-access-infrastructure',
     layerId: 'model-consumption',
     depth: 2,
     depthLabel: 'domain',
-    name: 'Local & On-Premise Inference',
-    description: 'Running open-weight models locally or in private infrastructure without cloud API dependency.',
+    name: 'Private & On-Premise Inference',
+    description: 'Running open-weight models in private VPCs or air-gapped servers for data-sovereign deployments — distinct from on-device mobile inference.',
     order: 3,
+  },
+  {
+    id: 'mc-pa-realtime-streaming',
+    parentId: 'mc-access-infrastructure',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Real-Time & Multimodal Streaming',
+    description: 'Stateful WebSocket/SSE sessions for bidirectional, sub-second latency interactions — a fundamentally different access pattern from stateless REST. Same model, different interface: voice agents and live assistants require this. OpenAI Realtime API, Google Gemini Live.',
+    order: 4,
+  },
+  {
+    id: 'mc-pa-on-device',
+    parentId: 'mc-access-infrastructure',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'On-Device & Edge Inference',
+    description: 'OS-native model APIs running on mobile and embedded hardware — zero marginal token cost, strong privacy, offline capability, limited context window. Apple Foundation Models framework, Android AI Core, Gemini Nano.',
+    order: 5,
+  },
+  {
+    id: 'mc-pa-finetuning-service',
+    parentId: 'mc-access-infrastructure',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Fine-Tuning-as-a-Service',
+    description: 'Managed pipelines with a distinct lifecycle: submit data → train adapter → hosted custom model endpoint with separate billing. OpenAI fine-tuning API, HF AutoTrain, OctoAI, Replicate.',
+    order: 6,
   },
 
   // Depth 3 — Niches: Chat & Completion APIs
@@ -273,8 +313,28 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depth: 3,
     depthLabel: 'niche',
     name: 'Batch Inference',
-    description: 'Asynchronous bulk inference APIs for large-scale offline workloads at reduced cost.',
+    description: 'Async JSONL bulk inference at 50% cost discount vs synchronous APIs (OpenAI Batch API). The economic pattern for large-scale offline workloads: classification, document extraction, bulk embeddings.',
     order: 3,
+  },
+  {
+    id: 'mc-tg-cc-prompt-caching',
+    parentId: 'mc-tg-chat-completion',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Prompt Prefix Caching',
+    description: 'Provider-side caching of stable prompt prefixes — Anthropic (90% discount on cache hits), OpenAI (50-75%). Designing conversation IDs and stable system prompts to maximise cache reuse is an architectural pattern, not just a feature.',
+    order: 4,
+  },
+  {
+    id: 'mc-tg-cc-code-models',
+    parentId: 'mc-tg-chat-completion',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Code-Specialised Models',
+    description: 'Models evaluated on coding benchmarks with distinct tool-calling patterns — DeepSeek Coder V2 (300+ languages), GitHub Copilot backend, StarCoder. Treated separately from general chat when designing coding systems.',
+    order: 5,
   },
 
   // Depth 3 — Niches: Reasoning & Long-Context
@@ -297,6 +357,16 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     name: 'Long-Context Processing',
     description: 'Models supporting 100K–1M token contexts for full-document ingestion and analysis.',
     order: 2,
+  },
+  {
+    id: 'mc-tg-rl-reasoning-models',
+    parentId: 'mc-tg-reasoning',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Reasoning Effort APIs',
+    description: 'o1/o3/R1-style models with a "reasoning effort" parameter (low/medium/high). Distinct pricing — output tokens 4-10x more expensive than standard — and latency profile (seconds to minutes). Architects treat these as a separate model tier when designing systems.',
+    order: 3,
   },
 
   // Depth 3 — Niches: Structured Output
@@ -376,16 +446,6 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     description: 'Filling, extending, or replacing masked regions of existing images.',
     order: 1,
   },
-  {
-    id: 'mc-iv-ie-instruction-edit',
-    parentId: 'mc-iv-image-editing',
-    layerId: 'model-consumption',
-    depth: 3,
-    depthLabel: 'niche',
-    name: 'Instruction-Based Editing',
-    description: 'Natural language instructions that modify specific elements of an existing image.',
-    order: 2,
-  },
 
   // Depth 3 — Niches: Video Generation
   {
@@ -428,6 +488,28 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     depthLabel: 'niche',
     name: 'Document & OCR APIs',
     description: 'Specialised APIs for extracting structured text and layout from scanned documents and PDFs.',
+    order: 2,
+  },
+
+  // Depth 3 — Niches: Video Understanding
+  {
+    id: 'mc-iv-vund-video-qa',
+    parentId: 'mc-iv-video-understanding',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Video Q&A',
+    description: 'Answering natural language questions over long-form video footage — hours of content queried semantically.',
+    order: 1,
+  },
+  {
+    id: 'mc-iv-vund-video-search',
+    parentId: 'mc-iv-video-understanding',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Semantic Video Search',
+    description: 'Embedding video libraries into vector spaces for retrieval-over-video — find the moment, scene, or clip matching a query.',
     order: 2,
   },
 
@@ -508,6 +590,16 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     description: 'CLIP-style models embedding images and text into a shared space for text-image search.',
     order: 1,
   },
+  {
+    id: 'mc-emb-multimodal-video',
+    parentId: 'mc-emb-multimodal-embeddings',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Video & Audio Embeddings',
+    description: 'Unified vector spaces over heterogeneous media — text + image + audio + video in a single embedding space. Enables multimodal RAG and cross-modal search. Twelve Labs Embed API, AWS Bedrock Titan Multimodal.',
+    order: 2,
+  },
 
   // Depth 3 — Niches: Unified APIs
   {
@@ -553,10 +645,10 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     order: 2,
   },
 
-  // Depth 3 — Niches: Local Inference
+  // Depth 3 — Niches: Private & On-Premise Inference
   {
     id: 'mc-pa-li-local-runtime',
-    parentId: 'mc-pa-local-inference',
+    parentId: 'mc-pa-private-inference',
     layerId: 'model-consumption',
     depth: 3,
     depthLabel: 'niche',
@@ -566,12 +658,78 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
   },
   {
     id: 'mc-pa-li-private-cloud',
-    parentId: 'mc-pa-local-inference',
+    parentId: 'mc-pa-private-inference',
     layerId: 'model-consumption',
     depth: 3,
     depthLabel: 'niche',
     name: 'Private Cloud Deployment',
     description: 'Deploying open-weight models on private VPCs for data-sovereign, air-gapped inference.',
+    order: 2,
+  },
+
+  // Depth 3 — Niches: Real-Time & Multimodal Streaming
+  {
+    id: 'mc-pa-rt-voice-sessions',
+    parentId: 'mc-pa-realtime-streaming',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Full-Duplex Voice Sessions',
+    description: 'Speech-in/speech-out sessions with <300ms first-token latency and barge-in support. GPT-4o Realtime API, ElevenLabs Conversational AI.',
+    order: 1,
+  },
+  {
+    id: 'mc-pa-rt-multimodal-live',
+    parentId: 'mc-pa-realtime-streaming',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Live Multimodal Sessions',
+    description: 'Simultaneous camera + microphone + text input in a single stateful session. Google Gemini Live, screen-share understanding.',
+    order: 2,
+  },
+
+  // Depth 3 — Niches: On-Device & Edge Inference
+  {
+    id: 'mc-pa-od-mobile',
+    parentId: 'mc-pa-on-device',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Mobile On-Device',
+    description: 'OS-native model APIs on smartphones and tablets — Apple Intelligence (Foundation Models framework), Android AI Core (Gemini Nano), running on NPU with no cloud round-trip.',
+    order: 1,
+  },
+  {
+    id: 'mc-pa-od-edge',
+    parentId: 'mc-pa-on-device',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Edge & Embedded Inference',
+    description: 'Small models on constrained hardware — Raspberry Pi, industrial edge devices, Qualcomm Snapdragon NPU, Hailo AI accelerators.',
+    order: 2,
+  },
+
+  // Depth 3 — Niches: Fine-Tuning-as-a-Service
+  {
+    id: 'mc-pa-ft-lora-adapters',
+    parentId: 'mc-pa-finetuning-service',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Provider-Managed LoRA Adapters',
+    description: 'Provider handles LoRA/QLoRA training infrastructure — submit JSONL, receive a hosted adapter endpoint. GroqCloud LoRA, OpenAI fine-tune.',
+    order: 1,
+  },
+  {
+    id: 'mc-pa-ft-custom-endpoints',
+    parentId: 'mc-pa-finetuning-service',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Custom Model Endpoints',
+    description: 'Versioned, warm, auto-scaled fine-tuned model endpoints behind standard inference APIs — separate billing from base model usage.',
     order: 2,
   },
 
