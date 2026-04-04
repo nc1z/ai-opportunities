@@ -46,8 +46,17 @@ export function AboutPage() {
             rather than rank alone.
           </p>
           <p>
-            This research represented a meaningful personal financial investment — made deliberately to ensure the
-            quality and breadth of coverage that a single model or a casual prompt would not produce.
+            This research represented a meaningful personal financial investment from the{' '}
+            <a
+              href="https://github.com/nc1z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-800 underline underline-offset-2 decoration-zinc-300 hover:decoration-zinc-600"
+            >
+              creator
+            </a>{' '}
+            — made deliberately to ensure the quality and breadth of coverage that a single model or a casual
+            prompt would not produce.
           </p>
         </div>
       </section>
@@ -129,7 +138,7 @@ const agents = [
 const steps = [
   'Each agent independently researched all five taxonomy layers using its native deep research capability — no shared context, no cross-contamination.',
   'Raw research outputs were stored per-provider and processed one layer at a time to avoid context degradation.',
-  'Signals were extracted from each source: new categories, missing niches, renames, culls, and emerging trends.',
+  'Signals were extracted from each source: new categories, missing niches, renames, removals of low-signal entries, and emerging trends.',
   'Signals were cross-validated by source agreement count: 3–4 sources = high confidence (implement), 2 sources = medium (implement), 1 source = low (niche only or defer).',
   'A structured patch was written per layer before any code changes — ensuring the taxonomy reflects research consensus, not any single model\'s view.',
 ]
