@@ -9,19 +9,19 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     depth: 0,
     depthLabel: 'layer',
     name: 'Agent / Workflow Layer',
-    description: 'The layer where models are composed into pipelines that can plan, reason, and act over multiple steps. Includes autonomous research agents, workflow automation, human-in-the-loop approval flows, and multi-agent coordination systems. One of the fastest-moving areas in the AI stack with enormous opportunity.',
+    description: 'The layer where models are composed into pipelines that can plan, reason, and act over multiple steps. Includes autonomous research agents, workflow automation, human oversight systems, multi-agent coordination, and persistent background agents. One of the fastest-moving areas in the AI stack with enormous opportunity.',
     order: 2,
   },
 
   // ─── Groups (depth 1) ─────────────────────────────────────────────────────
   {
-    id: 'agent-tool-using',
+    id: 'agent-api-tool-using',
     parentId: 'agent-workflow',
     layerId: 'agent-workflow',
     depth: 1,
     depthLabel: 'group',
-    name: 'Tool-Using Agents',
-    description: 'Agents that execute actions in the real world — browsing the web, running code, calling APIs, and interacting with databases. The quality of tool design and error handling determines whether these agents are reliable in production.',
+    name: 'API & Tool-Using Agents',
+    description: 'Agents that execute actions through structured APIs, function calls, and tool use — as distinct from computer-use agents that perceive screens. Includes web interaction, code execution, system operations, and MCP-based tool integration. The quality of tool design and error handling determines whether these agents are reliable in production.',
     order: 1,
   },
   {
@@ -45,13 +45,13 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     order: 3,
   },
   {
-    id: 'agent-hitl',
+    id: 'agent-human-oversight',
     parentId: 'agent-workflow',
     layerId: 'agent-workflow',
     depth: 1,
     depthLabel: 'group',
-    name: 'Human-in-the-Loop',
-    description: 'Patterns and systems for keeping humans appropriately involved in AI decision-making. Confidence-gated review, annotation loops, and audit trails define this space. Critical for high-stakes deployments.',
+    name: 'Human Oversight & Governance',
+    description: 'Patterns and systems for keeping humans appropriately involved in AI decision-making — evolved from "backup mode" into a full governance and approval architecture. Approval gating with durable execution, confidence-gated review, annotation loops, and audit trails define this space. Critical for high-stakes deployments.',
     order: 4,
   },
   {
@@ -61,14 +61,24 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     depth: 1,
     depthLabel: 'group',
     name: 'Multi-Agent Systems',
-    description: 'Systems where multiple AI agents collaborate, compete, or specialise to complete tasks that exceed single-agent capability. Orchestration patterns, specialisation, and inter-agent communication are the core challenges.',
+    description: 'Systems where multiple AI agents collaborate, compete, or specialise to complete tasks that exceed single-agent capability. Orchestration patterns, specialisation, inter-agent communication protocols (A2A, MCP), and role-based crews are the core challenges.',
     order: 5,
   },
+  {
+    id: 'aw-persistent-agents',
+    parentId: 'agent-workflow',
+    layerId: 'agent-workflow',
+    depth: 1,
+    depthLabel: 'group',
+    name: 'Persistent & Background Agents',
+    description: 'Agents that maintain state across sessions, run asynchronously, accumulate memory over time, and resume work from durable checkpoints. Fundamentally different from session-scoped agents — these agents have continuity. ChatGPT memory, LangGraph durable execution, MemGPT, and AWS AgentCore represent the emerging infrastructure.',
+    order: 6,
+  },
 
-  // ─── Domains under Tool-Using Agents (depth 2) ───────────────────────────
+  // ─── Domains under API & Tool-Using Agents (depth 2) ─────────────────────
   {
     id: 'agent-tool-web',
-    parentId: 'agent-tool-using',
+    parentId: 'agent-api-tool-using',
     layerId: 'agent-workflow',
     depth: 2,
     depthLabel: 'domain',
@@ -78,7 +88,7 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
   },
   {
     id: 'agent-tool-code',
-    parentId: 'agent-tool-using',
+    parentId: 'agent-api-tool-using',
     layerId: 'agent-workflow',
     depth: 2,
     depthLabel: 'domain',
@@ -88,13 +98,43 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
   },
   {
     id: 'agent-tool-system',
-    parentId: 'agent-tool-using',
+    parentId: 'agent-api-tool-using',
     layerId: 'agent-workflow',
     depth: 2,
     depthLabel: 'domain',
     name: 'System & Infrastructure',
     description: 'Agents that interact with operating systems, CLI tools, databases, and infrastructure. High-value but high-risk; careful sandboxing and permission scoping are essential.',
     order: 3,
+  },
+  {
+    id: 'aw-tu-computer-use',
+    parentId: 'agent-api-tool-using',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Computer-Use & GUI Agents',
+    description: 'Agents that perceive screens and simulate mouse/keyboard events to automate legacy software, desktop apps, and web UIs without structured API access. Anthropic Computer Use, OpenAI Operator. Architecturally distinct from API-calling agents — they must recover from unexpected interface changes and navigate ambiguous visual state.',
+    order: 4,
+  },
+  {
+    id: 'aw-tu-mcp-integration',
+    parentId: 'agent-api-tool-using',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'MCP-Based Tool Integration',
+    description: 'Building and consuming tools via the Model Context Protocol — the emerging de facto standard for agent-to-tool connectivity ("USB-C for AI"). Governed by the Agentic AI Foundation. MCP enables dynamic tool discovery, reducing context distraction and improving agent accuracy.',
+    order: 5,
+  },
+  {
+    id: 'aw-tu-long-horizon-planning',
+    parentId: 'agent-api-tool-using',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Long-Horizon Planning',
+    description: 'Planner-executor architectures that separate task decomposition from step execution. The planner generates a structured plan upfront; the executor follows it, checking back with the planner when unexpected states arise. Distinct from reactive ReAct loops — better for complex multi-day tasks.',
+    order: 6,
   },
 
   // ─── Domains under Research Agents (depth 2) ─────────────────────────────
@@ -105,7 +145,7 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Deep Research Pipelines',
-    description: 'Multi-step research agents that synthesise information from many sources, iterate on hypotheses, and verify claims before producing output. Used for market research, academic synthesis, and competitive analysis.',
+    description: 'Multi-step research agents that synthesise information from many sources, iterate on hypotheses, and verify claims. The evolved form is hierarchical: a manager agent decomposes the query, worker agents search in parallel, and a critic agent reconciles conflicts before synthesis. Used for market research, academic synthesis, and competitive analysis.',
     order: 1,
   },
   {
@@ -125,8 +165,18 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     depth: 2,
     depthLabel: 'domain',
     name: 'Competitive Intelligence',
-    description: 'Agents that continuously monitor competitors, track pricing changes, and surface feature comparisons. Particularly valuable for product and sales teams.',
+    description: 'Agents that continuously monitor competitors in real-time — tracking pricing changes, SEC filings, blog posts, and news to generate up-to-date SWOT analyses and market signals. Particularly valuable for product and sales teams operating in fast-moving categories.',
     order: 3,
+  },
+  {
+    id: 'aw-ra-scientific-research',
+    parentId: 'agent-research',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Scientific Research Automation',
+    description: 'Agents that automate full research pipelines: literature review, experiment design, data analysis, and draft paper generation. Agent Laboratory is an early example. Most compelling for high-throughput domains like drug discovery and materials science where hypothesis cycles are expensive.',
+    order: 4,
   },
 
   // ─── Domains under Workflow Automation (depth 2) ──────────────────────────
@@ -160,11 +210,31 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     description: 'Conditional routing, escalation, and notification systems that keep humans in the loop at the right decision points without creating bottlenecks.',
     order: 3,
   },
+  {
+    id: 'aw-wa-embedded-enterprise',
+    parentId: 'agent-workflow-automation',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Embedded Enterprise Agents',
+    description: 'Agents deployed inside existing enterprise software — CRM, HR systems, ERP, security tooling — rather than as standalone products. Salesforce Agentforce, IBM Watson Orchestrate, and Microsoft Security Copilot represent this pattern. This is where most real enterprise agentic deployment lives in practice.',
+    order: 4,
+  },
+  {
+    id: 'aw-wa-evaluator-optimizer',
+    parentId: 'agent-workflow-automation',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Evaluator-Optimizer Loops',
+    description: 'Generate-critique-refine patterns where one LLM produces output and a second evaluates and critiques it, repeating until quality criteria are met. Used for translation quality, research completeness, and code review. One of the most reliable patterns for improving output quality in production.',
+    order: 5,
+  },
 
-  // ─── Domains under Human-in-the-Loop (depth 2) ───────────────────────────
+  // ─── Domains under Human Oversight & Governance (depth 2) ────────────────
   {
     id: 'agent-hitl-review',
-    parentId: 'agent-hitl',
+    parentId: 'agent-human-oversight',
     layerId: 'agent-workflow',
     depth: 2,
     depthLabel: 'domain',
@@ -174,7 +244,7 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
   },
   {
     id: 'agent-hitl-feedback',
-    parentId: 'agent-hitl',
+    parentId: 'agent-human-oversight',
     layerId: 'agent-workflow',
     depth: 2,
     depthLabel: 'domain',
@@ -184,13 +254,33 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
   },
   {
     id: 'agent-hitl-audit',
-    parentId: 'agent-hitl',
+    parentId: 'agent-human-oversight',
     layerId: 'agent-workflow',
     depth: 2,
     depthLabel: 'domain',
     name: 'Audit & Compliance',
     description: 'Decision logging, replay systems, and audit trails that satisfy regulatory and internal compliance requirements for AI-assisted decisions.',
     order: 3,
+  },
+  {
+    id: 'aw-hg-approval-gating',
+    parentId: 'agent-human-oversight',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Approval Gating with Durable Execution',
+    description: 'Agents that pause mid-workflow for human approval, persist full execution state to durable storage, then resume exactly where they left off without restarting. LangGraph checkpoint pattern. Critical for high-value autonomous actions — the agent does not lose context while waiting for a human who may take hours to respond.',
+    order: 4,
+  },
+  {
+    id: 'aw-hg-governor-pattern',
+    parentId: 'agent-human-oversight',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Human-as-Governor',
+    description: 'One human overseeing many agents simultaneously via policy boundaries and anomaly alerts rather than approving every individual decision. Distinct from per-decision review — the human defines the guardrails upfront and intervenes only on exceptions. The right pattern when agent throughput exceeds what per-step review allows.',
+    order: 5,
   },
 
   // ─── Domains under Multi-Agent Systems (depth 2) ─────────────────────────
@@ -222,6 +312,58 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     depthLabel: 'domain',
     name: 'Inter-Agent Communication',
     description: 'Message passing protocols, shared memory systems, and coordination mechanisms that allow agents to collaborate without stepping on each other.',
+    order: 3,
+  },
+  {
+    id: 'aw-ma-a2a-protocols',
+    parentId: 'agent-multi-agent',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Agent-to-Agent Protocols',
+    description: 'Structured inter-agent communication standards enabling agents built on different frameworks to interoperate. Google A2A protocol and MCP inter-agent extensions are the leading implementations. Becoming infrastructure-grade as multi-agent deployments scale across heterogeneous systems.',
+    order: 4,
+  },
+  {
+    id: 'aw-ma-role-based-crews',
+    parentId: 'agent-multi-agent',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Role-Based Agent Crews',
+    description: 'CrewAI-style orchestration where agents have explicitly defined roles, a central orchestrator assigns tasks, and the crew executes with defined handoff points. Preferred for compliance-sensitive enterprise workflows where auditability of which agent did what is required.',
+    order: 5,
+  },
+
+  // ─── Domains under Persistent & Background Agents (depth 2) ──────────────
+  {
+    id: 'aw-pa-session-memory',
+    parentId: 'aw-persistent-agents',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Cross-Session Memory',
+    description: 'Storing user context, task state, preferences, and episodic history across conversations so agents remember what they did last week. ChatGPT memory and AWS AgentCore long-term memory are reference implementations. The key challenge is memory retrieval that is both accurate and privacy-respecting.',
+    order: 1,
+  },
+  {
+    id: 'aw-pa-durable-execution',
+    parentId: 'aw-persistent-agents',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Background & Async Execution',
+    description: 'Long-running agents that operate headlessly, resume from durable checkpoints after interruptions, and complete work outside active user sessions. LangGraph durable execution and MemGPT demonstrate this pattern. Enables tasks that take hours or days — the agent does not need to finish in a single conversation turn.',
+    order: 2,
+  },
+  {
+    id: 'aw-pa-personal-agents',
+    parentId: 'aw-persistent-agents',
+    layerId: 'agent-workflow',
+    depth: 2,
+    depthLabel: 'domain',
+    name: '"Second-Me" Personal Agents',
+    description: 'Personalised agents that accumulate a user\'s preferences, communication style, knowledge, and goals over months of use — acting as a persistent digital delegate. Distinct from session assistants in that they develop a model of the user that improves with time.',
     order: 3,
   },
 
@@ -291,6 +433,38 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     order: 2,
   },
 
+  // ─── Niches under Computer-Use & GUI Agents (depth 3) ────────────────────
+  {
+    id: 'aw-tu-cu-browser',
+    parentId: 'aw-tu-computer-use',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Browser Navigation Agents',
+    description: 'Agents that control a browser visually — clicking, scrolling, form-filling — on sites with no accessible API. Enables automation of legacy web applications.',
+    order: 1,
+  },
+  {
+    id: 'aw-tu-cu-desktop',
+    parentId: 'aw-tu-computer-use',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Desktop OS Control Agents',
+    description: 'Agents that interact with desktop applications via screen perception and keyboard/mouse simulation. Unlocks automation of software that has no programmatic interface.',
+    order: 2,
+  },
+  {
+    id: 'aw-tu-cu-mobile',
+    parentId: 'aw-tu-computer-use',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Mobile App Automation',
+    description: 'Agents that navigate and automate mobile app UIs — completing multi-step tasks across apps on behalf of users.',
+    order: 3,
+  },
+
   // ─── Niches under Deep Research Pipelines (depth 3) ──────────────────────
   {
     id: 'agent-research-deep-multisource',
@@ -311,6 +485,16 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     name: 'Iterative Refinement',
     description: 'Research agents that loop — generating hypotheses, testing them, and refining their approach based on what they find.',
     order: 2,
+  },
+  {
+    id: 'aw-research-deep-hierarchical',
+    parentId: 'agent-research-deep',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Hierarchical Deep Research (DRA)',
+    description: 'Manager-worker-critic architecture: a manager agent decomposes the research query into sub-questions, parallel worker agents search, and a critic agent reconciles conflicting findings before final synthesis. The pattern behind Perplexity Deep Research, ChatGPT Deep Research, and Step-DeepResearch.',
+    order: 3,
   },
 
   // ─── Niches under Data Extraction (depth 3) ───────────────────────────────
@@ -345,6 +529,16 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     name: 'Competitor Tracking',
     description: 'Automated monitoring of competitor pricing, features, messaging, and market moves.',
     order: 1,
+  },
+  {
+    id: 'aw-ra-ci-realtime',
+    parentId: 'agent-research-competitive',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Real-Time Intelligence Feeds',
+    description: 'Continuous ingestion of news, SEC filings, job postings, and social signals about competitors to surface strategic alerts in near real-time.',
+    order: 2,
   },
 
   // ─── Niches under Document Processing (depth 3) ───────────────────────────
@@ -413,6 +607,28 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     order: 2,
   },
 
+  // ─── Niches under Evaluator-Optimizer Loops (depth 3) ────────────────────
+  {
+    id: 'aw-wa-eo-translation',
+    parentId: 'aw-wa-evaluator-optimizer',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Translation & Localisation Quality',
+    description: 'Generate-evaluate-refine loops where a translator agent produces output and a critic agent checks fluency, cultural accuracy, and tone alignment.',
+    order: 1,
+  },
+  {
+    id: 'aw-wa-eo-code-review',
+    parentId: 'aw-wa-evaluator-optimizer',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Automated Code Review Loops',
+    description: 'AI-generated code reviewed by a second agent for correctness, style, security, and test coverage before any human sees it.',
+    order: 2,
+  },
+
   // ─── Niches under HITL Review (depth 3) ──────────────────────────────────
   {
     id: 'agent-hitl-review-confidence',
@@ -467,6 +683,28 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     name: 'Audit Trail Systems',
     description: 'Decision logging and replay systems that create immutable records of AI-assisted decisions for compliance.',
     order: 1,
+  },
+
+  // ─── Niches under Approval Gating (depth 3) ──────────────────────────────
+  {
+    id: 'aw-hg-ag-pause-resume',
+    parentId: 'aw-hg-approval-gating',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Pause-and-Resume Checkpoints',
+    description: 'Workflow checkpointing that serialises full agent state to durable storage when human approval is needed, resuming seamlessly after sign-off.',
+    order: 1,
+  },
+  {
+    id: 'aw-hg-ag-high-stakes',
+    parentId: 'aw-hg-approval-gating',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'High-Stakes Action Gating',
+    description: 'Approval gates specifically for irreversible or high-value actions — financial transfers, deployments, data deletions — where human sign-off is non-negotiable.',
+    order: 2,
   },
 
   // ─── Niches under MA Orchestration (depth 3) ─────────────────────────────
@@ -532,6 +770,50 @@ export const agentWorkflowNodes: TaxonomyNode[] = [
     depthLabel: 'niche',
     name: 'Coordination Mechanisms',
     description: 'Agent scheduling, task allocation, and conflict resolution for multi-agent systems at scale.',
+    order: 2,
+  },
+
+  // ─── Niches under Cross-Session Memory (depth 3) ─────────────────────────
+  {
+    id: 'aw-pa-sm-episodic',
+    parentId: 'aw-pa-session-memory',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Episodic Memory Storage',
+    description: 'Systems that store timestamped records of past conversations and events so agents can recall specific prior interactions.',
+    order: 1,
+  },
+  {
+    id: 'aw-pa-sm-preferences',
+    parentId: 'aw-pa-session-memory',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'User Preference Modelling',
+    description: 'Continuously updated models of user preferences, communication style, and domain knowledge that personalise agent behaviour over time.',
+    order: 2,
+  },
+
+  // ─── Niches under Background Execution (depth 3) ─────────────────────────
+  {
+    id: 'aw-pa-de-checkpoint',
+    parentId: 'aw-pa-durable-execution',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Checkpoint & Resume',
+    description: 'Execution frameworks that serialize agent state at each step so long-running tasks survive process restarts, network failures, and timeout events.',
+    order: 1,
+  },
+  {
+    id: 'aw-pa-de-scheduled',
+    parentId: 'aw-pa-durable-execution',
+    layerId: 'agent-workflow',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Scheduled & Triggered Agents',
+    description: 'Agents that run on schedules or in response to events rather than user prompts — daily briefings, monitoring sweeps, background data ingestion.',
     order: 2,
   },
 
