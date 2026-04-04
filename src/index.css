@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Menlo', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-zinc-900 antialiased;
+    margin: 0;
+  }
+}
