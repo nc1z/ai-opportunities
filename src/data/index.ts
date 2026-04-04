@@ -1,34 +1,38 @@
-export type { Layer, Category, Opportunity, Connection, OpportunityType, LensFilter, TagValue } from './types'
-export { layers } from './layers'
-export { categories } from './categories'
-export { opportunities } from './opportunities'
-export { connections } from './connections'
+import { allNodes } from './taxonomy'
+import type { TaxonomyNode } from './types'
 
-import { layers } from './layers'
-import { categories } from './categories'
-import { opportunities } from './opportunities'
-import type { Layer, Category, Opportunity } from './types'
+export type { TaxonomyNode } from './types'
+export { allNodes } from './taxonomy'
 
-export const layerMap: Record<string, Layer> = Object.fromEntries(
-  layers.map((l) => [l.id, l])
+export const nodeMap: Record<string, TaxonomyNode> = Object.fromEntries(
+  allNodes.map((n) => [n.id, n])
 )
 
-export const categoryMap: Record<string, Category> = Object.fromEntries(
-  categories.map((c) => [c.id, c])
-)
-
-export const categoriesByLayer: Record<string, Category[]> = layers.reduce(
-  (acc, layer) => {
-    acc[layer.id] = categories.filter((c) => c.layerId === layer.id)
+export const childrenOf: Record<string, TaxonomyNode[]> = allNodes.reduce(
+  (acc, node) => {
+    const key = node.parentId ?? '__root__'
+    if (!acc[key]) acc[key] = []
+    acc[key].push(node)
     return acc
   },
-  {} as Record<string, Category[]>
+  {} as Record<string, TaxonomyNode[]>
 )
 
-export const opportunitiesByCategory: Record<string, Opportunity[]> = categories.reduce(
-  (acc, cat) => {
-    acc[cat.id] = opportunities.filter((o) => o.categoryId === cat.id)
-    return acc
-  },
-  {} as Record<string, Opportunity[]>
+// Sort children by order within each parent
+for (const key of Object.keys(childrenOf)) {
+  childrenOf[key].sort((a, b) => a.order - b.order)
+}
+
+export function ancestorsOf(id: string): TaxonomyNode[] {
+  const ancestors: TaxonomyNode[] = []
+  let current = nodeMap[id]
+  while (current?.parentId) {
+    current = nodeMap[current.parentId]
+    if (current) ancestors.unshift(current)
+  }
+  return ancestors
+}
+
+export const layerRoots: TaxonomyNode[] = (childrenOf['__root__'] ?? []).sort(
+  (a, b) => a.order - b.order
 )

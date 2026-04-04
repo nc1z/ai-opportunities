@@ -1,51 +1,13 @@
-export type OpportunityType = 'contribute' | 'build' | 'public_good'
+export type NodeDepthLabel = 'layer' | 'group' | 'domain' | 'niche' | 'focus'
 
-export type LensFilter = 'all' | 'contribute' | 'build' | 'public_good'
-
-export type TagValue =
-  | 'B2C'
-  | 'B2B'
-  | 'Developer'
-  | 'End-user'
-  | 'Open source'
-  | 'Public good'
-  | 'Monetizable'
-  | 'Multimodal'
-  | 'Agentic'
-  | 'Evaluation'
-  | 'Infrastructure-adjacent'
-
-export interface Layer {
+export interface TaxonomyNode {
   id: string
+  parentId: string | null  // null only for the 5 layer nodes
+  layerId: string          // always one of the 5 layer ids
+  depth: number            // 0=layer, 1=group, 2=domain, 3=niche, 4=focus
+  depthLabel: NodeDepthLabel
   name: string
-  shortDescription: string
-  longDescription: string
-  includedInMainView: boolean
+  description: string
   order: number
-  disclaimerNote?: string
-}
-
-export interface Category {
-  id: string
-  layerId: string
-  name: string
-  description: string
-  exampleTypes: string[]
-  opportunityTypes: OpportunityType[]
-  tags: TagValue[]
-  relatedCategoryIds: string[]
-}
-
-export interface Opportunity {
-  id: string
-  categoryId: string
-  type: OpportunityType
-  title: string
-  description: string
-}
-
-export interface Connection {
-  sourceId: string
-  targetId: string
-  relationshipType: string
+  tags?: string[]
 }
