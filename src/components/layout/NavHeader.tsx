@@ -12,6 +12,12 @@ export function NavHeader() {
         </Link>
         <div className="flex items-center gap-6">
           <Link
+            to="/about"
+            className="text-xs text-zinc-400 hover:text-zinc-700 transition-colors"
+          >
+            About
+          </Link>
+          <Link
             to="/sources"
             className="text-xs text-zinc-400 hover:text-zinc-700 transition-colors"
           >

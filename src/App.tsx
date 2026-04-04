@@ -3,6 +3,7 @@ import { NavHeader } from '@/components/layout/NavHeader'
 import { HomePage } from '@/pages/HomePage'
 import { NodePage } from '@/pages/NodePage'
 import { SourcesPage } from '@/pages/SourcesPage'
+import { AboutPage } from '@/pages/AboutPage'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/node/:nodeId" element={<NodePage />} />
           <Route path="/sources" element={<SourcesPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </div>
     </HashRouter>
