@@ -1,7 +1,18 @@
 export function AboutPage() {
   return (
     <main className="max-w-[860px] mx-auto px-6 py-16">
-      <h1 className="text-2xl font-semibold text-zinc-900 mb-4">About</h1>
+      <h1 className="text-2xl font-semibold text-zinc-900 mb-3">About</h1>
+      <p className="text-xs text-zinc-400 mb-6">
+        Built by{' '}
+        <a
+          href="https://github.com/nc1z"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-500 underline underline-offset-2 decoration-zinc-300 hover:text-zinc-700 hover:decoration-zinc-500"
+        >
+          Neil C. (nc1z)
+        </a>
+      </p>
 
       <section className="mb-14 max-w-2xl">
         <p className="text-zinc-600 text-sm leading-relaxed mb-4">
