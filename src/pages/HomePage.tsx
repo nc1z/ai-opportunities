@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { layers } from '@/data/layers'
+import { layerRoots } from '@/data/index'
 
 export function HomePage() {
   return (
@@ -18,10 +18,10 @@ export function HomePage() {
         <div className="absolute left-5 top-6 bottom-6 w-px bg-zinc-150" style={{ backgroundColor: '#e8e8e8' }} />
 
         <div className="space-y-1">
-          {layers.map((layer) => (
+          {layerRoots.map((layer) => (
             <Link
               key={layer.id}
-              to={`/layer/${layer.id}`}
+              to={`/node/${layer.id}`}
               className="group flex items-start gap-6 px-0 py-5 rounded-xl hover:bg-zinc-50 transition-colors -mx-4 px-4"
             >
               <div className="w-10 h-10 rounded-full border-2 border-zinc-200 bg-white flex items-center justify-center shrink-0 group-hover:border-zinc-400 transition-colors z-10 mt-0.5">
@@ -40,7 +40,7 @@ export function HomePage() {
                   </span>
                 </div>
                 <p className="text-sm text-zinc-500 mt-1 leading-relaxed">
-                  {layer.shortDescription}
+                  {layer.description}
                 </p>
               </div>
             </Link>

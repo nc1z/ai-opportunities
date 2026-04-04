@@ -1,7 +1,5 @@
-import type { TagValue } from '@/data/types'
-
 interface Props {
-  value: TagValue
+  value: string
 }
 
 export function Tag({ value }: Props) {

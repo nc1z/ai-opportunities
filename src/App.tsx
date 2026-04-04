@@ -1,8 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import { NavHeader } from '@/components/layout/NavHeader'
 import { HomePage } from '@/pages/HomePage'
-import { LayerPage } from '@/pages/LayerPage'
-import { CategoryPage } from '@/pages/CategoryPage'
+import { NodePage } from '@/pages/NodePage'
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
         <NavHeader />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/layer/:layerId" element={<LayerPage />} />
-          <Route path="/layer/:layerId/category/:categoryId" element={<CategoryPage />} />
+          <Route path="/node/:nodeId" element={<NodePage />} />
         </Routes>
       </div>
     </HashRouter>

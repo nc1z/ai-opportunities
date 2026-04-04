@@ -1,8 +1,7 @@
-import type { TagValue } from '@/data/types'
 import { Tag } from './Tag'
 
 interface Props {
-  tags: TagValue[]
+  tags: string[]
 }
 
 export function TagList({ tags }: Props) {
