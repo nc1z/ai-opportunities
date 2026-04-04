@@ -123,7 +123,7 @@ const agents = [
   { name: 'Onyx Deep Research', provider: 'Onyx', ranks: [9] },
   { name: 'Gemini Deep Research', provider: 'Google', ranks: [18] },
   { name: 'OpenAI Deep Research', provider: 'OpenAI', ranks: [20] },
-  { name: 'Perplexity AI Deep Research', provider: 'Perplexity', ranks: [] },
+  { name: 'Perplexity AI Deep Research', provider: 'Perplexity', ranks: [28] },
 ]
 
 const steps = [
