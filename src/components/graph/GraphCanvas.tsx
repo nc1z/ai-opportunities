@@ -18,7 +18,7 @@ import { GRAPH_CENTER, layoutFan } from './graphUtils'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const ROOT_RADIUS = 180
+const ROOT_RADIUS = 210
 
 const nodeTypes: NodeTypes = { taxonomyNode: GraphNodeComponent }
 
@@ -221,88 +221,85 @@ const BTN_STYLE: React.CSSProperties = {
 function GraphControls() {
   const { getNodes, setNodes, setEdges, zoomIn, zoomOut, fitView } = useReactFlow()
   const animRef = useRef(false)
+  const [isExpanded, setIsExpanded] = useState(false)
 
-  const expandAll = useCallback(() => {
-    if (animRef.current) return
-    animRef.current = true
+  const toggleExpandAll = useCallback(() => {
+    if (isExpanded) {
+      // Collapse all
+      animRef.current = false
+      setNodes(buildInitialNodes())
+      setEdges([])
+      setIsExpanded(false)
+    } else {
+      // Expand all via BFS animation
+      if (animRef.current) return
+      animRef.current = true
 
-    // Reset to clean initial state, then animate BFS level-by-level
-    const initial = buildInitialNodes()
-    setNodes(initial)
-    setEdges([])
+      const LEVEL_DELAY = 380
 
-    const LEVEL_DELAY = 380 // ms between depth levels
+      const expandLevel = (parentIds: string[], depth: number) => {
+        if (!animRef.current) return
 
-    const expandLevel = (parentIds: string[], depth: number) => {
-      if (!animRef.current) return // cancelled by collapseAll
+        const current = getNodes()
+        const existingIds = new Set(current.map((n) => n.id))
+        const newNodes: Node[] = []
+        const newEdges: Edge[] = []
+        const nextIds: string[] = []
 
-      const current = getNodes()
-      const existingIds = new Set(current.map((n) => n.id))
-      const newNodes: Node[] = []
-      const newEdges: Edge[] = []
-      const nextIds: string[] = []
+        for (const parentId of parentIds) {
+          const parentNode = current.find((n) => n.id === parentId)
+          if (!parentNode) continue
+          const children = childrenOf[parentId] ?? []
+          if (children.length === 0) continue
 
-      for (const parentId of parentIds) {
-        const parentNode = current.find((n) => n.id === parentId)
-        if (!parentNode) continue
-        const children = childrenOf[parentId] ?? []
-        if (children.length === 0) continue
-
-        const positions = layoutFan(parentNode.position, depth, children.length)
-        children.forEach((child, i) => {
-          if (existingIds.has(child.id)) return
-          newNodes.push({
-            id: child.id,
-            type: 'taxonomyNode',
-            position: positions[i],
-            data: {
-              node: child,
-              isExpanded: false,
-              hasChildren: (childrenOf[child.id] ?? []).length > 0,
-            } satisfies GraphNodeData,
+          const positions = layoutFan(parentNode.position, depth, children.length)
+          children.forEach((child, i) => {
+            if (existingIds.has(child.id)) {
+              nextIds.push(child.id)
+              return
+            }
+            newNodes.push({
+              id: child.id,
+              type: 'taxonomyNode',
+              position: positions[i],
+              data: {
+                node: child,
+                isExpanded: false,
+                hasChildren: (childrenOf[child.id] ?? []).length > 0,
+              } satisfies GraphNodeData,
+            })
+            newEdges.push({
+              id: `edge-${parentId}-${child.id}`,
+              source: parentId,
+              target: child.id,
+              type: 'straight',
+              style: { stroke: '#e4e4e7', strokeWidth: 1 },
+            })
+            nextIds.push(child.id)
           })
-          newEdges.push({
-            id: `edge-${parentId}-${child.id}`,
-            source: parentId,
-            target: child.id,
-            type: 'straight',
-            style: { stroke: '#e4e4e7', strokeWidth: 1 },
-          })
-          nextIds.push(child.id)
-        })
+        }
+
+        setNodes((prev) => [
+          ...prev.map((n) =>
+            parentIds.includes(n.id) && (childrenOf[n.id] ?? []).length > 0
+              ? { ...n, data: { ...n.data, isExpanded: true } }
+              : n,
+          ),
+          ...newNodes,
+        ])
+        if (newEdges.length > 0) setEdges((prev) => [...prev, ...newEdges])
+
+        if (nextIds.length > 0) {
+          setTimeout(() => expandLevel(nextIds, depth + 1), LEVEL_DELAY)
+        } else {
+          animRef.current = false
+        }
       }
 
-      if (newNodes.length === 0) {
-        animRef.current = false
-        return
-      }
-
-      setNodes((prev) => [
-        ...prev.map((n) =>
-          parentIds.includes(n.id) && (childrenOf[n.id] ?? []).length > 0
-            ? { ...n, data: { ...n.data, isExpanded: true } }
-            : n,
-        ),
-        ...newNodes,
-      ])
-      setEdges((prev) => [...prev, ...newEdges])
-
-      if (nextIds.length > 0) {
-        setTimeout(() => expandLevel(nextIds, depth + 1), LEVEL_DELAY)
-      } else {
-        animRef.current = false
-      }
+      setIsExpanded(true)
+      expandLevel(layerRoots.map((r) => r.id), 0)
     }
-
-    // Small head-start delay lets the reset render before animation begins
-    setTimeout(() => expandLevel(layerRoots.map((r) => r.id), 0), 80)
-  }, [getNodes, setNodes, setEdges])
-
-  const collapseAll = useCallback(() => {
-    animRef.current = false
-    setNodes(buildInitialNodes())
-    setEdges([])
-  }, [setNodes, setEdges])
+  }, [isExpanded, getNodes, setNodes, setEdges])
 
   return (
     <Panel position="bottom-left" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -353,36 +350,29 @@ function GraphControls() {
       {/* Divider */}
       <div style={{ height: 1, backgroundColor: '#e4e4e7', margin: '2px 0' }} />
 
-      {/* Expand all */}
+      {/* Expand all / Collapse all toggle */}
       <button
         style={BTN_STYLE}
-        title="Expand all"
-        onClick={expandAll}
+        title={isExpanded ? 'Collapse all' : 'Expand all'}
+        onClick={toggleExpandAll}
         onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
         onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
       >
-        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M2 6V2h4M2 2l4.5 4.5"/>
-          <path d="M14 6V2h-4M14 2l-4.5 4.5"/>
-          <path d="M2 10v4h4M2 14l4.5-4.5"/>
-          <path d="M14 10v4h-4M14 14l-4.5-4.5"/>
-        </svg>
-      </button>
-
-      {/* Collapse all */}
-      <button
-        style={BTN_STYLE}
-        title="Collapse all"
-        onClick={collapseAll}
-        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
-        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
-      >
-        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 2v4H2M6 6l-4.5-4.5"/>
-          <path d="M10 2v4h4M10 6l4.5-4.5"/>
-          <path d="M6 14v-4H2M6 10l-4.5 4.5"/>
-          <path d="M10 14v-4h4M10 10l4.5 4.5"/>
-        </svg>
+        {isExpanded ? (
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 2v4H2M6 6l-4.5-4.5"/>
+            <path d="M10 2v4h4M10 6l4.5-4.5"/>
+            <path d="M6 14v-4H2M6 10l-4.5 4.5"/>
+            <path d="M10 14v-4h4M10 10l4.5 4.5"/>
+          </svg>
+        ) : (
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M2 6V2h4M2 2l4.5 4.5"/>
+            <path d="M14 6V2h-4M14 2l-4.5 4.5"/>
+            <path d="M2 10v4h4M2 14l4.5-4.5"/>
+            <path d="M14 10v4h-4M14 14l-4.5-4.5"/>
+          </svg>
+        )}
       </button>
     </Panel>
   )

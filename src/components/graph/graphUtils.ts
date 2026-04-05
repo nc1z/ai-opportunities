@@ -2,8 +2,9 @@
 
 export const GRAPH_CENTER = { x: 0, y: 0 }
 
-/** Radius from parent → children, indexed by parent depth (0–3) */
-export const CHILD_RADII = [250, 220, 190, 170]
+/** Radius from parent → children, indexed by parent depth (0–3).
+ *  Grows exponentially — tight near root, much wider at deeper levels. */
+export const CHILD_RADII = [280, 560, 560, 560]
 
 /**
  * Place `count` nodes in a fan arc around (px, py), pointing away from
@@ -23,7 +24,7 @@ export function layoutFan(
     return [{ x: parentPos.x + radius * Math.cos(dir), y: parentPos.y + radius * Math.sin(dir) }]
   }
 
-  const spread = Math.max(Math.PI / 3, Math.min(Math.PI * 1.1, count * 0.4))
+  const spread = Math.max(Math.PI / 3, Math.min(Math.PI * 1.2, count * 0.45))
   const start = dir - spread / 2
 
   return Array.from({ length: count }, (_, i) => {
