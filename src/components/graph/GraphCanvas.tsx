@@ -14,7 +14,6 @@ import {
 import '@xyflow/react/dist/style.css'
 import { layerRoots, childrenOf, nodeMap } from '@/data'
 import { GraphNodeComponent, type GraphNodeData } from './GraphNode'
-import { SourceCitation } from '@/components/shared/SourceCitation'
 import { GRAPH_CENTER, layoutFan } from './graphUtils'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -200,8 +199,23 @@ function InfoPanel({
           )}
 
           {node.sources && node.sources.length > 0 && (
-            <div style={{ marginTop: 14 }}>
-              <SourceCitation sources={node.sources} />
+            <div style={{ marginTop: 14, borderTop: '1px solid #f4f4f5', paddingTop: 12 }}>
+              <p style={{ fontSize: 11, fontWeight: 600, color: '#a1a1aa', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: 6 }}>
+                Sources
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                {node.sources.map((s, i) => (
+                  <a
+                    key={i}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: 12, color: '#52525b', textDecoration: 'underline', textUnderlineOffset: 2, textDecorationColor: '#d4d4d8' }}
+                  >
+                    {s.label}
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>
