@@ -9,6 +9,12 @@ import { vsaasFocusNodes } from './focus-vsaas'
 import { creativeFocusNodes } from './focus-creative'
 import { civicFocusNodes } from './focus-civic'
 import { gpDtFocusNodes } from './focus-gp-dt'
+import { focusAwWorkflowNodes } from './focus-aw-workflow'
+import { focusAwToolAgentsNodes } from './focus-aw-tool-agents'
+import { focusAwResearchNodes } from './focus-aw-research'
+import { focusAwOversightNodes } from './focus-aw-oversight'
+import { focusAwMultiAgentNodes } from './focus-aw-multi-agent'
+import { focusAwPersistentNodes } from './focus-aw-persistent'
 import type { TaxonomyNode } from '../types'
 
 export const allNodes: TaxonomyNode[] = [
@@ -23,4 +29,10 @@ export const allNodes: TaxonomyNode[] = [
   ...creativeFocusNodes,
   ...civicFocusNodes,
   ...gpDtFocusNodes,
+  ...focusAwWorkflowNodes,
+  ...focusAwToolAgentsNodes,
+  ...focusAwResearchNodes,
+  ...focusAwOversightNodes,
+  ...focusAwMultiAgentNodes,
+  ...focusAwPersistentNodes,
 ]
