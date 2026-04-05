@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { sourceCount } from '@/data/index'
 
 export function AboutPage() {
   return (
@@ -56,6 +57,22 @@ export function AboutPage() {
 
       <section className="mb-14">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-6">Research Method</h2>
+        <div className="flex gap-6 mb-8">
+          <div className="text-center">
+            <p className="text-3xl font-bold text-zinc-900 tabular-nums">5</p>
+            <p className="text-xs text-zinc-400 mt-1">research agents</p>
+          </div>
+          <div className="w-px bg-zinc-100" />
+          <div className="text-center">
+            <p className="text-3xl font-bold text-zinc-900 tabular-nums">{sourceCount.toLocaleString()}</p>
+            <p className="text-xs text-zinc-400 mt-1">sources cited</p>
+          </div>
+          <div className="w-px bg-zinc-100" />
+          <div className="text-center">
+            <p className="text-3xl font-bold text-zinc-900 tabular-nums">2,533</p>
+            <p className="text-xs text-zinc-400 mt-1">opportunities mapped</p>
+          </div>
+        </div>
         <div className="max-w-2xl space-y-4 text-sm text-zinc-600 leading-relaxed">
           <p>
             The taxonomy was built through a structured multi-agent deep research process. Five of the most capable

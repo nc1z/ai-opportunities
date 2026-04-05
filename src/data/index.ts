@@ -36,3 +36,11 @@ export function ancestorsOf(id: string): TaxonomyNode[] {
 export const layerRoots: TaxonomyNode[] = (childrenOf['__root__'] ?? []).sort(
   (a, b) => a.order - b.order
 )
+
+export const sourceCount: number = (() => {
+  const seen = new Set<string>()
+  for (const node of allNodes) {
+    for (const s of node.sources ?? []) seen.add(s.url)
+  }
+  return seen.size
+})()

@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { layerRoots } from '@/data/index'
+import { layerRoots, sourceCount } from '@/data/index'
 
 const STATS: { label: string; value: number }[] = [
-  { label: 'Layer',  value: 5 },
-  { label: 'Group',  value: 32 },
-  { label: 'Domain', value: 200 },
-  { label: 'Niche',  value: 370 },
-  { label: 'Focus',  value: 2533 },
+  { label: 'Layer',   value: 5 },
+  { label: 'Group',   value: 32 },
+  { label: 'Domain',  value: 200 },
+  { label: 'Niche',   value: 370 },
+  { label: 'Focus',   value: 2533 },
+  { label: 'Sources', value: sourceCount },
 ]
 
 function useCountUp(target: number, duration: number, delay: number) {

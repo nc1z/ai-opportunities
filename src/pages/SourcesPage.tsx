@@ -25,6 +25,12 @@ const sourcesPageModule = import.meta.glob('./SourcesPage.tsx', {
 
 const nicheSourceGroups = buildNicheSourceGroups()
 
+const inlineSourceCount = (sourcesPageModule['./SourcesPage.tsx'] ?? '').split('<Source ').length - 1
+const totalReferencesCount =
+  inlineSourceCount +
+  expansionSourceGroups.reduce((sum, g) => sum + g.entries.length, 0) +
+  nicheSourceGroups.reduce((sum, g) => sum + g.entries.length, 0)
+
 export function SourcesPage() {
   return (
     <main className="max-w-[860px] mx-auto px-6 py-16">
@@ -33,7 +39,10 @@ export function SourcesPage() {
         <span className="text-zinc-300">›</span>
         <span className="text-zinc-700">Sources</span>
       </nav>
-      <h1 className="text-2xl font-semibold text-zinc-900 mb-4">References</h1>
+      <div className="flex items-baseline gap-4 mb-4">
+        <h1 className="text-2xl font-semibold text-zinc-900">References</h1>
+        <span className="text-sm font-mono text-zinc-400">{totalReferencesCount.toLocaleString()} sources</span>
+      </div>
       <p className="text-zinc-500 text-sm leading-relaxed mb-12 max-w-2xl">
         This industry scan was built on deep research conducted by state-of-the-art AI research agents —{' '}
         <strong className="text-zinc-700">OpenAI Deep Research</strong>,{' '}
