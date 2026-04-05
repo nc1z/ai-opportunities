@@ -1,4 +1,4 @@
-# ai-opportunities
+# The Opportunities in AI
 
 An industry scan of the AI ecosystem — a structured overview of where the field stands, what's being built, and where the gaps are. Built to help builders orient themselves across five layers, from consumer-facing applications down to model consumption APIs.
 
@@ -31,12 +31,6 @@ pnpm install
 pnpm run dev
 pnpm run build
 ```
-
-## Tech stack
-
-- React 18 + TypeScript + Vite
-- Tailwind CSS v4
-- React Router v7
 
 ## License
 
