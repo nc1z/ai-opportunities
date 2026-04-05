@@ -27,6 +27,11 @@ import { focusDtObservabilityNodes } from './focus-dt-observability'
 import { focusDtSdksNodes } from './focus-dt-sdks'
 import { focusDtIdeNodes } from './focus-dt-ide'
 import { focusDtGuardrailsNodes } from './focus-dt-guardrails'
+import { focusMcTextGenNodes } from './focus-mc-text-gen'
+import { focusMcImageVideoNodes } from './focus-mc-image-video'
+import { focusMcAudioNodes } from './focus-mc-audio'
+import { focusMcEmbeddingsNodes } from './focus-mc-embeddings'
+import { focusMcAccessNodes } from './focus-mc-access'
 import type { TaxonomyNode } from '../types'
 
 export const allNodes: TaxonomyNode[] = [
@@ -59,4 +64,9 @@ export const allNodes: TaxonomyNode[] = [
   ...focusDtSdksNodes,
   ...focusDtIdeNodes,
   ...focusDtGuardrailsNodes,
+  ...focusMcTextGenNodes,
+  ...focusMcImageVideoNodes,
+  ...focusMcAudioNodes,
+  ...focusMcEmbeddingsNodes,
+  ...focusMcAccessNodes,
 ]
