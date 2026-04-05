@@ -40,6 +40,21 @@ export function AboutPage() {
       </section>
 
       <section className="mb-14">
+        <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-6">Taxonomy Levels</h2>
+        <div className="max-w-2xl space-y-3">
+          {taxonomyLevels.map((level) => (
+            <div key={level.name} className="flex gap-4 text-sm">
+              <span className="text-zinc-300 font-mono shrink-0 mt-0.5">{level.order}</span>
+              <div>
+                <span className="font-medium text-zinc-800">{level.name}</span>
+                <span className="text-zinc-400 ml-2">{level.description}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-14">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-6">Research Method</h2>
         <div className="max-w-2xl space-y-4 text-sm text-zinc-600 leading-relaxed">
           <p>
@@ -167,4 +182,12 @@ const layers = [
   { depth: 'L3', name: 'Harness & Runtime Layer', description: 'Context, memory, tool orchestration, safety, observability' },
   { depth: 'L4', name: 'Developer Tooling Layer', description: 'Evals, prompt management, SDKs, CI/CD, guardrails' },
   { depth: 'L5', name: 'Model Consumption Layer', description: 'How applications access, route, and optimise model calls' },
+]
+
+const taxonomyLevels = [
+  { order: '1', name: 'Layer', description: 'The top-level part of the AI stack, such as applications, runtimes, or developer tooling.' },
+  { order: '2', name: 'Group', description: 'A broad cluster inside a layer that organizes similar kinds of work or products.' },
+  { order: '3', name: 'Domain', description: 'A more specific problem area within a group, usually centered on a concrete workflow or market.' },
+  { order: '4', name: 'Niche', description: 'A tightly scoped subcategory where user needs, constraints, or buyer behavior become distinct.' },
+  { order: '5', name: 'Focus', description: 'The most specific opportunity level: an exact product angle, use case, or startup wedge worth building.' },
 ]
