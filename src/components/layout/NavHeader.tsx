@@ -8,7 +8,7 @@ export function NavHeader() {
           to="/"
           className="text-xs tracking-widest uppercase text-zinc-400 hover:text-zinc-700 transition-colors font-medium"
         >
-          ai-opportunities
+          The Opportunities in AI
         </Link>
         <div className="flex items-center gap-6">
           <Link
