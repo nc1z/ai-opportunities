@@ -22,6 +22,11 @@ import { focusHrSafetyNodes } from './focus-hr-safety'
 import { focusHrSandboxNodes } from './focus-hr-sandbox'
 import { focusHrObservabilityNodes } from './focus-hr-observability'
 import { focusHrGatewayNodes } from './focus-hr-gateway'
+import { focusDtEvalsNodes } from './focus-dt-evals'
+import { focusDtObservabilityNodes } from './focus-dt-observability'
+import { focusDtSdksNodes } from './focus-dt-sdks'
+import { focusDtIdeNodes } from './focus-dt-ide'
+import { focusDtGuardrailsNodes } from './focus-dt-guardrails'
 import type { TaxonomyNode } from '../types'
 
 export const allNodes: TaxonomyNode[] = [
@@ -49,4 +54,9 @@ export const allNodes: TaxonomyNode[] = [
   ...focusHrSandboxNodes,
   ...focusHrObservabilityNodes,
   ...focusHrGatewayNodes,
+  ...focusDtEvalsNodes,
+  ...focusDtObservabilityNodes,
+  ...focusDtSdksNodes,
+  ...focusDtIdeNodes,
+  ...focusDtGuardrailsNodes,
 ]
