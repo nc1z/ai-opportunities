@@ -33,16 +33,20 @@ function layoutPolygon(cx: number, cy: number, radius: number, count: number) {
 
 function buildInitialNodes(): Node[] {
   const positions = layoutPolygon(GRAPH_CENTER.x, GRAPH_CENTER.y, ROOT_RADIUS, layerRoots.length)
-  return layerRoots.map((layer, i) => ({
-    id: layer.id,
-    type: 'taxonomyNode',
-    position: positions[i],
-    data: {
-      node: layer,
-      isExpanded: false,
-      hasChildren: (childrenOf[layer.id] ?? []).length > 0,
-    } satisfies GraphNodeData,
-  }))
+  return layerRoots.map((layer, i) => {
+    const pos = { ...positions[i] }
+    if (layer.order === 3 || layer.order === 4) pos.y -= 80
+    return {
+      id: layer.id,
+      type: 'taxonomyNode',
+      position: pos,
+      data: {
+        node: layer,
+        isExpanded: false,
+        hasChildren: (childrenOf[layer.id] ?? []).length > 0,
+      } satisfies GraphNodeData,
+    }
+  })
 }
 
 // ─── Info Panel ───────────────────────────────────────────────────────────────
@@ -416,7 +420,7 @@ export function GraphCanvas() {
           style: { stroke: '#d4d4d8', strokeWidth: 1 },
         }}
       >
-        <Background variant={BackgroundVariant.Dots} color="#e4e4e7" gap={24} size={1} />
+        <Background variant={BackgroundVariant.Lines} color="#f7f7f7" gap={40} />
         <GraphControls />
       </ReactFlow>
 

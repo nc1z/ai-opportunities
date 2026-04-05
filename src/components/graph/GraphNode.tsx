@@ -234,6 +234,8 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
     (e: React.MouseEvent) => {
       e.stopPropagation()
       const nodeId = node.id
+      const color = LAYER_ACCENT[node.layerId]
+
       setNodes((prev) => {
         const existingIds = new Set(prev.map((n) => n.id))
         const subtreeIds = new Set<string>([nodeId])
@@ -249,6 +251,20 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
         }
         const thisNode = prev.find((n) => n.id === nodeId)
         const nextHighlight = !thisNode?.data?.isHighlighted
+
+        setEdges((prevEdges) =>
+          prevEdges.map((edge) =>
+            subtreeIds.has(edge.source) && subtreeIds.has(edge.target)
+              ? {
+                  ...edge,
+                  style: nextHighlight
+                    ? { stroke: color, strokeWidth: 1.5, strokeOpacity: 0.4 }
+                    : { stroke: '#e4e4e7', strokeWidth: 1 },
+                }
+              : edge,
+          ),
+        )
+
         return prev.map((n) =>
           subtreeIds.has(n.id)
             ? { ...n, data: { ...n.data, isHighlighted: nextHighlight } }
@@ -256,7 +272,7 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
         )
       })
     },
-    [node, setNodes],
+    [node, setNodes, setEdges],
   )
 
   return (
@@ -316,6 +332,20 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
             >
               {String(node.order).padStart(2, '0')}
             </span>
+          )}
+
+          {/* Accent dot — child nodes only */}
+          {node.depth > 0 && accentColor && (
+            <span
+              style={{
+                width: 5,
+                height: 5,
+                borderRadius: '50%',
+                backgroundColor: accentColor,
+                flexShrink: 0,
+                opacity: 0.85,
+              }}
+            />
           )}
 
           <span
