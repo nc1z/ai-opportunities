@@ -15,6 +15,13 @@ import { focusAwResearchNodes } from './focus-aw-research'
 import { focusAwOversightNodes } from './focus-aw-oversight'
 import { focusAwMultiAgentNodes } from './focus-aw-multi-agent'
 import { focusAwPersistentNodes } from './focus-aw-persistent'
+import { focusHrContextNodes } from './focus-hr-context'
+import { focusHrMemoryNodes } from './focus-hr-memory'
+import { focusHrToolsNodes } from './focus-hr-tools'
+import { focusHrSafetyNodes } from './focus-hr-safety'
+import { focusHrSandboxNodes } from './focus-hr-sandbox'
+import { focusHrObservabilityNodes } from './focus-hr-observability'
+import { focusHrGatewayNodes } from './focus-hr-gateway'
 import type { TaxonomyNode } from '../types'
 
 export const allNodes: TaxonomyNode[] = [
@@ -35,4 +42,11 @@ export const allNodes: TaxonomyNode[] = [
   ...focusAwOversightNodes,
   ...focusAwMultiAgentNodes,
   ...focusAwPersistentNodes,
+  ...focusHrContextNodes,
+  ...focusHrMemoryNodes,
+  ...focusHrToolsNodes,
+  ...focusHrSafetyNodes,
+  ...focusHrSandboxNodes,
+  ...focusHrObservabilityNodes,
+  ...focusHrGatewayNodes,
 ]
