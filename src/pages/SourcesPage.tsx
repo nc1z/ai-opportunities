@@ -1,6 +1,30 @@
 import { Link } from 'react-router-dom'
 import { expansionSourceGroups } from '../data/expansionSources'
 
+interface ExtractedSourceEntry {
+  label: string
+  href: string
+}
+
+interface ExtractedSourceGroup {
+  label: string
+  entries: ExtractedSourceEntry[]
+}
+
+const nicheResearchFiles = import.meta.glob('../../.research/expansion/niche/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>
+
+const sourcesPageModule = import.meta.glob('./SourcesPage.tsx', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>
+
+const nicheSourceGroups = buildNicheSourceGroups()
+
 export function SourcesPage() {
   return (
     <main className="max-w-[860px] mx-auto px-6 py-16">
@@ -197,6 +221,18 @@ export function SourcesPage() {
         ))}
       </Section>
 
+      {nicheSourceGroups.length > 0 && (
+        <Section title="Niche Expansion Research References">
+          {nicheSourceGroups.map((group) => (
+            <SourceGroup key={group.label} label={group.label}>
+              {group.entries.map((source) => (
+                <Source key={source.href} label={source.label} href={source.href} />
+              ))}
+            </SourceGroup>
+          ))}
+        </Section>
+      )}
+
       <Section title="News & Analysis">
         <ul className="space-y-2">
           <Source label="TechCrunch — Harvey raises $100M for Legal AI (2024)" href="https://techcrunch.com/2024/07/23/openai-backed-legaltech-startup-harvey-raises-100m/" />
@@ -259,4 +295,106 @@ function Source({ label, href }: SourceProps) {
       </a>
     </li>
   )
+}
+
+function buildNicheSourceGroups(): ExtractedSourceGroup[] {
+  const existingHrefs = new Set<string>([
+    ...expansionSourceGroups.flatMap((group) => group.entries.map((entry) => normalizeHref(entry.href))),
+    ...extractInlineSourceHrefs(sourcesPageModule['./SourcesPage.tsx'] ?? ''),
+  ])
+
+  return Object.entries(nicheResearchFiles)
+    .sort(([leftPath], [rightPath]) => leftPath.localeCompare(rightPath))
+    .map(([filePath, content]) => {
+      const seenInGroup = new Set<string>()
+      const entries = extractSourcesFromMarkdown(content).filter((entry) => {
+        const href = normalizeHref(entry.href)
+        if (existingHrefs.has(href) || seenInGroup.has(href)) {
+          return false
+        }
+
+        seenInGroup.add(href)
+        existingHrefs.add(href)
+        return true
+      })
+
+      return {
+        label: formatNicheGroupLabel(filePath),
+        entries,
+      }
+    })
+    .filter((group) => group.entries.length > 0)
+}
+
+function extractInlineSourceHrefs(source: string) {
+  return [...source.matchAll(/href="([^"]+)"/g)].map((match) => normalizeHref(match[1]))
+}
+
+function extractSourcesFromMarkdown(markdown: string) {
+  const entries: ExtractedSourceEntry[] = []
+  const seen = new Set<string>()
+
+  for (const match of markdown.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g)) {
+    const label = normalizeLabel(match[1])
+    const href = normalizeHref(match[2])
+
+    if (seen.has(href)) {
+      continue
+    }
+
+    seen.add(href)
+    entries.push({ label, href })
+  }
+
+  for (const match of markdown.matchAll(/https?:\/\/[^\s)\]>'"`]+/g)) {
+    const href = normalizeHref(match[0])
+
+    if (seen.has(href)) {
+      continue
+    }
+
+    seen.add(href)
+    entries.push({
+      label: formatUrlLabel(href),
+      href,
+    })
+  }
+
+  return entries
+}
+
+function normalizeHref(href: string) {
+  return href
+    .replace(/\\_/g, '_')
+    .replace(/\\\(/g, '(')
+    .replace(/\\\)/g, ')')
+}
+
+function normalizeLabel(label: string) {
+  return label
+    .replace(/\\_/g, '_')
+    .replace(/\\\*/g, '*')
+    .replace(/\\\(/g, '(')
+    .replace(/\\\)/g, ')')
+    .trim()
+}
+
+function formatUrlLabel(href: string) {
+  try {
+    const url = new URL(href)
+    const path = `${url.pathname}${url.search}`.replace(/\/$/, '')
+    return path ? `${url.hostname}${path}` : url.hostname
+  } catch {
+    return href
+  }
+}
+
+function formatNicheGroupLabel(filePath: string) {
+  const fileName = filePath.split('/').pop()?.replace(/\.md$/, '') ?? filePath
+  const baseName = fileName.replace(/^\d+-/, '').replace(/-niche-expansion$/, '')
+
+  return baseName
+    .split('-')
+    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+    .join(' ')
 }
