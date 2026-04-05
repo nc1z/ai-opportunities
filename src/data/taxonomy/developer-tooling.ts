@@ -942,4 +942,414 @@ export const developerToolingNodes: TaxonomyNode[] = [
   { id: 'dt-focus-adversarial-prompts', parentId: 'devtool-guard-auto-redteam', layerId: 'developer-tooling', depth: 4, depthLabel: 'focus', name: 'Adversarial Prompt Generation', description: 'Automated generation of prompts designed to elicit unsafe, biased, or policy-violating model outputs.', order: 1 },
   { id: 'dt-focus-instruction-pairs', parentId: 'devtool-data-synth-training', layerId: 'developer-tooling', depth: 4, depthLabel: 'focus', name: 'Instruction Pair Generation', description: 'Generating (instruction, response) pairs at scale for supervised fine-tuning datasets.', order: 1 },
   { id: 'dt-focus-pre-labelling', parentId: 'devtool-data-label-assisted', layerId: 'developer-tooling', depth: 4, depthLabel: 'focus', name: 'Pre-Labelling with LLMs', description: 'Using LLMs to generate initial labels that human annotators then verify and correct, reducing annotation time.', order: 1 },
+
+  // ─── New domains from 04-developer-tooling-layer-expansion ───────────────
+
+  // Multi-Turn Conversational Evaluation (under Evals & Testing, depth 2)
+  {
+    id: 'dt-evals-multiturn',
+    parentId: 'devtool-evals',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Multi-Turn Conversational Evaluation',
+    description: 'Conversation-level evaluation that measures the integrity of entire multi-turn interactions rather than individual responses. Key metrics: conversation completeness (did the agent fulfill all user intentions?), knowledge retention (did it avoid redundant questioning?), role adherence, and tool-use reliability. Evaluating turns in isolation misses the failure modes of agentic, long-horizon systems.',
+    order: 5,
+  },
+
+  // Adversarial Simulation (under Evals & Testing, depth 2)
+  {
+    id: 'dt-evals-adversarial-sim',
+    parentId: 'devtool-evals',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Adversarial Simulation & Environment Testing',
+    description: 'Evaluation using a "simulator LLM" that behaves non-cooperatively — mimicking hostile users, adversarial prompts, and edge-case environments. Also covers environment-aware testing that verifies agent side effects in mock file systems, shells, and databases. Distinct from automated benchmarks: requires an adversarial actor, not a passive grader.',
+    order: 6,
+  },
+
+  // Cross-Agent Attribution (under Tracing & Observability, depth 2)
+  {
+    id: 'dt-obs-cross-agent',
+    parentId: 'devtool-observability',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Cross-Agent Attribution',
+    description: 'Tracing that follows causal chains across multi-agent systems — attributing a final failure to a specific sub-agent\'s reasoning step or a specific tool\'s output. Distinct from distributed tracing because it tracks "reasoning causality," not just network spans. Essential when a Manager agent delegates to Worker agents and failures cascade in non-obvious ways.',
+    order: 4,
+  },
+
+  // User Session Analytics (under Tracing & Observability, depth 2)
+  {
+    id: 'dt-obs-session-analytics',
+    parentId: 'devtool-observability',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'User Session Analytics',
+    description: 'AI-specific session analytics that track conversation flows, satisfaction signals extracted from text, and prompt-to-output effectiveness over multi-turn interactions. Makes "invisible failures" visible — where a model is confidently wrong but the user doesn\'t push back, creating a silent mismatch that standard product analytics cannot detect.',
+    order: 5,
+  },
+
+  // Agent Protocols & Interoperability (under SDKs, Frameworks & Libraries, depth 2)
+  {
+    id: 'dt-sdks-agent-protocols',
+    parentId: 'dt-sdks-frameworks',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Agent Protocols & Interoperability',
+    description: 'Client libraries and tooling for MCP (Model Context Protocol) and A2A (Agent-to-Agent) protocol implementations. The plumbing that makes heterogeneous multi-agent systems practical at scale — allowing agents built on different frameworks to discover, authenticate, and exchange context with each other.',
+    order: 6,
+  },
+
+  // Alignment Tooling (under SDKs, Frameworks & Libraries, depth 2)
+  {
+    id: 'dt-sdks-alignment',
+    parentId: 'dt-sdks-frameworks',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Alignment Tooling',
+    description: 'RLHF, DPO, and preference optimization libraries for shaping model behavior toward intended values. Distinct from standard fine-tuning: alignment involves different data loops (preference pairs, not instruction pairs), different training objectives, and often "critic agent" loops that review and refine outputs. TRL, OpenRLHF, and similar libraries form this category.',
+    order: 7,
+  },
+
+  // AI Code Review & PR Automation (under AI IDEs & Coding Assistants, depth 2)
+  {
+    id: 'dt-ide-code-review',
+    parentId: 'dt-ai-ides',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI Code Review & PR Automation',
+    description: 'System-aware automated code review that understands dependency graphs across hundreds of repositories. As AI-generated code volume increases, human review capacity becomes the bottleneck — tools like CodeRabbit (now reviewing 1M+ repositories) and Qodo Merge provide contextual review that checks not just code style but cross-repo impact.',
+    order: 4,
+  },
+
+  // AI Documentation Generation (under AI IDEs & Coding Assistants, depth 2)
+  {
+    id: 'dt-ide-doc-gen',
+    parentId: 'dt-ai-ides',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI Documentation Generation',
+    description: 'Platforms that analyze repositories and APIs to auto-generate and keep synchronized: docstrings, READMEs, and architectural diagrams. Distinct from test generation — this focuses on communicating system intent to developers, not verifying behavior. A fast-growing category as AI-written codebases outpace human documentation capacity.',
+    order: 5,
+  },
+
+  // Agentic IAM & Identity (under Guardrails & Safety Tooling, depth 2)
+  {
+    id: 'dt-guard-agentic-iam',
+    parentId: 'devtool-guardrails',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Agentic IAM & Identity',
+    description: 'Tools for managing AI agents as independent, identity-bearing entities with their own credentials, permissions, and audit trails. Only 21.9% of technical teams treat agents as distinct identities — most rely on shared API keys which breaks accountability. Covers agent identity management, MCP permission scoping, and credential delegation flows.',
+    order: 4,
+  },
+
+  // Privacy & Data Leakage Detection (under Guardrails & Safety Tooling, depth 2)
+  {
+    id: 'dt-guard-privacy',
+    parentId: 'devtool-guardrails',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Privacy & Data Leakage Detection',
+    description: 'Inbound scanning tools that detect and redact PII, API keys, and credentials from prompts before they reach external models. Distinct from output validation (which is outbound): this focuses on data that should never leave the organization. Nightfall AI, Private AI, Microsoft Presidio represent the category.',
+    order: 5,
+  },
+
+  // Benchmark Contamination Detection (under Data & Dataset Tooling, depth 2)
+  {
+    id: 'dt-data-contamination',
+    parentId: 'devtool-data',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Benchmark Contamination Detection',
+    description: 'Statistical and embedding-based tools that detect when a model has been trained on its evaluation set — inflating benchmark scores and corrupting model selection decisions. Driven by the "Autophagy" problem where synthetic training data poisons downstream evals. Critical for trustworthy evaluation as academic benchmarks saturate above 90%.',
+    order: 5,
+  },
+
+  // Data Provenance & Lineage (under Data & Dataset Tooling, depth 2)
+  {
+    id: 'dt-data-provenance',
+    parentId: 'devtool-data',
+    layerId: 'developer-tooling',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Data Provenance & Lineage',
+    description: 'Tools providing column-level lineage for training data and cryptographic content credentials for digital assets. Driven by EU AI Act transparency requirements (August 2026 deadline) and the need to distinguish human-created from AI-generated content. C2PA standards create sealed provenance records that travel with photos, videos, and documents.',
+    order: 6,
+  },
+
+  // ─── Niches under Multi-Turn Evaluation (depth 3) ────────────────────────
+  {
+    id: 'dt-evals-mt-conversation-metrics',
+    parentId: 'dt-evals-multiturn',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Conversation-Level Metrics',
+    description: 'Holistic metrics that evaluate entire conversations — completeness, knowledge retention, and contextual faithfulness across all turns rather than individual responses.',
+    order: 1,
+  },
+  {
+    id: 'dt-evals-mt-role-adherence',
+    parentId: 'dt-evals-multiturn',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Role Adherence & Tool-Use Reliability',
+    description: 'Evaluating whether agents maintain their defined persona throughout long interactions and select tool parameters correctly with proper error handling.',
+    order: 2,
+  },
+
+  // ─── Niches under Adversarial Simulation (depth 3) ───────────────────────
+  {
+    id: 'dt-evals-as-sim-personas',
+    parentId: 'dt-evals-adversarial-sim',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Adversarial Persona Simulation',
+    description: 'Using a dedicated simulator LLM to impersonate hostile users — probing for jailbreaks, prompt injection, and logic flaws through non-cooperative, adversarial interaction.',
+    order: 1,
+  },
+  {
+    id: 'dt-evals-as-env-testing',
+    parentId: 'dt-evals-adversarial-sim',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Environment-Aware Action Testing',
+    description: 'Verifying the side effects of agent actions in mock file systems, shells, and databases — testing that agents produce the correct state changes, not just correct outputs.',
+    order: 2,
+  },
+
+  // ─── Niches under Cross-Agent Attribution (depth 3) ──────────────────────
+  {
+    id: 'dt-obs-ca-reasoning-causality',
+    parentId: 'dt-obs-cross-agent',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Reasoning Causality Tracing',
+    description: 'Tracing that captures the causal chain of reasoning decisions — not just which agent made a call, but why, and how that decision influenced downstream agent behavior.',
+    order: 1,
+  },
+  {
+    id: 'dt-obs-ca-failure-attribution',
+    parentId: 'dt-obs-cross-agent',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Multi-Agent Failure Attribution',
+    description: 'Tools that trace cascading failures from a final error back to the specific sub-agent reasoning step or tool output that caused it.',
+    order: 2,
+  },
+
+  // ─── Niches under User Session Analytics (depth 3) ───────────────────────
+  {
+    id: 'dt-obs-sa-conversation-flows',
+    parentId: 'dt-obs-session-analytics',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Conversation Flow Analysis',
+    description: 'Mapping the paths users take through multi-turn conversations — identifying drop-off points, clarification loops, and common abandonment patterns.',
+    order: 1,
+  },
+  {
+    id: 'dt-obs-sa-satisfaction',
+    parentId: 'dt-obs-session-analytics',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Implicit Satisfaction Signals',
+    description: 'Extracting satisfaction signals from conversation text — detecting when users accept incorrect answers without pushback to find "silent mismatch" failure modes.',
+    order: 2,
+  },
+
+  // ─── Niches under Agent Protocols (depth 3) ──────────────────────────────
+  {
+    id: 'dt-sdks-ap-mcp-clients',
+    parentId: 'dt-sdks-agent-protocols',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'MCP Client Libraries',
+    description: 'Client implementations for the Model Context Protocol that allow applications to connect to MCP servers, discover tools, and invoke resources in a standardized way.',
+    order: 1,
+  },
+  {
+    id: 'dt-sdks-ap-a2a-impl',
+    parentId: 'dt-sdks-agent-protocols',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'A2A Protocol Implementations',
+    description: 'Libraries implementing the Agent-to-Agent protocol for cross-vendor agent discovery, authentication, and communication — enabling agents to interoperate across frameworks.',
+    order: 2,
+  },
+
+  // ─── Niches under Alignment Tooling (depth 3) ────────────────────────────
+  {
+    id: 'dt-sdks-al-rlhf-dpo',
+    parentId: 'dt-sdks-alignment',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'RLHF & DPO Libraries',
+    description: 'Libraries like TRL and OpenRLHF that implement reinforcement learning from human feedback and direct preference optimization for post-training model alignment.',
+    order: 1,
+  },
+  {
+    id: 'dt-sdks-al-critic-agents',
+    parentId: 'dt-sdks-alignment',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Critic-Creator Agent Loops',
+    description: 'Frameworks where critic agents review and score the outputs of creator agents to generate preference data and drive continuous self-improvement loops.',
+    order: 2,
+  },
+
+  // ─── Niches under AI Code Review (depth 3) ───────────────────────────────
+  {
+    id: 'dt-ide-cr-pr-automation',
+    parentId: 'dt-ide-code-review',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'PR Review Automation',
+    description: 'Tools that automatically review pull requests with inline comments, summarize changes, and flag potential issues — reducing reviewer load as AI-generated code volume grows.',
+    order: 1,
+  },
+  {
+    id: 'dt-ide-cr-repo-aware',
+    parentId: 'dt-ide-code-review',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Multi-Repo Dependency Analysis',
+    description: 'Code review tools that understand cross-repository dependency graphs, detecting when a change in one repo would break consumers in other repositories.',
+    order: 2,
+  },
+
+  // ─── Niches under AI Documentation Generation (depth 3) ─────────────────
+  {
+    id: 'dt-ide-dg-docstrings',
+    parentId: 'dt-ide-doc-gen',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Docstring & README Sync',
+    description: 'Tools that keep inline documentation — docstrings, READMEs, and changelogs — synchronized with evolving code, regenerating them when code changes.',
+    order: 1,
+  },
+  {
+    id: 'dt-ide-dg-api-docs',
+    parentId: 'dt-ide-doc-gen',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'API & Architecture Documentation',
+    description: 'Automated generation of API reference documentation and architectural diagrams (UML, sequence diagrams) directly from source code analysis.',
+    order: 2,
+  },
+
+  // ─── Niches under Agentic IAM (depth 3) ──────────────────────────────────
+  {
+    id: 'dt-guard-ai-agent-identity',
+    parentId: 'dt-guard-agentic-iam',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Agent Identity Management',
+    description: 'Non-human identity (NHI) systems that give each AI agent its own credentials, audit trail, and identity lifecycle — replacing shared API key anti-patterns.',
+    order: 1,
+  },
+  {
+    id: 'dt-guard-ai-mcp-perms',
+    parentId: 'dt-guard-agentic-iam',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'MCP Permission & Credential Governance',
+    description: 'Fine-grained permission scoping for MCP server access and credential delegation in agent pipelines, ensuring least-privilege at the tool level.',
+    order: 2,
+  },
+
+  // ─── Niches under Privacy & Data Leakage (depth 3) ───────────────────────
+  {
+    id: 'dt-guard-priv-pii-inbound',
+    parentId: 'dt-guard-privacy',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Inbound PII & Credential Scanning',
+    description: 'Pre-flight scanning of prompts for PII, API keys, secrets, and proprietary data before they are sent to external model providers.',
+    order: 1,
+  },
+  {
+    id: 'dt-guard-priv-prompt-firewall',
+    parentId: 'dt-guard-privacy',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Prompt Firewalls',
+    description: 'Policy-based input controls that block or redact entire categories of sensitive data from entering LLM context — covering both privacy and injection prevention.',
+    order: 2,
+  },
+
+  // ─── Niches under Benchmark Contamination (depth 3) ──────────────────────
+  {
+    id: 'dt-data-cont-statistical',
+    parentId: 'dt-data-contamination',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Statistical Contamination Tests',
+    description: 'Statistical hypothesis tests that detect anomalously high performance on specific evaluation examples, indicating the model was trained on those examples.',
+    order: 1,
+  },
+  {
+    id: 'dt-data-cont-embedding',
+    parentId: 'dt-data-contamination',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Embedding-Based Overlap Detection',
+    description: 'Semantic similarity analysis that finds near-duplicate content between training corpora and evaluation sets, catching contamination that exact-match tests miss.',
+    order: 2,
+  },
+
+  // ─── Niches under Data Provenance (depth 3) ──────────────────────────────
+  {
+    id: 'dt-data-prov-lineage',
+    parentId: 'dt-data-provenance',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Training Data Lineage',
+    description: 'Column-level lineage tools that track the origin and transformation history of every data point used in model training, enabling EU AI Act compliance disclosures.',
+    order: 1,
+  },
+  {
+    id: 'dt-data-prov-c2pa',
+    parentId: 'dt-data-provenance',
+    layerId: 'developer-tooling',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'C2PA Content Credentials',
+    description: 'Cryptographically sealed provenance records (C2PA standard) embedded in digital assets to distinguish human-created from AI-generated content across its distribution lifecycle.',
+    order: 2,
+  },
 ]
