@@ -14,6 +14,7 @@ import {
 import '@xyflow/react/dist/style.css'
 import { layerRoots, childrenOf, nodeMap } from '@/data'
 import { GraphNodeComponent, type GraphNodeData } from './GraphNode'
+import { SourceCitation } from '@/components/shared/SourceCitation'
 import { GRAPH_CENTER, layoutFan } from './graphUtils'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -197,6 +198,12 @@ function InfoPanel({
             >
               {childCount} {node.depthLabel === 'layer' ? 'groups' : node.depthLabel === 'group' ? 'domains' : node.depthLabel === 'domain' ? 'niches' : node.depthLabel === 'niche' ? 'focus areas' : 'items'}
             </p>
+          )}
+
+          {node.sources && node.sources.length > 0 && (
+            <div style={{ marginTop: 14 }}>
+              <SourceCitation sources={node.sources} />
+            </div>
           )}
         </div>
       </div>
