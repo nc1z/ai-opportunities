@@ -1682,4 +1682,104 @@ export const applicationNodes: TaxonomyNode[] = [
     description: 'AI that converts Figma designs, sketches, or screenshots directly into styled, responsive frontend code — closing the gap between design and engineering.',
     order: 2,
   },
+
+  // ─── New Domains under Creative Tools (depth 2) ──────────────────────────
+  {
+    id: 'app-creative-automation',
+    parentId: 'app-creative-tools',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'AI Creator Automation',
+    description: 'Tools and orchestration stacks that automate the end-to-end content production pipeline — topic research, scripting, voiceover, video rendering, and multi-platform distribution. Distinct from human-in-the-loop creative tools: the human operates as a systems architect rather than a direct creator.',
+    order: 7,
+  },
+  {
+    id: 'app-creative-synthetic-personas',
+    parentId: 'app-creative-tools',
+    layerId: 'application',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Synthetic Personas & AI Influencers',
+    description: 'Platforms and workflows for creating, maintaining, and operating fully synthetic digital identities at scale — consistent character appearance, voice, and personality across platforms. Used by media companies, agencies, and independent creators for faceless brand building and AI-native talent.',
+    order: 8,
+  },
+
+  // ─── Niches under AI Creator Automation (depth 3) ────────────────────────
+  {
+    id: 'app-creative-automation-pipeline',
+    parentId: 'app-creative-automation',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Automated Video Production Pipelines',
+    description: 'Orchestrated stacks (n8n, Make.com) that connect research, scripting, voiceover, image generation, and video rendering APIs into a fully automated publishing workflow with minimal human intervention.',
+    order: 1,
+  },
+  {
+    id: 'app-creative-automation-distribution',
+    parentId: 'app-creative-automation',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Multi-Platform Content Distribution',
+    description: 'AI tools that repurpose and reformat a single piece of content — a video, article, or podcast — into platform-optimised variants for YouTube, TikTok, Instagram, and X simultaneously.',
+    order: 2,
+  },
+
+  // ─── Niches under Synthetic Personas (depth 3) ───────────────────────────
+  {
+    id: 'app-creative-synthetic-identity',
+    parentId: 'app-creative-synthetic-personas',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'AI Identity Creation & Consistency',
+    description: 'Tooling for generating and locking a synthetic character\'s visual DNA — custom LoRA training, facial restoration, and pose control — to maintain identity consistency across varied lighting, environments, and motion.',
+    order: 1,
+  },
+  {
+    id: 'app-creative-synthetic-management',
+    parentId: 'app-creative-synthetic-personas',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'AI Influencer Management',
+    description: 'Platforms for operating AI influencer accounts at scale — scheduling, audience engagement, cross-platform localisation, and performance analytics for synthetic creator identities.',
+    order: 2,
+  },
+
+  // ─── New Niche under B2B Sales & Revenue (depth 3) ───────────────────────
+  {
+    id: 'app-b2b-sales-growth-marketing',
+    parentId: 'app-b2b-sales',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'AI Growth Marketing & UGC',
+    description: 'AI tools for growth experimentation — generating user-generated content (UGC) style ads, orchestrating creator-led distribution at scale, and identifying high-intent competitor mentions to intercept with targeted outreach.',
+    order: 3,
+  },
+
+  // ─── New Niches under Civic > Misinformation & Digital Integrity (depth 3) ─
+  {
+    id: 'app-civic-integrity-provenance',
+    parentId: 'app-civic-digital-integrity',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Content Provenance & Attribution',
+    description: 'Standards and tooling for cryptographically signing and labelling AI-generated or AI-modified media at the point of creation. C2PA (Content Credentials) is the leading standard — TikTok has used it to label over 1.3 billion videos.',
+    order: 1,
+  },
+  {
+    id: 'app-civic-integrity-detection',
+    parentId: 'app-civic-digital-integrity',
+    layerId: 'application',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Synthetic Content Detection',
+    description: 'AI systems that identify deepfakes, AI-generated video, audio cloning, and synthetic text at platform scale — used by social networks, news organisations, and regulators to enforce disclosure rules and protect information integrity.',
+    order: 2,
+  },
 ]
