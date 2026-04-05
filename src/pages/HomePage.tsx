@@ -1,5 +1,46 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { layerRoots } from '@/data/index'
+
+const STATS: { label: string; value: number }[] = [
+  { label: 'Layer',  value: 5 },
+  { label: 'Group',  value: 32 },
+  { label: 'Domain', value: 200 },
+  { label: 'Niche',  value: 370 },
+  { label: 'Focus',  value: 2533 },
+]
+
+function useCountUp(target: number, duration: number, delay: number) {
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    let frame: number
+    const timeout = setTimeout(() => {
+      let start: number | null = null
+      const tick = (ts: number) => {
+        if (!start) start = ts
+        const progress = Math.min((ts - start) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3) // ease-out cubic
+        setCount(Math.round(eased * target))
+        if (progress < 1) frame = requestAnimationFrame(tick)
+      }
+      frame = requestAnimationFrame(tick)
+    }, delay)
+    return () => { clearTimeout(timeout); cancelAnimationFrame(frame) }
+  }, [target, duration, delay])
+  return count
+}
+
+function StatPill({ label, value, delay }: { label: string; value: number; delay: number }) {
+  const count = useCountUp(value, 700, delay)
+  return (
+    <div className="flex items-center gap-2 bg-white border border-zinc-200 rounded-lg px-3 py-2 shadow-sm">
+      <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400">{label}</span>
+      <span className="text-sm font-bold text-zinc-900 tabular-nums">
+        {count.toLocaleString()}
+      </span>
+    </div>
+  )
+}
 
 export function HomePage() {
   return (
@@ -19,6 +60,12 @@ export function HomePage() {
           </span>
           <span className="text-xs text-zinc-400">Research last updated 05 April 2026</span>
         </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-10">
+        {STATS.map((s, i) => (
+          <StatPill key={s.label} label={s.label} value={s.value} delay={i * 80} />
+        ))}
       </div>
 
       <div id="layers" className="relative">
