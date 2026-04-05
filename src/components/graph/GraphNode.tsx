@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, memo } from 'react'
 import { Handle, Position, useReactFlow, type Node, type Edge } from '@xyflow/react'
 import { childrenOf } from '@/data'
 import type { TaxonomyNode } from '@/data'
@@ -65,7 +65,7 @@ const HOVER_BTN: React.CSSProperties = {
   transition: 'opacity 0.12s',
 }
 
-export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
+function GraphNodeComponentInner({ data }: { data: GraphNodeData }) {
   const [hovered, setHovered] = useState(false)
   const [subtreeExpanded, setSubtreeExpanded] = useState(false)
   const { node, isExpanded, hasChildren, isHighlighted } = data
@@ -440,3 +440,5 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
     </>
   )
 }
+
+export const GraphNodeComponent = memo(GraphNodeComponentInner)

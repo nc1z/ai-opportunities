@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState, startTransition } from 'react'
 import {
   ReactFlow,
   useNodesState,
@@ -322,15 +322,17 @@ function GraphControls() {
           })
         }
 
-        setNodes((prev) => [
-          ...prev.map((n) =>
-            parentIds.includes(n.id) && (childrenOf[n.id] ?? []).length > 0
-              ? { ...n, data: { ...n.data, isExpanded: true } }
-              : n,
-          ),
-          ...newNodes,
-        ])
-        if (newEdges.length > 0) setEdges((prev) => [...prev, ...newEdges])
+        startTransition(() => {
+          setNodes((prev) => [
+            ...prev.map((n) =>
+              parentIds.includes(n.id) && (childrenOf[n.id] ?? []).length > 0
+                ? { ...n, data: { ...n.data, isExpanded: true } }
+                : n,
+            ),
+            ...newNodes,
+          ])
+          if (newEdges.length > 0) setEdges((prev) => [...prev, ...newEdges])
+        })
 
         if (nextIds.length > 0) {
           setTimeout(() => expandLevel(nextIds, depth + 1), LEVEL_DELAY)
@@ -517,6 +519,7 @@ export function GraphCanvas() {
         maxZoom={3}
         panOnScroll
         zoomOnScroll
+        onlyRenderVisibleElements
         defaultEdgeOptions={{
           type: 'straight',
           style: { stroke: '#d4d4d8', strokeWidth: 1 },
