@@ -24,7 +24,7 @@ export function layoutFan(
     return [{ x: parentPos.x + radius * Math.cos(dir), y: parentPos.y + radius * Math.sin(dir) }]
   }
 
-  const spread = Math.max(Math.PI / 3, Math.min(Math.PI * 1.2, count * 0.45))
+  const spread = Math.min(Math.PI * 2 / 3, count * 0.45)
   const start = dir - spread / 2
 
   return Array.from({ length: count }, (_, i) => {
