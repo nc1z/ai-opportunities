@@ -1,5 +1,10 @@
 export type NodeDepthLabel = 'layer' | 'group' | 'domain' | 'niche' | 'focus'
 
+export interface NodeSource {
+  label: string
+  url: string
+}
+
 export interface TaxonomyNode {
   id: string
   parentId: string | null  // null only for the 5 layer nodes
@@ -10,4 +15,5 @@ export interface TaxonomyNode {
   description: string
   order: number
   tags?: string[]
+  sources?: NodeSource[]
 }

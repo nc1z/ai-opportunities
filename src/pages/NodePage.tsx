@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { nodeMap, childrenOf, ancestorsOf } from '@/data/index'
 import { Breadcrumbs } from '@/components/shared/Breadcrumbs'
+import { SourceCitation } from '@/components/shared/SourceCitation'
 
 export function NodePage() {
   const { nodeId } = useParams<{ nodeId: string }>()
@@ -16,6 +17,7 @@ export function NodePage() {
 
   const ancestors = ancestorsOf(node.id)
   const children = childrenOf[node.id] ?? []
+  const isFocusNode = node.depth === 4
 
   return (
     <main className="max-w-[860px] mx-auto px-6 py-16">
@@ -27,12 +29,35 @@ export function NodePage() {
         <p className="text-xs font-mono uppercase tracking-widest text-zinc-400 mb-3">
           {node.depthLabel}
         </p>
-        <h1 className="text-3xl font-semibold text-zinc-900 tracking-tight leading-tight">
+        <h1 className="text-3xl font-semibold text-zinc-900 tracking-tight leading-tight flex items-start gap-2">
           {node.name}
+          {isFocusNode && node.sources && node.sources.length > 0 && (
+            <SourceCitation sources={node.sources} />
+          )}
         </h1>
         <p className="mt-4 text-zinc-500 max-w-xl leading-relaxed text-base">
           {node.description}
         </p>
+
+        {/* Sources list for focus node detail view */}
+        {isFocusNode && node.sources && node.sources.length > 0 && (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {node.sources.map((s, i) => (
+              <a
+                key={i}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-700 border border-zinc-200 hover:border-zinc-300 rounded-full px-3 py-1 transition-colors"
+              >
+                <svg viewBox="0 0 12 12" fill="currentColor" className="w-3 h-3 text-zinc-300">
+                  <path d="M10.5 6.5v3a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3v1h-3v7h7v-3h1ZM8 1.5h2.5V4h-1V2.707L6.354 5.854l-.708-.708L8.793 2.5H7.5v-1Z"/>
+                </svg>
+                {s.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
       {children.length > 0 && (
@@ -44,6 +69,7 @@ export function NodePage() {
           <div className="space-y-1">
             {children.map((child) => {
               const grandchildren = childrenOf[child.id] ?? []
+              const hasSources = child.sources && child.sources.length > 0
               return (
                 <Link
                   key={child.id}
@@ -58,8 +84,11 @@ export function NodePage() {
 
                   <div className="flex-1 min-w-0 pt-1">
                     <div className="flex items-center justify-between gap-4">
-                      <h2 className="text-lg font-semibold text-zinc-900 group-hover:text-zinc-700 transition-colors">
+                      <h2 className="text-lg font-semibold text-zinc-900 group-hover:text-zinc-700 transition-colors flex items-center flex-wrap gap-1">
                         {child.name}
+                        {hasSources && (
+                          <SourceCitation sources={child.sources!} />
+                        )}
                       </h2>
                       <span className="text-zinc-300 group-hover:text-zinc-500 transition-colors shrink-0 text-lg">
                         →
