@@ -1,0 +1,438 @@
+import { useCallback, useMemo, useRef, useState } from 'react'
+import {
+  ReactFlow,
+  useNodesState,
+  useEdgesState,
+  useReactFlow,
+  Background,
+  Panel,
+  BackgroundVariant,
+  type Node,
+  type Edge,
+  type NodeTypes,
+} from '@xyflow/react'
+import '@xyflow/react/dist/style.css'
+import { layerRoots, childrenOf, nodeMap } from '@/data'
+import { GraphNodeComponent, type GraphNodeData } from './GraphNode'
+import { GRAPH_CENTER, layoutFan } from './graphUtils'
+
+// ─── Constants ────────────────────────────────────────────────────────────────
+
+const ROOT_RADIUS = 180
+
+const nodeTypes: NodeTypes = { taxonomyNode: GraphNodeComponent }
+
+// ─── Layout ───────────────────────────────────────────────────────────────────
+
+function layoutPolygon(cx: number, cy: number, radius: number, count: number) {
+  return Array.from({ length: count }, (_, i) => {
+    const angle = -Math.PI / 2 + (2 * Math.PI * i) / count
+    return { x: cx + radius * Math.cos(angle), y: cy + radius * Math.sin(angle) }
+  })
+}
+
+function buildInitialNodes(): Node[] {
+  const positions = layoutPolygon(GRAPH_CENTER.x, GRAPH_CENTER.y, ROOT_RADIUS, layerRoots.length)
+  return layerRoots.map((layer, i) => ({
+    id: layer.id,
+    type: 'taxonomyNode',
+    position: positions[i],
+    data: {
+      node: layer,
+      isExpanded: false,
+      hasChildren: (childrenOf[layer.id] ?? []).length > 0,
+    } satisfies GraphNodeData,
+  }))
+}
+
+// ─── Info Panel ───────────────────────────────────────────────────────────────
+
+const DEPTH_LABEL_DISPLAY: Record<string, string> = {
+  layer: 'Layer',
+  group: 'Group',
+  domain: 'Domain',
+  niche: 'Niche',
+  focus: 'Focus',
+}
+
+function InfoPanel({
+  nodeId,
+  onClose,
+}: {
+  nodeId: string
+  onClose: () => void
+}) {
+  const node = nodeMap[nodeId]
+  if (!node) return null
+
+  const depthLabel = DEPTH_LABEL_DISPLAY[node.depthLabel] ?? node.depthLabel
+  const childCount = (childrenOf[node.id] ?? []).length
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: 16,
+        top: 16,
+        width: 320,
+        zIndex: 20,
+        pointerEvents: 'auto',
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: '#ffffff',
+          borderRadius: 12,
+          boxShadow: '0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06)',
+          border: '1px solid #e4e4e7',
+          fontFamily: 'Inter, system-ui, sans-serif',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Header */}
+        <div
+          style={{
+            borderBottom: '1px solid #f4f4f5',
+            padding: '12px 16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 8,
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <span
+              style={{
+                fontSize: 11,
+                fontWeight: 600,
+                color: '#52525b',
+                backgroundColor: '#f4f4f5',
+                border: '1px solid #e4e4e7',
+                borderRadius: 4,
+                padding: '2px 7px',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+                fontFamily: 'Inter, system-ui, sans-serif',
+              }}
+            >
+              {depthLabel}
+            </span>
+            {node.depth === 0 && (
+              <span
+                style={{
+                  fontSize: 10,
+                  fontWeight: 600,
+                  color: '#a1a1aa',
+                  fontFamily: 'JetBrains Mono, Menlo, monospace',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                {String(node.order).padStart(2, '0')}
+              </span>
+            )}
+          </div>
+
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            style={{
+              width: 20,
+              height: 20,
+              borderRadius: '50%',
+              border: '1px solid #e4e4e7',
+              backgroundColor: 'transparent',
+              color: '#a1a1aa',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: 14,
+              lineHeight: 1,
+              flexShrink: 0,
+              padding: 0,
+              paddingBottom: 1,
+            }}
+          >
+            ×
+          </button>
+        </div>
+
+        {/* Body */}
+        <div style={{ padding: '14px 16px 16px' }}>
+          <p
+            style={{
+              fontSize: 15,
+              fontWeight: 600,
+              color: '#18181b',
+              lineHeight: 1.4,
+              marginBottom: 10,
+            }}
+          >
+            {node.name}
+          </p>
+          <p
+            style={{
+              fontSize: 13,
+              color: '#71717a',
+              lineHeight: 1.65,
+              margin: 0,
+            }}
+          >
+            {node.description}
+          </p>
+
+          {childCount > 0 && (
+            <p
+              style={{
+                fontSize: 12,
+                color: '#a1a1aa',
+                marginTop: 14,
+                marginBottom: 0,
+                fontFamily: 'JetBrains Mono, Menlo, monospace',
+              }}
+            >
+              {childCount} {node.depthLabel === 'layer' ? 'groups' : node.depthLabel === 'group' ? 'domains' : node.depthLabel === 'domain' ? 'niches' : node.depthLabel === 'niche' ? 'focus areas' : 'items'}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ─── Expand / Collapse Controls ───────────────────────────────────────────────
+
+const BTN_STYLE: React.CSSProperties = {
+  width: 34,
+  height: 34,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: '#fff',
+  border: '1px solid #d4d4d8',
+  borderRadius: 6,
+  cursor: 'pointer',
+  color: '#52525b',
+  padding: 0,
+  transition: 'background-color 0.1s, color 0.1s',
+}
+
+/** Must be rendered inside <ReactFlow> so useReactFlow() has context. */
+function GraphControls() {
+  const { getNodes, setNodes, setEdges, zoomIn, zoomOut, fitView } = useReactFlow()
+  const animRef = useRef(false)
+
+  const expandAll = useCallback(() => {
+    if (animRef.current) return
+    animRef.current = true
+
+    // Reset to clean initial state, then animate BFS level-by-level
+    const initial = buildInitialNodes()
+    setNodes(initial)
+    setEdges([])
+
+    const LEVEL_DELAY = 380 // ms between depth levels
+
+    const expandLevel = (parentIds: string[], depth: number) => {
+      if (!animRef.current) return // cancelled by collapseAll
+
+      const current = getNodes()
+      const existingIds = new Set(current.map((n) => n.id))
+      const newNodes: Node[] = []
+      const newEdges: Edge[] = []
+      const nextIds: string[] = []
+
+      for (const parentId of parentIds) {
+        const parentNode = current.find((n) => n.id === parentId)
+        if (!parentNode) continue
+        const children = childrenOf[parentId] ?? []
+        if (children.length === 0) continue
+
+        const positions = layoutFan(parentNode.position, depth, children.length)
+        children.forEach((child, i) => {
+          if (existingIds.has(child.id)) return
+          newNodes.push({
+            id: child.id,
+            type: 'taxonomyNode',
+            position: positions[i],
+            data: {
+              node: child,
+              isExpanded: false,
+              hasChildren: (childrenOf[child.id] ?? []).length > 0,
+            } satisfies GraphNodeData,
+          })
+          newEdges.push({
+            id: `edge-${parentId}-${child.id}`,
+            source: parentId,
+            target: child.id,
+            type: 'straight',
+            style: { stroke: '#e4e4e7', strokeWidth: 1 },
+          })
+          nextIds.push(child.id)
+        })
+      }
+
+      if (newNodes.length === 0) {
+        animRef.current = false
+        return
+      }
+
+      setNodes((prev) => [
+        ...prev.map((n) =>
+          parentIds.includes(n.id) && (childrenOf[n.id] ?? []).length > 0
+            ? { ...n, data: { ...n.data, isExpanded: true } }
+            : n,
+        ),
+        ...newNodes,
+      ])
+      setEdges((prev) => [...prev, ...newEdges])
+
+      if (nextIds.length > 0) {
+        setTimeout(() => expandLevel(nextIds, depth + 1), LEVEL_DELAY)
+      } else {
+        animRef.current = false
+      }
+    }
+
+    // Small head-start delay lets the reset render before animation begins
+    setTimeout(() => expandLevel(layerRoots.map((r) => r.id), 0), 80)
+  }, [getNodes, setNodes, setEdges])
+
+  const collapseAll = useCallback(() => {
+    animRef.current = false
+    setNodes(buildInitialNodes())
+    setEdges([])
+  }, [setNodes, setEdges])
+
+  return (
+    <Panel position="bottom-left" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+      {/* Zoom in */}
+      <button
+        style={BTN_STYLE}
+        title="Zoom in"
+        onClick={() => zoomIn()}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+      >
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+          <circle cx="7" cy="7" r="5" />
+          <line x1="7" y1="4.5" x2="7" y2="9.5" />
+          <line x1="4.5" y1="7" x2="9.5" y2="7" />
+          <line x1="11" y1="11" x2="14" y2="14" />
+        </svg>
+      </button>
+
+      {/* Zoom out */}
+      <button
+        style={BTN_STYLE}
+        title="Zoom out"
+        onClick={() => zoomOut()}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+      >
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+          <circle cx="7" cy="7" r="5" />
+          <line x1="4.5" y1="7" x2="9.5" y2="7" />
+          <line x1="11" y1="11" x2="14" y2="14" />
+        </svg>
+      </button>
+
+      {/* Fit view */}
+      <button
+        style={BTN_STYLE}
+        title="Fit view"
+        onClick={() => fitView({ padding: 0.35 })}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+      >
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M1 5V2h3M1 11v3h3M15 5V2h-3M15 11v3h-3" />
+        </svg>
+      </button>
+
+      {/* Divider */}
+      <div style={{ height: 1, backgroundColor: '#e4e4e7', margin: '2px 0' }} />
+
+      {/* Expand all */}
+      <button
+        style={BTN_STYLE}
+        title="Expand all"
+        onClick={expandAll}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+      >
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 6V2h4M2 2l4.5 4.5"/>
+          <path d="M14 6V2h-4M14 2l-4.5 4.5"/>
+          <path d="M2 10v4h4M2 14l4.5-4.5"/>
+          <path d="M14 10v4h-4M14 14l-4.5-4.5"/>
+        </svg>
+      </button>
+
+      {/* Collapse all */}
+      <button
+        style={BTN_STYLE}
+        title="Collapse all"
+        onClick={collapseAll}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+      >
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 2v4H2M6 6l-4.5-4.5"/>
+          <path d="M10 2v4h4M10 6l4.5-4.5"/>
+          <path d="M6 14v-4H2M6 10l-4.5 4.5"/>
+          <path d="M10 14v-4h4M10 10l4.5 4.5"/>
+        </svg>
+      </button>
+    </Panel>
+  )
+}
+
+// ─── Canvas ───────────────────────────────────────────────────────────────────
+
+export function GraphCanvas() {
+  const [nodes, , onNodesChange] = useNodesState(useMemo(buildInitialNodes, []))
+  const [edges, , onEdgesChange] = useEdgesState<Edge>([])
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null)
+
+  // Clicking the node body selects it (the "+" button stops propagation)
+  const handleNodeClick = useCallback((_: React.MouseEvent, node: Node) => {
+    setSelectedNodeId((prev) => (prev === node.id ? null : node.id))
+  }, [])
+
+  // Clicking the canvas background deselects
+  const handlePaneClick = useCallback(() => {
+    setSelectedNodeId(null)
+  }, [])
+
+  return (
+    <div className="flex-1 overflow-hidden" style={{ position: 'relative' }}>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onNodeClick={handleNodeClick}
+        onPaneClick={handlePaneClick}
+        nodeTypes={nodeTypes}
+        fitView
+        fitViewOptions={{ padding: 0.35 }}
+        minZoom={0.05}
+        maxZoom={3}
+        panOnScroll
+        zoomOnScroll
+        defaultEdgeOptions={{
+          type: 'straight',
+          style: { stroke: '#d4d4d8', strokeWidth: 1 },
+        }}
+      >
+        <Background variant={BackgroundVariant.Dots} color="#e4e4e7" gap={24} size={1} />
+        <GraphControls />
+      </ReactFlow>
+
+      {selectedNodeId && (
+        <InfoPanel nodeId={selectedNodeId} onClose={() => setSelectedNodeId(null)} />
+      )}
+    </div>
+  )
+}

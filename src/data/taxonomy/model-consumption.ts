@@ -8,7 +8,7 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     layerId: 'model-consumption',
     depth: 0,
     depthLabel: 'layer',
-    name: 'Model Consumption',
+    name: 'Model Consumption Layer',
     description: 'APIs, SDKs, and abstractions for accessing foundation models across text, image, audio, and embedding modalities. Leading models now handle multiple modalities through unified endpoints, but the modality buckets remain a useful lens for builder discovery.',
     order: 5,
   },

@@ -2,15 +2,38 @@ import { Link } from 'react-router-dom'
 
 export function NavHeader() {
   return (
-    <header className="border-b border-zinc-100 px-6 py-4">
+    <header className="border-b border-zinc-100 px-6 py-4 shrink-0">
       <div className="max-w-[860px] mx-auto flex items-center justify-between">
         <Link
           to="/"
           className="text-xs tracking-widest uppercase text-zinc-400 hover:text-zinc-700 transition-colors font-medium"
         >
-          The Opportunities in AI
+          Opportunities in AI
         </Link>
         <div className="flex items-center gap-6">
+          {/* Graph view link */}
+          <Link
+            to="/graph"
+            className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-700 transition-colors cursor-pointer"
+          >
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              className="w-3.5 h-3.5"
+            >
+              <circle cx="8" cy="2" r="1.25" fill="currentColor" stroke="none" />
+              <circle cx="2.5" cy="13" r="1.25" fill="currentColor" stroke="none" />
+              <circle cx="13.5" cy="13" r="1.25" fill="currentColor" stroke="none" />
+              <line x1="8" y1="3.25" x2="2.5" y2="11.75" />
+              <line x1="8" y1="3.25" x2="13.5" y2="11.75" />
+              <line x1="3.75" y1="13" x2="12.25" y2="13" />
+            </svg>
+            Graph
+          </Link>
+
           <Link
             to="/about"
             className="text-xs text-zinc-400 hover:text-zinc-700 transition-colors"
