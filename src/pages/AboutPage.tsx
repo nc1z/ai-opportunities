@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { sourceCount } from '@/data/index'
+import { totalReferencesCount } from './SourcesPage'
 
 export function AboutPage() {
   return (
@@ -64,7 +64,7 @@ export function AboutPage() {
           </div>
           <div className="w-px bg-zinc-100" />
           <div className="text-center">
-            <p className="text-3xl font-bold text-zinc-900 tabular-nums">{sourceCount.toLocaleString()}</p>
+            <p className="text-3xl font-bold text-zinc-900 tabular-nums">{totalReferencesCount.toLocaleString()}</p>
             <p className="text-xs text-zinc-400 mt-1">sources cited</p>
           </div>
           <div className="w-px bg-zinc-100" />

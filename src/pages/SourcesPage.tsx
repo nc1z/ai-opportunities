@@ -26,7 +26,7 @@ const sourcesPageModule = import.meta.glob('./SourcesPage.tsx', {
 const nicheSourceGroups = buildNicheSourceGroups()
 
 const inlineSourceCount = (sourcesPageModule['./SourcesPage.tsx'] ?? '').split('<Source ').length - 1
-const totalReferencesCount =
+export const totalReferencesCount =
   inlineSourceCount +
   expansionSourceGroups.reduce((sum, g) => sum + g.entries.length, 0) +
   nicheSourceGroups.reduce((sum, g) => sum + g.entries.length, 0)
