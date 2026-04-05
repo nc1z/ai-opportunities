@@ -795,4 +795,312 @@ export const harnessRuntimeNodes: TaxonomyNode[] = [
   { id: 'hr-focus-playwright', parentId: 'harness-sandbox-headless', layerId: 'harness-runtime', depth: 4, depthLabel: 'focus', name: 'Playwright / Puppeteer Isolation', description: 'Controlled browser automation environments that give agents web access while capturing all activity.', order: 1 },
   { id: 'hr-focus-domain-allowlist', parentId: 'harness-sandbox-egress', layerId: 'harness-runtime', depth: 4, depthLabel: 'focus', name: 'Domain Allowlists', description: 'Explicit lists of permitted domains that sandboxed agents are allowed to make network requests to.', order: 1 },
   { id: 'hr-focus-readonly-mount', parentId: 'harness-sandbox-filesystem', layerId: 'harness-runtime', depth: 4, depthLabel: 'focus', name: 'Read-Only Mounts', description: 'Mounting required files as read-only to prevent agents from modifying system files or exfiltrating data.', order: 1 },
+
+  // ─── New domains from 03-harness-layer-expansion ──────────────────────────
+
+  // Context Compilation (under Context Assembly, depth 2)
+  {
+    id: 'hr-ctx-context-compilation',
+    parentId: 'harness-context',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Context Compilation',
+    description: 'Deterministic assembly of "decision packages" from multiple systems of record — ERP, CRM, contracts — ensuring context is complete relative to a defined decision boundary. Distinct from probabilistic RAG: logic-based and governance-explicit, not similarity-based. Reduces token usage by up to 60% while improving decision-grade accuracy.',
+    order: 8,
+  },
+
+  // Proactive Memory Consolidation (under Memory & Session, depth 2)
+  {
+    id: 'hr-mem-proactive-consolidation',
+    parentId: 'harness-memory',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Proactive Memory Consolidation',
+    description: 'Asynchronous background processes that extract and promote important facts from short-term working memory to long-term semantic stores after a session ends. Includes debounce patterns to wait for conversation stability before committing memories. Redis Agent Memory Server and similar systems implement this two-tier architecture.',
+    order: 6,
+  },
+
+  // Organizational Semantic Memory (under Memory & Session, depth 2)
+  {
+    id: 'hr-mem-org-semantic',
+    parentId: 'harness-memory',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Organizational Semantic Memory',
+    description: 'Canonical knowledge records, ownership metadata, and API contracts that form the enterprise "semantic backbone" — stable entity identities and explicit relationships across services and teams. Without this layer, context assembly pipelines produce hallucinations at scale. Distinct from agent-specific memory: these are institutional records, not session state.',
+    order: 7,
+  },
+
+  // A2A Protocol Layer (under Tool & Workflow Orchestration, depth 2)
+  {
+    id: 'hr-two-a2a-protocol',
+    parentId: 'hr-tool-workflow-orchestration',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Agent-to-Agent (A2A) Protocol',
+    description: 'Standards and infrastructure for how agents from different vendors discover, authenticate, and communicate with each other. Google\'s A2A protocol (donated to Linux Foundation) defines "Agent Cards" for advertising identity and capabilities. IBM\'s ACP merged into A2A in early 2026, consolidating the ecosystem around 150+ supporting organizations.',
+    order: 5,
+  },
+
+  // Static Workflow Verification (under Safety Gates, depth 2)
+  {
+    id: 'hr-sg-static-verification',
+    parentId: 'harness-safety',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Static Workflow Verification',
+    description: 'Pre-execution structural analysis of agent workflow graphs — detecting livelocks, dead-ends, missing HITL gates, and logical inconsistencies before the agent runs. Agentproof-style tools extract an AgentGraph from LangGraph, AutoGen, or Google ADK and run linear-complexity checks. Catches path-level defects that runtime monitors miss.',
+    order: 8,
+  },
+
+  // Session Risk Memory (under Safety Gates, depth 2)
+  {
+    id: 'hr-sg-session-risk-memory',
+    parentId: 'harness-safety',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Session Risk Memory',
+    description: 'Temporal dimension added to runtime safety gates — maintaining a compact session risk representation that accumulates suspicion over time rather than evaluating each action in isolation. Enables detection of "slow-burn" exfiltration where an agent moves data out in small benign-seeming steps. ILION framework benchmarks show F1 of 1.0 with 0% false positive rate.',
+    order: 9,
+  },
+
+  // Persistent Sandboxes (under Execution Sandboxes, depth 2)
+  {
+    id: 'hr-sb-persistent',
+    parentId: 'harness-sandbox',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Persistent Sandboxes',
+    description: 'Long-lived sandbox environments that maintain filesystem state across sessions for coding agents working on a repository over days or weeks. Contrasts with ephemeral sandboxes destroyed after each session. Includes desktop/GUI automation environments ("Computer Use") that run thousands of sequential steps across any application using foundation models as the automation brain.',
+    order: 4,
+  },
+
+  // Production Quality Monitoring (under Observability & Evaluation, depth 2)
+  {
+    id: 'hr-obs-production-quality',
+    parentId: 'hr-observability',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Production Quality Monitoring',
+    description: 'Real-time monitoring of deployed agent behavior for quality drift — detecting when the AI gradually answers a different question than asked ("The Drift") or produces plausible but incorrect results ("The Silent Mismatch"). Uses LLM-as-judge patterns with secondary models continuously evaluating production traces against golden datasets. A major coverage gap before 2025.',
+    order: 4,
+  },
+
+  // Sovereign Routing (under Model Gateway & Cost Control, depth 2)
+  {
+    id: 'hr-gw-sovereign-routing',
+    parentId: 'hr-model-gateway',
+    layerId: 'harness-runtime',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Sovereign Routing',
+    description: 'Jurisdiction-aware gateway routing that enforces data residency by construction — ensuring requests and data stay within specified geographic regions or private clouds. Driven by EU AI Act, California transparency requirements, and enterprise compliance needs. LiteLLM is a de facto standard for provider abstraction across 100+ providers with sovereign constraints.',
+    order: 4,
+  },
+
+  // ─── Niches under Context Compilation (depth 3) ───────────────────────────
+  {
+    id: 'hr-ctx-cc-multi-source',
+    parentId: 'hr-ctx-context-compilation',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Multi-Source Assembly',
+    description: 'Connecting simultaneously to ERP, CRM, contract management, and other systems of record to compile complete, verified evidence packages for agent decisions.',
+    order: 1,
+  },
+  {
+    id: 'hr-ctx-cc-token-optimized',
+    parentId: 'hr-ctx-context-compilation',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Token-Optimized Decision Packages',
+    description: 'Compiling only the verified evidence needed for a specific decision, reducing token usage by up to 60% compared to raw document retrieval while improving decision accuracy.',
+    order: 2,
+  },
+
+  // ─── Niches under Proactive Memory Consolidation (depth 3) ───────────────
+  {
+    id: 'hr-mem-pc-background-extraction',
+    parentId: 'hr-mem-proactive-consolidation',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Background Memory Extraction',
+    description: 'Asynchronous post-session processes that analyze conversation history and extract stable, relevant facts for long-term storage using a debounce pattern.',
+    order: 1,
+  },
+  {
+    id: 'hr-mem-pc-memory-tiering',
+    parentId: 'hr-mem-proactive-consolidation',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Memory Tiering & Promotion',
+    description: 'Two-tier architecture separating working memory (session-scoped, fast) from long-term memory (persistent, semantic search), with explicit promotion logic between tiers.',
+    order: 2,
+  },
+
+  // ─── Niches under Organizational Semantic Memory (depth 3) ───────────────
+  {
+    id: 'hr-mem-os-canonical-records',
+    parentId: 'hr-mem-org-semantic',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Canonical Knowledge Records',
+    description: 'Stable entity identities and ownership metadata that give agents a reliable reference layer — preventing hallucinations from ambiguous or contradictory entity references.',
+    order: 1,
+  },
+  {
+    id: 'hr-mem-os-data-catalog',
+    parentId: 'hr-mem-org-semantic',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Enterprise Data Catalog Integration',
+    description: 'Connecting agents to enterprise data catalogs that describe available data assets, their lineage, ownership, and access policies for governed retrieval.',
+    order: 2,
+  },
+
+  // ─── Niches under A2A Protocol (depth 3) ─────────────────────────────────
+  {
+    id: 'hr-two-a2a-agent-cards',
+    parentId: 'hr-two-a2a-protocol',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Agent Cards & Discovery',
+    description: 'Standardized "Agent Card" specifications that advertise an agent\'s identity, capabilities, endpoints, and authentication requirements to other agents and orchestrators.',
+    order: 1,
+  },
+  {
+    id: 'hr-two-a2a-cross-vendor',
+    parentId: 'hr-two-a2a-protocol',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Cross-Vendor Agent Communication',
+    description: 'Infrastructure for routing and authenticating messages between agents built on different frameworks (LangGraph, AutoGen, Google ADK) using open protocol standards.',
+    order: 2,
+  },
+
+  // ─── Niches under Static Workflow Verification (depth 3) ─────────────────
+  {
+    id: 'hr-sg-sv-exit-reachability',
+    parentId: 'hr-sg-static-verification',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Exit Reachability Analysis',
+    description: 'Static checks verifying that every node in an agent workflow graph can reach a terminal exit state, detecting livelocks and infinite loops before deployment.',
+    order: 1,
+  },
+  {
+    id: 'hr-sg-sv-hitl-presence',
+    parentId: 'hr-sg-static-verification',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'HITL Presence Verification',
+    description: 'Structural checks that verify human-in-the-loop gates are present in workflow paths that involve sensitive tools or high-risk actions, enforcing organizational policy by construction.',
+    order: 2,
+  },
+
+  // ─── Niches under Session Risk Memory (depth 3) ───────────────────────────
+  {
+    id: 'hr-sg-srm-trajectory-auth',
+    parentId: 'hr-sg-session-risk-memory',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Trajectory-Level Authorization',
+    description: 'Authorization decisions that consider the full sequence of prior actions in a session — not just the current request — accumulating a risk score that gates subsequent tool calls.',
+    order: 1,
+  },
+  {
+    id: 'hr-sg-srm-slowburn',
+    parentId: 'hr-sg-session-risk-memory',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Slow-Burn Exfiltration Detection',
+    description: 'Detection of multi-step data exfiltration attacks where each individual action appears benign but the cumulative trajectory reveals unauthorized data movement.',
+    order: 2,
+  },
+
+  // ─── Niches under Persistent Sandboxes (depth 3) ─────────────────────────
+  {
+    id: 'hr-sb-ps-repo-agents',
+    parentId: 'hr-sb-persistent',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Long-Running Repository Sandboxes',
+    description: 'Persistent sandbox environments that maintain a repository\'s filesystem, dependencies, and configuration state across sessions for coding agents working over days or weeks.',
+    order: 1,
+  },
+  {
+    id: 'hr-sb-ps-desktop-gui',
+    parentId: 'hr-sb-persistent',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Desktop & GUI Automation Sandboxes',
+    description: '"Computer Use" environments that run full desktop sessions for agents navigating GUIs, running thousands of sequential steps across any application using foundation models as the automation layer.',
+    order: 2,
+  },
+
+  // ─── Niches under Production Quality Monitoring (depth 3) ────────────────
+  {
+    id: 'hr-obs-pq-drift-detection',
+    parentId: 'hr-obs-production-quality',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Real-Time Drift Detection',
+    description: 'Continuous monitoring of production traces for quality degradation — detecting when deployed agents begin answering differently than expected against established baseline metrics.',
+    order: 1,
+  },
+  {
+    id: 'hr-obs-pq-llm-judge',
+    parentId: 'hr-obs-production-quality',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'LLM-as-Judge Quality Gates',
+    description: 'Secondary models that continuously evaluate production traces against golden datasets, flagging fabrications, silent mismatches, and policy violations at scale without human review of every trace.',
+    order: 2,
+  },
+
+  // ─── Niches under Sovereign Routing (depth 3) ────────────────────────────
+  {
+    id: 'hr-gw-sr-data-residency',
+    parentId: 'hr-gw-sovereign-routing',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Data Residency Enforcement',
+    description: 'Gateway-level constraints that ensure requests, prompts, and responses remain within specified geographic jurisdictions or private cloud boundaries, enforced by construction rather than policy.',
+    order: 1,
+  },
+  {
+    id: 'hr-gw-sr-airgapped',
+    parentId: 'hr-gw-sovereign-routing',
+    layerId: 'harness-runtime',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Air-Gapped & On-Prem Deployment',
+    description: 'Gateway configurations for fully isolated deployments with no external network access — serving defense, intelligence, and regulated industries that cannot use cloud-based model providers.',
+    order: 2,
+  },
 ]
