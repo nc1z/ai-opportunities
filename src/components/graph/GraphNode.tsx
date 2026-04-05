@@ -3,6 +3,7 @@ import { Handle, Position, useReactFlow, type Node, type Edge } from '@xyflow/re
 import { childrenOf } from '@/data'
 import type { TaxonomyNode } from '@/data'
 import { layoutFan, GRAPH_CENTER } from './graphUtils'
+import { SourceCitation } from '@/components/shared/SourceCitation'
 
 export type GraphNodeData = {
   node: TaxonomyNode
@@ -357,6 +358,10 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
           >
             {node.name}
           </span>
+
+          {node.sources && node.sources.length > 0 && (
+            <SourceCitation sources={node.sources} />
+          )}
         </div>
 
         {/* ── Hover buttons (always rendered, toggled via opacity) ─────── */}
