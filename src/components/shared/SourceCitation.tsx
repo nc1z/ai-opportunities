@@ -15,8 +15,8 @@ export function SourceCitation({ sources }: Props) {
         </svg>
       </span>
 
-      {/* Tooltip */}
-      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 hidden group-hover/cite:block">
+      {/* Tooltip — pb-2 bridges the gap between icon and box so hover isn't lost */}
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 z-50 hidden group-hover/cite:block pb-2">
         <span className="block bg-zinc-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg w-64">
           <span className="block font-medium text-zinc-300 mb-1.5">
             {sources.length === 1 ? 'Source' : 'Sources'}
@@ -28,7 +28,7 @@ export function SourceCitation({ sources }: Props) {
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="pointer-events-auto underline underline-offset-2 decoration-zinc-500 hover:text-zinc-200 transition-colors"
+                  className="underline underline-offset-2 decoration-zinc-500 hover:text-zinc-200 transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >
                   {s.label}
