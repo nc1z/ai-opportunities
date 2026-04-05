@@ -519,7 +519,6 @@ export function GraphCanvas() {
         maxZoom={3}
         panOnScroll
         zoomOnScroll
-        onlyRenderVisibleElements
         defaultEdgeOptions={{
           type: 'straight',
           style: { stroke: '#d4d4d8', strokeWidth: 1 },
