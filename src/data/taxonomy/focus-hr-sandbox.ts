@@ -133,7 +133,7 @@ export const focusHrSandboxNodes: TaxonomyNode[] = [
     depth: 4,
     depthLabel: 'focus',
     name: 'Managed Browser-as-a-Service',
-    description: 'Serverless headless browser infrastructure handling proxy rotation, fingerprinting, and session cleanup automatically.',
+    description: 'Serverless headless browser infrastructure that manages IP pool rotation, browser identity consistency, and session lifecycle automatically for agent workloads.',
     order: 1,
   },
   {

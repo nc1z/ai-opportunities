@@ -85,9 +85,9 @@ export const focusAwToolAgentsNodes: TaxonomyNode[] = [
     layerId: 'agent-workflow',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Autonomous CAPTCHA-Bypass Ethical Gateways',
+    name: 'Human Verification Handling for Authorized Agents',
     description:
-      'Managed high-speed CAPTCHA solving services scoped to agents operating on sites where they hold administrative authorization, with audit trails to enforce ethical-use policies.',
+      'Managed services that resolve human-verification challenges on behalf of agents operating on sites where they hold explicit authorization, with audit trails to enforce policy compliance.',
     order: 8,
   },
 
