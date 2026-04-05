@@ -29,6 +29,8 @@ export function layoutFan(
 
   return Array.from({ length: count }, (_, i) => {
     const angle = start + (spread * i) / (count - 1)
-    return { x: parentPos.x + radius * Math.cos(angle), y: parentPos.y + radius * Math.sin(angle) }
+    // Deterministic jitter: ±25% variance based on position in sibling list
+    const r = radius * (1 + 0.25 * Math.sin(i * 2.3))
+    return { x: parentPos.x + r * Math.cos(angle), y: parentPos.y + r * Math.sin(angle) }
   })
 }
