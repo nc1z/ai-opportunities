@@ -866,4 +866,294 @@ export const modelConsumptionNodes: TaxonomyNode[] = [
     order: 1,
     tags: ['ollama', 'llama.cpp', 'local', 'on-device'],
   },
+
+  // ─── New domains from 05-model-consumption-layer-expansion ───────────────
+
+  // 3D Generation & NeRF APIs (under Image & Video, depth 2)
+  {
+    id: 'mc-iv-3d-generation',
+    parentId: 'mc-image-video',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: '3D Generation & NeRF APIs',
+    description: 'APIs generating fully realized 3D models, meshes, point clouds, and Neural Radiance Fields from text or 2D images. Distinct from image generation: the output is spatial geometry, not pixels. Growing adoption in e-commerce (product visualization), gaming, and robotics simulation. Meshy, Rodin AI, 3D AI Studio.',
+    order: 6,
+  },
+
+  // Multimodal Document Parsing (under Image & Video, depth 2)
+  {
+    id: 'mc-iv-doc-parsing',
+    parentId: 'mc-image-video',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Multimodal Document Parsing',
+    description: 'Vision-Language Model APIs that semantically reconstruct complex document layouts — multi-page tables, charts, handwriting, and embedded images — converting "document chaos" into structured AI-ready assets. Distinct from OCR: understands layout semantics and relationships, not just character recognition. Essential for agentic RAG in finance, legal, and healthcare. LlamaParse, Google Document AI.',
+    order: 7,
+  },
+
+  // Native Real-Time Audio Models (under Audio & Speech, depth 2)
+  {
+    id: 'mc-as-native-audio',
+    parentId: 'mc-audio-speech',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Native Real-Time Audio Models',
+    description: 'Models that think and speak simultaneously by jointly modeling time-aligned text and acoustic tokens — achieving "glass-to-glass" latencies as low as 160ms. Fundamentally different from cascaded STT → LLM → TTS pipelines, which introduce 1–3 seconds of latency and lose non-verbal information like tone and emotion. Moshi, Inworld Realtime API.',
+    order: 4,
+  },
+
+  // Music Generation APIs (under Audio & Speech, depth 2)
+  {
+    id: 'mc-as-music-gen',
+    parentId: 'mc-audio-speech',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Music Generation APIs',
+    description: 'Text-to-music synthesis APIs with detailed prompt control, stem export (separating vocals, drums, instruments), and scene-aware soundscape generation. A distinct API category from TTS with real developer adoption in marketing, gaming, and personalized content. Suno and Udio pioneered the category.',
+    order: 5,
+  },
+
+  // Late Interaction & Multi-Vector APIs (under Embeddings & Reranking, depth 2)
+  {
+    id: 'mc-emb-late-interaction',
+    parentId: 'mc-embeddings',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Late Interaction & Multi-Vector APIs',
+    description: 'APIs serving ColBERT and ColPali-style late interaction models that preserve individual token embeddings and match via the MaxSim operator. Provides significant accuracy gains over single-vector bi-encoders in out-of-domain and reasoning-intensive retrieval — at the cost of 10–100x storage. Distinct from cross-encoders (which can\'t pre-compute) and bi-encoders (which compress to one vector).',
+    order: 4,
+  },
+
+  // Inference Spot Markets & DePIN (under Access Infrastructure, depth 2)
+  {
+    id: 'mc-pa-depin-inference',
+    parentId: 'mc-access-infrastructure',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Inference Spot Markets & DePIN',
+    description: 'Decentralized physical infrastructure (DePIN) protocols creating peer-to-peer GPU marketplaces for model inference — offering prices significantly below centralized cloud at the cost of variable latency and less governance. Distinct from unified APIs: involves peer-to-peer resource allocation, verifiable compute, and often "uncensored" / non-custodial model access. Akash Network, io.net.',
+    order: 7,
+  },
+
+  // Federated Inference (under Access Infrastructure, depth 2)
+  {
+    id: 'mc-pa-federated',
+    parentId: 'mc-access-infrastructure',
+    layerId: 'model-consumption',
+    depth: 2,
+    depthLabel: 'domain',
+    name: 'Federated Inference',
+    description: 'Cloud-edge hybrid inference patterns where a large cloud model provides general reasoning while a lightweight SLM on the edge handles sensitive, personalized data — enabling organizations to collaborate on intelligence without sharing raw data. Addresses data sovereignty needs beyond simple private cloud: the data never moves, only gradients or outputs do. Flower, Floe.',
+    order: 8,
+  },
+
+  // ─── New niches under existing Image & Video domains ─────────────────────
+
+  // Under Video Generation (depth 3, order 3)
+  {
+    id: 'mc-iv-vg-world-models',
+    parentId: 'mc-iv-video-generation',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'World Foundation Models',
+    description: 'Predictive video models that simulate the future state of a physical scene given an action — used as high-fidelity simulators for robotics and autonomous driving reinforcement learning. Distinct from creative video generation: the goal is physical accuracy, not visual aesthetics.',
+    order: 3,
+  },
+
+  // Under Image Generation (depth 3, order 3)
+  {
+    id: 'mc-iv-ig-character-consistency',
+    parentId: 'mc-iv-image-generation',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Character Consistency Libraries',
+    description: 'API-accessible "Character Libraries" or "Cast Databases" that maintain identical faces, outfits, and styling across different scenes and contexts. Now a baseline requirement for professional brand work — allows a mascot or product to appear consistently across hundreds of generated scenarios.',
+    order: 3,
+  },
+
+  // ─── New niche under Text-to-Speech ───────────────────────────────────────
+  {
+    id: 'mc-as-tts-s2s',
+    parentId: 'mc-as-tts',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Speech-to-Speech Translation',
+    description: 'Real-time dubbing APIs that translate spoken audio across languages while preserving the original speaker\'s vocal characteristics, cadence, and emotion.',
+    order: 3,
+  },
+
+  // ─── New niche under Text Embeddings ──────────────────────────────────────
+  {
+    id: 'mc-emb-te-mrl',
+    parentId: 'mc-emb-text-embeddings',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Matryoshka (MRL) Embeddings',
+    description: 'Embeddings using Matryoshka Representation Learning that can be truncated from 3,072 to 256 dimensions with minimal quality loss — enabling developers to balance retrieval quality against vector storage costs. OpenAI text-embedding-3 and Voyage AI offer this capability.',
+    order: 3,
+  },
+
+  // ─── Niches under 3D Generation (depth 3) ────────────────────────────────
+  {
+    id: 'mc-iv-3d-text-to-3d',
+    parentId: 'mc-iv-3d-generation',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Text-to-3D Generation',
+    description: 'APIs generating 3D meshes and textured models from text descriptions in 30–60 seconds, suitable for rapid iteration in e-commerce and game asset pipelines.',
+    order: 1,
+  },
+  {
+    id: 'mc-iv-3d-image-to-3d',
+    parentId: 'mc-iv-3d-generation',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Image-to-3D & NeRF APIs',
+    description: 'Reconstructing 3D geometry from one or more 2D images using Neural Radiance Fields or direct mesh estimation — used for photorealistic product assets and scene reconstruction.',
+    order: 2,
+  },
+
+  // ─── Niches under Multimodal Document Parsing (depth 3) ──────────────────
+  {
+    id: 'mc-iv-dp-layout-extraction',
+    parentId: 'mc-iv-doc-parsing',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Complex Layout Extraction',
+    description: 'VLM APIs that reconstruct multi-page tables, nested lists, charts, and mixed text-image layouts into structured Markdown or JSON, preserving semantic relationships.',
+    order: 1,
+  },
+  {
+    id: 'mc-iv-dp-form-handwriting',
+    parentId: 'mc-iv-doc-parsing',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Form & Handwriting Recognition',
+    description: 'Specialized processors for high-accuracy extraction from handwritten forms, ID documents, invoices, and receipts — combining OCR with structural understanding.',
+    order: 2,
+  },
+
+  // ─── Niches under Native Real-Time Audio (depth 3) ───────────────────────
+  {
+    id: 'mc-as-na-glass-to-glass',
+    parentId: 'mc-as-native-audio',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Glass-to-Glass Inference',
+    description: 'End-to-end audio APIs with sub-200ms latency from audio input to audio output, achieved by eliminating the cascaded pipeline in favour of joint audio-text token modeling.',
+    order: 1,
+  },
+  {
+    id: 'mc-as-na-emotion-preserving',
+    parentId: 'mc-as-native-audio',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Tone & Emotion Preservation',
+    description: 'Native audio models that preserve non-verbal acoustic signals — tone, emphasis, hesitation — that are destroyed by the transcription step in cascaded pipelines.',
+    order: 2,
+  },
+
+  // ─── Niches under Music Generation (depth 3) ─────────────────────────────
+  {
+    id: 'mc-as-mg-text-to-music',
+    parentId: 'mc-as-music-gen',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Text-to-Music Synthesis',
+    description: 'Generating complete music tracks from text prompts with control over genre, mood, tempo, and instrumentation.',
+    order: 1,
+  },
+  {
+    id: 'mc-as-mg-stem-export',
+    parentId: 'mc-as-music-gen',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Stem Export & Scene-Aware Audio',
+    description: 'APIs exporting separated audio stems (vocals, drums, instruments) and generating soundscapes synchronized with AI-generated video scenes.',
+    order: 2,
+  },
+
+  // ─── Niches under Late Interaction (depth 3) ─────────────────────────────
+  {
+    id: 'mc-emb-li-colbert',
+    parentId: 'mc-emb-late-interaction',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'ColBERT-Style Late Interaction',
+    description: 'Token-level text retrieval using MaxSim scoring between query and document token embeddings, providing high precision for out-of-domain and reasoning-intensive retrieval tasks.',
+    order: 1,
+  },
+  {
+    id: 'mc-emb-li-colpali',
+    parentId: 'mc-emb-late-interaction',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'ColPali Multimodal Late Interaction',
+    description: 'Late interaction retrieval over document page images — matching query tokens against visual patch embeddings to retrieve complex visual documents without OCR.',
+    order: 2,
+  },
+
+  // ─── Niches under DePIN Inference (depth 3) ──────────────────────────────
+  {
+    id: 'mc-pa-depin-spot',
+    parentId: 'mc-pa-depin-inference',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'GPU Spot Market Access',
+    description: 'Bidding on available GPU compute from distributed node operators at spot prices, significantly below centralized cloud providers for batch and non-latency-sensitive workloads.',
+    order: 1,
+  },
+  {
+    id: 'mc-pa-depin-verifiable',
+    parentId: 'mc-pa-depin-inference',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Verifiable Compute',
+    description: 'Cryptographic proofs that a specific inference was executed correctly on the claimed model without trusting the node operator — enabling trustless AI computation.',
+    order: 2,
+  },
+
+  // ─── Niches under Federated Inference (depth 3) ──────────────────────────
+  {
+    id: 'mc-pa-fed-cloud-edge',
+    parentId: 'mc-pa-federated',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Cloud-Edge Hybrid Inference',
+    description: 'Architectures where a large cloud model handles general reasoning while a lightweight SLM on the edge processes sensitive or personalized data locally, combining capability with data residency.',
+    order: 1,
+  },
+  {
+    id: 'mc-pa-fed-collaborative',
+    parentId: 'mc-pa-federated',
+    layerId: 'model-consumption',
+    depth: 3,
+    depthLabel: 'niche',
+    name: 'Privacy-Preserving Collaborative Inference',
+    description: 'Federated frameworks where multiple organizations train or serve models collaboratively without sharing raw data — enabling cross-institutional AI in regulated sectors like healthcare and finance.',
+    order: 2,
+  },
 ]
