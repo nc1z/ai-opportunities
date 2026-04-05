@@ -221,11 +221,29 @@ const BTN_STYLE: React.CSSProperties = {
   transition: 'background-color 0.1s, color 0.1s',
 }
 
+const DEPTH_OPTIONS: { depth: number; label: string; warn?: boolean }[] = [
+  { depth: 1, label: 'Group' },
+  { depth: 2, label: 'Domain' },
+  { depth: 3, label: 'Niche' },
+  { depth: 4, label: 'Focus', warn: true },
+]
+
 /** Must be rendered inside <ReactFlow> so useReactFlow() has context. */
 function GraphControls() {
   const { getNodes, setNodes, setEdges, zoomIn, zoomOut, fitView } = useReactFlow()
   const animRef = useRef(false)
   const [isExpanded, setIsExpanded] = useState(false)
+  const [expandDepth, setExpandDepth] = useState(3)
+  const [showPicker, setShowPicker] = useState(false)
+  const hidePickerTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const openPicker = () => {
+    if (hidePickerTimeout.current) clearTimeout(hidePickerTimeout.current)
+    setShowPicker(true)
+  }
+  const closePicker = () => {
+    hidePickerTimeout.current = setTimeout(() => setShowPicker(false), 120)
+  }
 
   const toggleExpandAll = useCallback(() => {
     if (isExpanded) {
@@ -235,7 +253,7 @@ function GraphControls() {
       setEdges([])
       setIsExpanded(false)
     } else {
-      // Expand all via BFS animation
+      // Expand all via BFS animation up to expandDepth
       if (animRef.current) return
       animRef.current = true
 
@@ -243,6 +261,7 @@ function GraphControls() {
 
       const expandLevel = (parentIds: string[], depth: number) => {
         if (!animRef.current) return
+        if (depth >= expandDepth) return
 
         const current = getNodes()
         const existingIds = new Set(current.map((n) => n.id))
@@ -303,7 +322,7 @@ function GraphControls() {
       setIsExpanded(true)
       expandLevel(layerRoots.map((r) => r.id), 0)
     }
-  }, [isExpanded, getNodes, setNodes, setEdges])
+  }, [isExpanded, expandDepth, getNodes, setNodes, setEdges])
 
   return (
     <Panel position="bottom-left" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -354,30 +373,93 @@ function GraphControls() {
       {/* Divider */}
       <div style={{ height: 1, backgroundColor: '#e4e4e7', margin: '2px 0' }} />
 
-      {/* Expand all / Collapse all toggle */}
-      <button
-        style={BTN_STYLE}
-        title={isExpanded ? 'Collapse all' : 'Expand all'}
-        onClick={toggleExpandAll}
-        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
-        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+      {/* Expand all / Collapse all toggle with depth picker */}
+      <div
+        style={{ position: 'relative' }}
+        onMouseEnter={openPicker}
+        onMouseLeave={closePicker}
       >
-        {isExpanded ? (
-          <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M6 2v4H2M6 6l-4.5-4.5"/>
-            <path d="M10 2v4h4M10 6l4.5-4.5"/>
-            <path d="M6 14v-4H2M6 10l-4.5 4.5"/>
-            <path d="M10 14v-4h4M10 10l4.5 4.5"/>
-          </svg>
-        ) : (
-          <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M2 6V2h4M2 2l4.5 4.5"/>
-            <path d="M14 6V2h-4M14 2l-4.5 4.5"/>
-            <path d="M2 10v4h4M2 14l4.5-4.5"/>
-            <path d="M14 10v4h-4M14 14l-4.5-4.5"/>
-          </svg>
+        <button
+          style={BTN_STYLE}
+          title={isExpanded ? 'Collapse all' : `Expand to ${DEPTH_OPTIONS.find(o => o.depth === expandDepth)?.label ?? 'Niche'} level`}
+          onClick={toggleExpandAll}
+          onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#f4f4f5' }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#fff' }}
+        >
+          {isExpanded ? (
+            <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 2v4H2M6 6l-4.5-4.5"/>
+              <path d="M10 2v4h4M10 6l4.5-4.5"/>
+              <path d="M6 14v-4H2M6 10l-4.5 4.5"/>
+              <path d="M10 14v-4h4M10 10l4.5 4.5"/>
+            </svg>
+          ) : (
+            <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 6V2h4M2 2l4.5 4.5"/>
+              <path d="M14 6V2h-4M14 2l-4.5 4.5"/>
+              <path d="M2 10v4h4M2 14l4.5-4.5"/>
+              <path d="M14 10v4h-4M14 14l-4.5-4.5"/>
+            </svg>
+          )}
+        </button>
+
+        {/* Depth picker — shown on hover when collapsed */}
+        {showPicker && !isExpanded && (
+          <div
+            onMouseEnter={openPicker}
+            onMouseLeave={closePicker}
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 'calc(100% + 8px)',
+              backgroundColor: '#fff',
+              border: '1px solid #e4e4e7',
+              borderRadius: 8,
+              boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+              padding: '8px 10px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 4,
+              whiteSpace: 'nowrap',
+              zIndex: 10,
+            }}
+          >
+            <span style={{ fontSize: 10, fontWeight: 600, color: '#a1a1aa', letterSpacing: '0.06em', textTransform: 'uppercase', paddingLeft: 2, marginBottom: 2 }}>
+              Expand to
+            </span>
+            {DEPTH_OPTIONS.map((opt) => {
+              const isActive = expandDepth === opt.depth
+              return (
+                <button
+                  key={opt.depth}
+                  onClick={(e) => { e.stopPropagation(); setExpandDepth(opt.depth) }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 20,
+                    padding: '4px 8px',
+                    borderRadius: 5,
+                    border: 'none',
+                    cursor: 'pointer',
+                    backgroundColor: isActive ? '#18181b' : 'transparent',
+                    color: isActive ? '#fff' : '#52525b',
+                    fontSize: 12,
+                    fontWeight: isActive ? 600 : 400,
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    textAlign: 'left',
+                  }}
+                >
+                  {opt.label}
+                  {opt.warn && (
+                    <span style={{ fontSize: 10, color: isActive ? '#fbbf24' : '#d97706', fontWeight: 600 }}>slow</span>
+                  )}
+                </button>
+              )
+            })}
+          </div>
         )}
-      </button>
+      </div>
     </Panel>
   )
 }
