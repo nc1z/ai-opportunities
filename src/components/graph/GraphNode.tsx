@@ -262,6 +262,7 @@ export function GraphNodeComponent({ data }: { data: GraphNodeData }) {
   return (
     <>
       <div
+        className="graph-node-enter"
         style={{
           display: 'inline-flex',
           alignItems: 'center',
