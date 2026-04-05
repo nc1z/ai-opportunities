@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { expansionSourceGroups } from '../data/expansionSources'
 
 export function SourcesPage() {
   return (
@@ -184,6 +185,16 @@ export function SourcesPage() {
           <Source label="DeepEval / Confident AI" href="https://www.confident-ai.com/" />
           <Source label="Helicone — LLM Cost & Observability" href="https://www.helicone.ai/" />
         </SourceGroup>
+      </Section>
+
+      <Section title="Expansion Research References">
+        {expansionSourceGroups.map((group) => (
+          <SourceGroup key={group.label} label={group.label}>
+            {group.entries.map((source) => (
+              <Source key={source.href} label={source.label} href={source.href} />
+            ))}
+          </SourceGroup>
+        ))}
       </Section>
 
       <Section title="News & Analysis">
