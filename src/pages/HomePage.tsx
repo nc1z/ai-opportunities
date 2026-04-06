@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { layerRoots } from '@/data/index'
 import { totalReferencesCount } from './SourcesPage'
+import peerlistBadge from '@/assets/peerlist-ai-opportunities.png'
+import producthuntBadge from '@/assets/producthunt-ai-opportunities.png'
 
 const STATS: { label: string; value: number }[] = [
   { label: 'Layer',   value: 5 },
@@ -68,6 +70,36 @@ export function HomePage() {
         {STATS.map((s, i) => (
           <StatPill key={s.label} label={s.label} value={s.value} delay={i * 80} />
         ))}
+      </div>
+
+      <div className="flex flex-wrap items-center gap-3 mb-10 select-none">
+        <a
+          href="https://peerlist.io/nc1zdev/project/ai-opportunities--open-source-explorer"
+          target="_blank"
+          rel="noreferrer"
+          className="shrink-0 outline-none"
+          style={{ border: 'none' }}
+        >
+          <img
+            src={peerlistBadge}
+            alt="AI Opportunities — Open Source Explorer"
+            style={{ display: 'block', width: 'auto', height: '54px', border: 'none' }}
+          />
+        </a>
+        <div className="h-8 w-px bg-zinc-200" />
+        <a
+          href="https://www.producthunt.com/products/ai-opportunities/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-ai-opportunities"
+          target="_blank"
+          rel="noreferrer"
+          className="shrink-0 outline-none"
+          style={{ border: 'none' }}
+        >
+          <img
+            src={producthuntBadge}
+            alt="AI Opportunities - 2,500+ AI focus areas – open source &quot;what to build&quot; explorer | Product Hunt"
+            style={{ display: 'block', width: 'auto', height: '54px', border: 'none' }}
+          />
+        </a>
       </div>
 
       <div id="layers" className="relative">
