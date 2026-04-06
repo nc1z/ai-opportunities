@@ -1,3 +1,4 @@
+export type { SourceEntry } from './researchSources'
 import { type SourceEntry } from './researchSources'
 import {
   chatgptApplication, chatgptAgentWorkflow, chatgptHarness,
@@ -23,10 +24,6 @@ function dedup(entries: SourceEntry[]): SourceEntry[] {
     seen.add(e.href)
     return true
   })
-}
-
-function host(href: string) {
-  try { return new URL(href).hostname.replace(/^www\./, '') } catch { return '' }
 }
 
 function matches(href: string, patterns: RegExp[]) {
