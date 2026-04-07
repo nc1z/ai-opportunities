@@ -8,7 +8,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Neurodivergent Learning Companions',
+    name: 'Learning Companions for Neurodivergent Students',
     description:
       'Specialized tutoring interfaces that adjust pacing, sensory input, and reward mechanisms for students with ADHD, dyslexia, or ASD.',
     order: 1,
@@ -20,7 +20,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Trade Skill Simulation Tutors',
+    name: 'Tutors for Trade & Vocational Skills',
     description:
       'Step-by-step AI guidance for vocational training (plumbing, electrical) using computer vision to provide real-time feedback on manual tasks.',
     order: 2,
@@ -31,7 +31,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Embedded Community Tutors',
+    name: 'AI Tutors Built into Study Communities',
     description:
       'Subject-specific AI agents that live within student Discord or Reddit communities to facilitate peer-to-peer study sessions.',
     order: 3,
@@ -54,7 +54,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Preschool Cognitive Playmates',
+    name: 'AI Playmates for Preschool Learning',
     description:
       'AI-powered physical toys that engage toddlers in developmental speech and logic games through natural conversation.',
     order: 5,
@@ -71,7 +71,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Adult Certification Strategy Coaches',
+    name: 'Certification Study Coaches for Adults',
     description:
       'Targeted prep tools for professional certifications (CFA, PMP, AWS) that identify knowledge gaps through mock exam analysis.',
     order: 6,
@@ -88,7 +88,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Dynamic Standardized Curriculum Mapping',
+    name: 'Automated Curriculum Mapping Tools',
     description:
       'Tools that convert a student\'s unique interests (e.g., sports, gaming) into a custom curriculum meeting national education standards.',
     order: 7,
@@ -105,7 +105,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Bilingual Bridge Tutors',
+    name: 'Bilingual Learning Tutors',
     description:
       'Real-time translation agents for ESL students that synthesize classroom lectures while building localized academic glossaries.',
     order: 8,
@@ -118,7 +118,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Lecture-to-Simulated Lab Converters',
+    name: 'Lecture-to-Virtual Lab Simulators',
     description:
       'Software that ingests video lectures and generates interactive 3D simulations to reinforce abstract scientific or mathematical concepts.',
     order: 1,
@@ -129,7 +129,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Academic Citation & Integrity Agents',
+    name: 'Citation Checkers & Academic Integrity Tools',
     description:
       'Automated bibliography managers that scan for accidental plagiarism and ensure adherence to the latest APA/MLA/Chicago standards.',
     order: 2,
@@ -140,7 +140,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Spaced-Repetition Knowledge Mappers',
+    name: 'Spaced Repetition Study Trackers',
     description:
       'Note-taking assistants that automatically map connections between concepts and schedule review sessions based on forgetting curves.',
     order: 3,
@@ -151,7 +151,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Collaborative Group-Research Summarizers',
+    name: 'Research Summarizers for Study Groups',
     description:
       'Multi-user interfaces that synthesize hundreds of research papers into a single structured knowledge base for team projects.',
     order: 4,
@@ -168,7 +168,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Socratic Argumentation Essay Coaches',
+    name: 'Critical Thinking Essay Coaches',
     description:
       'Writing assistants that utilize probing questions to help students clarify logic and improve argumentative flow without writing for them.',
     order: 5,
@@ -179,7 +179,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Whiteboard-to-LaTeX Digitizers',
+    name: 'Whiteboard-to-Math Notation Converters',
     description:
       'Mobile apps utilizing computer vision to convert complex handwritten math or chemistry equations on physical boards into editable digital code.',
     order: 6,
@@ -196,7 +196,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Voice-First Commuting Quiz Companions',
+    name: 'Voice Quiz Companions for Commuters',
     description:
       'Audio-only tools that allow students to test themselves on material via high-quality synthetic speech during transit.',
     order: 7,
@@ -213,7 +213,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Assignment-Density Calendar Optimizers',
+    name: 'Smart Deadline & Assignment Planners',
     description:
       'Scheduling tools that break down large projects into daily tasks based on an individual student\'s past work velocity and upcoming deadlines.',
     order: 8,
@@ -226,7 +226,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Grief and Legacy Support Companions',
+    name: 'AI Companions for Grief & Legacy Support',
     description:
       'Empathetic AI interfaces designed to help users process loss through structured journaling and legacy-sharing protocols.',
     order: 1,
@@ -243,7 +243,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real-Time Panic Grounding Tools',
+    name: 'Real-Time Panic & Anxiety Grounding Tools',
     description:
       'Voice-guided assistants that detect physiological signs of anxiety via wearables and initiate immediate grounding exercises.',
     order: 2,
@@ -254,7 +254,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'High-Stress Profession Burnout Monitors',
+    name: 'Burnout Trackers for High-Pressure Jobs',
     description:
       'Specialized agents for healthcare workers or teachers that monitor work patterns and proactively suggest micro-breaks and stress-relief techniques.',
     order: 3,
@@ -265,7 +265,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Sobriety Habit-Change Accountability Partners',
+    name: 'Sobriety & Recovery Accountability Partners',
     description:
       'Check-in bots that use behavioral science to provide personalized "nudges" during high-risk relapse periods.',
     order: 4,
@@ -276,7 +276,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Sleep Architecture Optimization Coaches',
+    name: 'Sleep Quality Optimization Coaches',
     description:
       'AI that analyzes wearable data (Oura/Whoop) to suggest hyper-specific adjustments to room temperature, light, and routine.',
     order: 5,
@@ -293,7 +293,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Social Anxiety Performance Arenas',
+    name: 'Social Anxiety Practice Environments',
     description:
       'Safe, simulated environments where users can rehearse difficult professional or personal conversations with reactive AI personas.',
     order: 6,
@@ -304,7 +304,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Digital Mindfulness Minimalism Mentors',
+    name: 'Mindfulness & Digital Wellbeing Coaches',
     description:
       'AI that monitors screen-time and app usage patterns to help users break addictive scrolling habits through mindful friction.',
     order: 7,
@@ -315,7 +315,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Philosophical and Spiritual Mentors',
+    name: 'Philosophical & Spiritual Mentors',
     description:
       'Non-clinical AI companions trained on philosophical texts to help users navigate existential crises or life transitions.',
     order: 8,
@@ -328,7 +328,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Computer Vision Technique Correction',
+    name: 'AI Fitness Form & Technique Correctors',
     description:
       'Mobile platforms utilizing the smartphone camera to provide real-time audio corrections for lifting form or yoga poses.',
     order: 1,
@@ -345,7 +345,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Post-Surgical Physical Therapy Assistants',
+    name: 'Post-Surgery Physical Therapy Assistants',
     description:
       'Post-op apps that track range-of-motion progress and ensure home exercise compliance through visual verification.',
     order: 2,
@@ -356,7 +356,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Condition-Specific Metabolic Dietitians',
+    name: 'AI Dietitians for Specific Health Conditions',
     description:
       'Nutrition planners tailored for specific conditions like PCOS, Type 2 Diabetes, or IBS through meal-blood glucose sync.',
     order: 3,
@@ -373,7 +373,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Bio-Integrated Intelligent Grocery Assistants',
+    name: 'Health-Aware Grocery Shopping Assistants',
     description:
       'Shopping tools that recommend foods based on real-time continuous glucose monitor (CGM) or HRV data response.',
     order: 4,
@@ -384,7 +384,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Amateur Athlete Performance Directors',
+    name: 'Performance Coaches for Amateur Athletes',
     description:
       'AI training blocks for runners or cyclists that adapt based on weather, terrain, and cumulative fatigue metrics.',
     order: 5,
@@ -395,7 +395,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Interaction Checking Wellness Advisors',
+    name: 'Drug Interaction & Wellness Advisors',
     description:
       'Tools that cross-reference over-the-counter supplements and vitamins with medications to avoid adverse reactions.',
     order: 6,
@@ -406,7 +406,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Visual Nutrient Recognition Loggers',
+    name: 'Photo-Based Nutrition Trackers',
     description:
       'One-click photo-to-nutrient extraction that estimates portion sizes and caloric density from single images.',
     order: 7,
@@ -423,7 +423,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Biological Age and Longevity Trackers',
+    name: 'Biological Age & Longevity Trackers',
     description:
       'Platforms synthesizing blood markers, wearable data, and lifestyle logs to provide actionable longevity roadmaps.',
     order: 8,
@@ -436,7 +436,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Decadal Memory Legacy Avatars',
+    name: 'Long-Term Memory & Legacy Avatars',
     description:
       'Companions that learn a user\'s life history and personality over years, acting as a digital biographer for future generations.',
     order: 1,
@@ -453,7 +453,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Elderly Companionship & Health Bots',
+    name: 'Companionship & Health Bots for the Elderly',
     description:
       'Voice-first AI providing daily check-ins, medication reminders, and cognitive stimulation for isolated seniors.',
     order: 2,
@@ -464,7 +464,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Creator-Centric Fan Interaction Avatars',
+    name: 'AI Avatars for Creator Fan Engagement',
     description:
       'AI versions of popular influencers that fans can interact with for lore questions or personalized advice.',
     order: 3,
@@ -481,7 +481,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Neurodivergent Social Skill Roleplay',
+    name: 'Social Skills Practice for Neurodivergent Users',
     description:
       'Safe environments for practicing eye contact, social cues, and subtext interpretation through simulated conversation.',
     order: 4,
@@ -492,7 +492,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Shared AI Family Members',
+    name: 'Shared AI Family Companions',
     description:
       'Multi-user companions participating in family group chats to track shared history and manage collective logistics.',
     order: 5,
@@ -509,7 +509,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Emergent Behavior AI Pets',
+    name: 'AI Pets with Evolving Behaviors',
     description:
       'Digital entities that "evolve" personalities based on the frequency and quality of user interaction.',
     order: 6,
@@ -520,7 +520,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Interactive Fiction Universe Immersion',
+    name: 'Immersive Interactive Story Worlds',
     description:
       'Licensed characters from popular media franchises allowing fans to explore "off-screen" narrative life.',
     order: 7,
@@ -537,7 +537,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Historical Mentor Simulators',
+    name: 'Historical Figure Mentor Simulators',
     description:
       'AI models of historical figures (e.g., Marcus Aurelius) providing advice based on documented philosophical writings.',
     order: 8,
@@ -550,7 +550,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Procedural AI Dungeon Masters',
+    name: 'AI Dungeon Masters for Tabletop Games',
     description:
       'Dynamic narrative engines for tabletop-style RPGs that generate maps, dialogue, and world-state in real-time.',
     order: 1,
@@ -567,7 +567,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Natural Language Game Modding Suites',
+    name: 'Text-Based Game Modding Tools',
     description:
       'Tools allowing players to describe new mechanics or assets to be generated and integrated into existing games.',
     order: 2,
@@ -578,7 +578,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Biometric Adaptive Difficulty Tuners',
+    name: 'Game Difficulty Adjusters Based on Biometrics',
     description:
       'Real-time engines monitoring player stress (via HRV or input) to adjust enemy behavior and maintain flow state.',
     order: 3,
@@ -589,7 +589,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Voice-to-Game Creation Engines',
+    name: 'Voice-Based Game Creation Tools',
     description:
       'Platforms where users "describe" worlds and mechanics to build interactive experiences without code (Roblox for AI).',
     order: 4,
@@ -600,7 +600,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Personalized Lore & History Generators',
+    name: 'Personalized Game Lore & History Creators',
     description:
       'Systems that track unique player choices and generate a world chronicle document at the campaign\'s conclusion.',
     order: 5,
@@ -611,7 +611,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Scalable Game QA Bot Fleets',
+    name: 'Automated Game Testing Bots',
     description:
       'Agents that "play" games 24/7 to identify bugs, balance issues, and navigation blockers before release.',
     order: 6,
@@ -628,7 +628,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Emotionally Resonant Dialogue Localization',
+    name: 'Emotionally Intelligent Game Dialogue Translators',
     description:
       'Localization tools providing high-quality, tonally-consistent dubbing in any language during runtime.',
     order: 7,
@@ -639,7 +639,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'In-Game NPC Conversational Layers',
+    name: 'Conversational AI for In-Game Characters',
     description:
       'Replacing dialogue trees with LLMs, allowing players to have open-ended voice conversations with game characters.',
     order: 8,
@@ -658,7 +658,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Native Social Media Platforms',
+    name: 'Social Media Platforms Built on AI',
     description:
       'Networks where human and AI entities coexist, with agents generating content and acting as community facilitators.',
     order: 1,
@@ -675,7 +675,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI Matchmaking Compatibility Protocols',
+    name: 'AI-Powered Relationship Matchmaking',
     description:
       'Systems where a user\'s AI "interviews" another\'s to determine compatibility before a real-world date occurs.',
     order: 2,
@@ -686,7 +686,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Group Chat Consensus Facilitators',
+    name: 'Group Chat Decision-Making Tools',
     description:
       'AI members in group chats that suggest meetups, settle logistics, or provide context for shared discussions.',
     order: 3,
@@ -703,7 +703,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Dating Interaction Performance Coaches',
+    name: 'Dating Conversation Coaches',
     description:
       'AI that analyzes dating app profiles and threads to offer "ghost-writing" and feedback on social signals.',
     order: 4,
@@ -714,7 +714,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Community Management Auto-Pilots',
+    name: 'Automated Community Management Agents',
     description:
       'Advanced agents for Discord/Reddit that handle onboarding, conflict resolution, and event scheduling.',
     order: 5,
@@ -725,7 +725,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Digital Life Memory Documentarians',
+    name: 'AI Life Memory & Journal Keepers',
     description:
       'Agents that automatically curate a user\'s social and private media into coherent monthly "story" books.',
     order: 6,
@@ -736,7 +736,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Social Anxiety Rehearsal Environments',
+    name: 'Social Situation Rehearsal Environments',
     description:
       'Simulated "cocktail parties" or "board meetings" where users practice networking and social entry skills.',
     order: 7,
@@ -747,7 +747,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Multilingual Pen Pal Bridges',
+    name: 'AI Pen Pals for Language Practice',
     description:
       'AI partners facilitating language learning through persistent, culturally-aware text and voice correspondence.',
     order: 8,
@@ -760,7 +760,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Hyper-Personalized Spending Nudges',
+    name: 'Personalized Spending Habit Nudges',
     description:
       'Real-time alerts that intervene during a purchase to show the impact on specific long-term financial goals.',
     order: 1,
@@ -771,7 +771,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Freelancer Automated Tax Deduction Scouts',
+    name: 'Tax Deduction Finders for Freelancers',
     description:
       'AI that scans transactions to identify potential gig-worker write-offs and pre-fills tax forms.',
     order: 2,
@@ -788,7 +788,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Autonomous Debt Repayment Snowballers',
+    name: 'Automated Debt Repayment Planners',
     description:
       'Agents that move money between accounts to execute the most efficient interest-avoidance strategy.',
     order: 3,
@@ -810,7 +810,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Zombie Subscription Audit Guards',
+    name: 'Unused Subscription Trackers & Cancelers',
     description:
       'Proactive monitors flagging unused subscriptions and handling the multi-step cancellation process.',
     order: 5,
@@ -821,7 +821,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Gamified Teen Financial Literacy Mentors',
+    name: 'Financial Literacy Games & Coaches for Teens',
     description:
       'Companions helping teenagers manage allowances while teaching compounding interest through simulation.',
     order: 6,
@@ -832,7 +832,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Estate and Will Planning Assistants',
+    name: 'Estate & Will Planning Assistants',
     description:
       'Conversational tools documenting assets and preferences to generate legally-compliant estate documents.',
     order: 7,
@@ -849,7 +849,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Investment Portfolio Natural-Language Explainers',
+    name: 'Plain-Language Portfolio Explainers',
     description:
       'Tools that "translate" complex brokerage statements and market movements into plain English.',
     order: 8,
@@ -862,7 +862,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'One-Click Cinematic Event Highlights',
+    name: 'Automatic Event Highlight Video Makers',
     description:
       'AI that scans raw footage to edit 60-second recap videos for weddings or travel.',
     order: 1,
@@ -879,7 +879,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Generative Virtual Outfit Try-On',
+    name: 'Virtual Outfit Try-On Tools',
     description:
       'Tools allowing users to take a selfie and see themselves in any e-commerce garment before buying.',
     order: 2,
@@ -896,7 +896,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Virtual Studio Background Stylers',
+    name: 'Virtual Background Stylers for Videos',
     description:
       'Consumer tools placing subjects in photorealistic "studio" environments for professional headshots.',
     order: 3,
@@ -907,7 +907,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Local-First Family Photo Managers',
+    name: 'Private On-Device Family Photo Managers',
     description:
       'AI that organizes decades of photos by person and event on-device without cloud data transfer.',
     order: 4,
@@ -918,7 +918,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Old Photo Restoration & High-Fidelity Colorization',
+    name: 'Old Photo Restoration & Colorization',
     description:
       'High-resolution agents repairing physical damage and adding historical color to archival photos.',
     order: 5,
@@ -935,7 +935,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Social Media Aesthetic "Vibe" Presets',
+    name: 'Social Media Aesthetic Preset Tools',
     description:
       'Generative filters that re-style photos to match trending aesthetics on TikTok or Instagram.',
     order: 6,
@@ -946,7 +946,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Personalized Video Dubbing & Lip-Sync',
+    name: 'Personalized Video Dubbing & Lip-Sync Tools',
     description:
       'Apps allowing users to dub their own videos into foreign languages while matching lip movements.',
     order: 7,
@@ -963,7 +963,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Powered Narrative Photo Book Curators',
+    name: 'AI Photo Book Story Creators',
     description:
       'Software that selects the best 5% of a photo set to build a narrative print-ready book.',
     order: 8,
@@ -976,7 +976,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Multimodal Review Verdict Agents',
+    name: 'Multi-Format Product Review Analyzers',
     description:
       'Tools synthesizing thousands of video/text reviews to answer specific logistical questions.',
     order: 1,
@@ -993,7 +993,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Personalized "Find Me X" Discovery Scouts',
+    name: 'Personalized Product & Experience Discovery Agents',
     description:
       'Natural language search for products meeting multi-factor requirements (e.g., "Ethical, under $100, waterproof").',
     order: 2,
@@ -1004,7 +1004,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Ethical and Sustainability Scorecard Extensions',
+    name: 'Ethics & Sustainability Scoring Extensions',
     description:
       'Browser tools providing instant impact or labor practice scores for any product.',
     order: 3,
@@ -1026,7 +1026,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Selfie-Based Fit Prediction Engines',
+    name: 'Selfie-Based Clothing Fit Predictors',
     description:
       'Agents using mirror photos to recommend exact sizes across different clothing brands with 95% accuracy.',
     order: 5,
@@ -1043,7 +1043,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Second-Hand Market Scrapers',
+    name: 'Second-Hand Deal Finders',
     description:
       'Real-time monitors for eBay and Depop finding vintage items matching a user\'s unique "style profile."',
     order: 6,
@@ -1054,7 +1054,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Optimal Purchase-Time Predictors',
+    name: 'Best Time to Buy Predictors',
     description:
       'Prediction models advising users on the best time to buy based on seasonal cycles and competitor drops.',
     order: 7,
@@ -1065,7 +1065,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Allergen and Ingredient Transparency Agents',
+    name: 'Allergen & Ingredient Checkers',
     description:
       'Food commerce assistants flagging hidden ingredients in grocery carts.',
     order: 8,
@@ -1078,7 +1078,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Predictive Household Replenishment Agents',
+    name: 'Automated Household Restocking Agents',
     description:
       'Systems monitoring consumable usage (detergent, diapers) and handling autonomous reordering and payment.',
     order: 1,
@@ -1089,7 +1089,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Limited-Edition Flash-Deal Snipers',
+    name: 'Flash Deal & Limited-Edition Alert Agents',
     description:
       'Agents monitoring drops and executing purchases in milliseconds for fans to compete with scalpers.',
     order: 2,
@@ -1100,7 +1100,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Birthday Gift Fulfillment Pilots',
+    name: 'Automated Birthday Gift Buyers',
     description:
       'AI remembering birthdays and autonomously selecting, wrapping, and shipping gifts within pre-approved budgets.',
     order: 3,
@@ -1111,7 +1111,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Returns and Dispute Management Assistants',
+    name: 'Return & Dispute Help Assistants',
     description:
       'AI handling the multi-step return process, including label generation and carrier pickup scheduling.',
     order: 4,
@@ -1122,7 +1122,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Spending-Policy Delegated Agents',
+    name: 'Policy-Compliant Purchase Agents',
     description:
       'Integration allowing employees to delegate purchasing power to an AI within strict corporate card guardrails.',
     order: 5,
@@ -1133,7 +1133,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Event Ticket Queue Monitors',
+    name: 'Event Ticket Queue Watchers',
     description:
       'Agents waiting in virtual queues for concerts and completing checkout immediately upon access.',
     order: 6,
@@ -1144,7 +1144,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Airline Credit Recovery Monitors',
+    name: 'Airline Credit & Refund Trackers',
     description:
       'Tools scanning inboxes for unused travel vouchers and applying them to the next relevant booking.',
     order: 7,
@@ -1155,7 +1155,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Post-Purchase Price Drop Reclaimers',
+    name: 'Price Drop Refund Claimers',
     description:
       'Agents monitoring price changes after a sale and autonomously requesting price-match refunds.',
     order: 8,
@@ -1168,7 +1168,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Pace-Aware Multi-City Itineraries',
+    name: 'Smart Multi-City Trip Planners',
     description:
       'Planning tools balancing sightseeing density with rest days based on traveler energy history.',
     order: 1,
@@ -1179,7 +1179,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cheapest-Viable Route Optimizers',
+    name: 'Cheapest Route Finders',
     description:
       'Agents finding the lowest-cost paths between cities using a mix of budget rail, air, and coach.',
     order: 2,
@@ -1201,7 +1201,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Anti-Tourist Local Experience Curators',
+    name: 'Off-the-Beaten-Path Local Experience Guides',
     description:
       'Agents using local social media to find restaurants and hidden spots missing from guidebooks.',
     order: 4,
@@ -1212,7 +1212,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Hidden Red-Flag Accommodation Vetters',
+    name: 'Accommodation Safety & Red-Flag Checkers',
     description:
       'Agents cross-referencing Airbnb photos with reviews to find issues like poor Wi-Fi or noise.',
     order: 5,
@@ -1223,7 +1223,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Group Consensus Trip Facilitators',
+    name: 'Group Trip Planning & Agreement Tools',
     description:
       'Collaborative bots polling friends on dates and budgets to find the group\'s "Pareto optimal" vacation.',
     order: 6,
@@ -1234,7 +1234,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Accessibility-Prioritized Itinerary Builders',
+    name: 'Accessibility-First Trip Planners',
     description:
       'Planners focusing on wheelchair access and low-sensory environments for neurodivergent travelers.',
     order: 7,
@@ -1245,7 +1245,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Travel Style-Aware Specialized Agents',
+    name: 'Travel Agents Tailored to Your Style',
     description:
       'Niche agents for "Digital Nomads" or "Solo Luxury Travelers" with domain-specific knowledge.',
     order: 8,
@@ -1258,7 +1258,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Autonomous Flight Delay Rebookers',
+    name: 'Automatic Flight Rebooking Agents',
     description:
       'Systems detecting delays and instantly presenting/booking the best alternative flight before public announcements.',
     order: 1,
@@ -1269,7 +1269,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Step-by-Step Local Transit Navigators',
+    name: 'Step-by-Step Local Transit Guides',
     description:
       'Real-time guides for foreign metro systems providing visual cues and tap-to-pay instructions.',
     order: 2,
@@ -1280,7 +1280,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Context-Aware Cultural Etiquette Coaches',
+    name: 'Cultural Etiquette Coaches for Travelers',
     description:
       'Location-based alerts providing the right gesture or phrase for a specific venue or city.',
     order: 3,
@@ -1291,7 +1291,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Lost Document Emergency Pilots',
+    name: 'Emergency Lost Document Recovery Agents',
     description:
       'Step-by-step guidance for replacing passports, including embassy location and form pre-filling.',
     order: 4,
@@ -1302,7 +1302,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Hyper-Local Safety Sentiment Alerts',
+    name: 'Real-Time Local Safety Alerts',
     description:
       'Real-time monitoring of news/social media to alert travelers of protests or weather events in their immediate vicinity.',
     order: 5,
@@ -1313,7 +1313,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Impossible-Restaurant Cancellation Agents',
+    name: 'Hard-to-Get Restaurant Booking Agents',
     description:
       'Bots waiting for cancellations at booked-out venues and grabbing them for the traveler instantly.',
     order: 6,
@@ -1324,7 +1324,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'GPS-Aware Travel Journal Generators',
+    name: 'Location-Based Travel Journal Creators',
     description:
       'Narrative tools using GPS data and photos to draft daily blog posts or private memory entries.',
     order: 7,
@@ -1335,7 +1335,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Low-Latency Translation Earbud Interfaces',
+    name: 'Real-Time Translation Earbuds',
     description:
       'Near-zero lag face-to-face translation for deep interaction with locals.',
     order: 8,
@@ -1354,7 +1354,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cry Pattern Interpretation Algorithms',
+    name: 'Baby Cry Interpreters',
     description:
       'Software differentiating "hunger," "tired," and "pain" cries with over 90% accuracy.',
     order: 1,
@@ -1371,7 +1371,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Predictive Nap Window Optimizers',
+    name: 'Baby Nap Schedule Predictors',
     description:
       'AI analyzing light and movement data to suggest the ideal window for the next sleep to avoid overtiredness.',
     order: 2,
@@ -1388,7 +1388,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Single-Image Malnutrition Assessment Tools',
+    name: 'Photo-Based Baby Nutrition Assessors',
     description:
       'Smartphone apps estimating child height/weight to track growth in underserved regions.',
     order: 3,
@@ -1405,7 +1405,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Camera-Based SIDS Prevention Monitors',
+    name: 'Camera-Based SIDS Risk Monitors',
     description:
       'Non-wearable systems utilizing computer vision to monitor chest rise and sleep environment safety.',
     order: 4,
@@ -1422,7 +1422,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Developmental Milestone Auto-Loggers',
+    name: 'Automated Baby Development Trackers',
     description:
       'AI scanning smartphone video to "flag" and save a child\'s first roll, crawl, or step.',
     order: 5,
@@ -1456,7 +1456,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Infant Health Longitudinal Digital Twins',
+    name: 'Long-Term Infant Health Tracking Systems',
     description:
       'Data models combining sleep, feeding, and medical records to help pediatricians spot early chronic trends.',
     order: 7,
@@ -1467,7 +1467,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real-Time Baby Wellness Analytics',
+    name: 'Real-Time Baby Health Dashboards',
     description:
       'Dashboards providing weekly summaries of infant health data compared to WHO developmental curves.',
     order: 8,
@@ -1480,7 +1480,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Age-Specific Content Filter Curators',
+    name: 'Age-Appropriate Content Filters for Kids',
     description:
       "Agents selecting educational media based on a child's current developmental stage and parent boundaries.",
     order: 1,
@@ -1508,7 +1508,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI Family Logistics Hub',
+    name: 'Family Scheduling & Logistics Hub',
     description:
       'Shared bots managing carpools, doctor appointments, and school calendars across multiple caregivers.',
     order: 3,
@@ -1519,7 +1519,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Caregiver Handoff Briefing Automators',
+    name: 'Automated Caregiver Handoff Summaries',
     description:
       'Summaries for babysitters including recent meals, naps, and specific "mood reports."',
     order: 4,
@@ -1530,7 +1530,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Teen Emotional Check-In Companions',
+    name: 'Emotional Check-In Companions for Teens',
     description:
       'Non-intrusive AI gauging teen well-being via text and flagging concerns to parents.',
     order: 5,
@@ -1541,7 +1541,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'School Readiness Interactive Play',
+    name: 'Interactive School Readiness Play Tools',
     description:
       'Apps evaluating literacy and numeracy through play to provide a "readiness score" for kindergarten.',
     order: 6,
@@ -1552,7 +1552,7 @@ export const consumerFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Co-Parenting Conflict Buffering Agents',
+    name: 'AI Mediators for Co-Parenting Conflicts',
     description:
       'AI "neutralizing" emotional language in messages between divorced parents to focus on logistics.',
     order: 7,
