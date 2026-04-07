@@ -126,7 +126,7 @@ interface SourceGroupProps {
 function SourceGroup({ label, children }: SourceGroupProps) {
   return (
     <div>
-      <p className="text-xs font-medium text-zinc-500 mb-2">{label}</p>
+      <p className="text-xs font-medium text-zinc-500 mb-2 break-all">{label}</p>
       <ul className="space-y-1.5">{children}</ul>
     </div>
   )
@@ -144,7 +144,7 @@ function Source({ label, href }: SourceProps) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors underline underline-offset-2 decoration-zinc-300 hover:decoration-zinc-600"
+        className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors underline underline-offset-2 decoration-zinc-300 hover:decoration-zinc-600 break-all"
       >
         {label}
       </a>
