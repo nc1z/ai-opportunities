@@ -8,7 +8,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Live-Streaming Real-Time Audio Descriptions',
+    name: 'Real-Time Audio Descriptions for Blind TV Viewers',
     description:
       'AI providing voiceovers for blind users watching TV, generating natural-language narration of on-screen action in real time.',
     order: 1,
@@ -20,7 +20,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real-Time Blind Navigation Wayfinding Bots',
+    name: 'Navigation Assistants for Blind Users',
     description:
       'AI informing users of nearby obstacles and distances via camera feed, describing spatial context such as "chair at 5 feet" through an earpiece.',
     order: 2,
@@ -32,7 +32,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Screen-Reader PDF Document Remediation',
+    name: 'PDF Accessibility Fixers for Screen Readers',
     description:
       'AI processing poorly structured PDFs to add accessibility tags, headings, and alt-text so screen readers can interpret them correctly.',
     order: 3,
@@ -43,7 +43,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Handwritten OCR Reading Agents',
+    name: 'Handwritten Text Readers for Blind Users',
     description:
       'AI reading handwritten text such as birthday cards or menus aloud to blind users, handling informal scripts and varied handwriting styles.',
     order: 4,
@@ -55,7 +55,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Social Context Facial Expression Recognizers',
+    name: 'Facial Expression & Social Cue Readers for Blind Users',
     description:
       'AI interpreting facial expressions and body language in a user\'s field of view and whispering social cues into their ear to aid blind users in conversations.',
     order: 5,
@@ -66,7 +66,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'App-Store Visual Accessibility Labelers',
+    name: 'App Accessibility Scanners for Visually Impaired Users',
     description:
       'AI scanning mobile applications to generate accessibility nutrition labels that describe which features and interactions are supported for users with visual impairments.',
     order: 6,
@@ -78,7 +78,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Color-Blind Contrast Adapters',
+    name: 'Website Color Adapters for Color Blind Users',
     description:
       'AI re-coloring websites and UIs in real time to meet the perceptual needs of users with color blindness or low vision, without requiring manual browser settings.',
     order: 7,
@@ -89,7 +89,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Enhanced Screen Magnifiers',
+    name: 'Screen Magnifiers for Low-Vision Users',
     description:
       'AI sharpening and upscaling text and UI elements as they are zoomed in, preventing the blur degradation that typically accompanies screen magnification for low-vision users.',
     order: 8,
@@ -103,7 +103,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'High-Speed AAC Predictive Devices',
+    name: 'Predictive Communication Boards for Non-Verbal Users',
     description:
       'AI-powered augmentative and alternative communication boards for non-verbal users that anticipate intended utterances, dramatically reducing the time to form a sentence.',
     order: 1,
@@ -114,7 +114,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Sign-to-Speech and Sign-to-Text Translators',
+    name: 'Sign Language to Speech & Text Translators',
     description:
       'AI watching sign language via camera and converting gestures into spoken words or on-screen text in real time, bridging communication between deaf and hearing users.',
     order: 2,
@@ -125,7 +125,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Stuttering Support Speech Smoothers',
+    name: 'Speech Smoothers for People Who Stutter',
     description:
       'AI processing a user\'s audio stream in real time to reduce the audible impact of stuttering during phone calls and video meetings, increasing confidence and accessibility.',
     order: 3,
@@ -137,7 +137,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cognitive Step Simplifiers',
+    name: 'Plain-Language Instruction Simplifiers for Cognitive Disabilities',
     description:
       'AI converting complex instructions, legal documents, or medical guides into short, plain-language steps designed for users with cognitive or intellectual disabilities.',
     order: 4,
@@ -148,7 +148,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Stroke-Recovery Aphasia Word Finders',
+    name: 'Word-Finding Assistants for Stroke & Aphasia Recovery',
     description:
       'AI assisting stroke survivors with aphasia by suggesting contextually appropriate words when they are unable to retrieve them, supporting language rehabilitation.',
     order: 5,
@@ -159,7 +159,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Foreign-Language Live Meeting Captions',
+    name: 'Real-Time Meeting Captions for Deaf Users',
     description:
       'AI providing instant native-language text captions for any spoken presentation or meeting, enabling deaf and hard-of-hearing users to participate across language barriers.',
     order: 6,
@@ -170,7 +170,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Rhythmic-Tone Dyslexia Text Readers',
+    name: 'Text-to-Speech Readers for Dyslexic Users',
     description:
       'AI reading text aloud at a rhythm and pace calibrated to improve comprehension for dyslexic users, combining audio with on-screen highlighting to support tracking.',
     order: 7,
@@ -182,7 +182,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Text-to-Sign Language Avatar Generators',
+    name: 'Text to Sign Language Avatar Converters',
     description:
       'AI converting written text into video of a signing avatar, enabling organizations to produce accessible sign-language content without requiring human interpreters for every message.',
     order: 8,
@@ -195,7 +195,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Immigration Form Navigation Bots',
+    name: 'Immigration Form Assistants',
     description:
       'AI guiding immigrants through which forms are required for their specific situation and pre-filling fields based on their documentation, reducing costly filing errors.',
     order: 1,
@@ -206,7 +206,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'No-Lawyer Small Claims Court Assistants',
+    name: 'Self-Represented Small Claims Court Assistants',
     description:
       'AI helping citizens structure arguments, gather evidence, and prepare filings for small claims disputes without requiring legal representation.',
     order: 2,
@@ -217,7 +217,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Public Housing Application Scouts',
+    name: 'Public Housing Waitlist Trackers',
     description:
       'AI managing complex, points-based public housing waitlists and notifying citizens of their status, eligibility changes, and new openings in real time.',
     order: 3,
@@ -228,7 +228,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Voter Registration Change Monitors',
+    name: 'Voter Registration Status Alert Tools',
     description:
       'AI monitoring state voter registration databases and alerting citizens immediately if their registration status is modified or purged without their knowledge.',
     order: 4,
@@ -239,7 +239,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Low-Priority 911 Triage Systems',
+    name: 'Non-Emergency 911 Call Routing Systems',
     description:
       'AI handling and routing non-emergency calls to free up human dispatchers, triaging requests by urgency and directing callers to appropriate non-emergency services.',
     order: 5,
@@ -250,7 +250,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Public Health Emergency Communication Bots',
+    name: 'Public Health Emergency Alert Bots',
     description:
       'AI delivering hyper-local health guidance to residents during pollution spikes, disease outbreaks, or environmental emergencies via SMS and push notifications.',
     order: 6,
@@ -261,7 +261,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Social Services Case Summarizers',
+    name: 'Case History Summarizers for Social Workers',
     description:
       'AI condensing lengthy case histories into structured summaries for social workers, enabling faster, more informed decisions during high-caseload situations.',
     order: 7,
@@ -272,7 +272,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Dashcam Pothole Reporting Agents',
+    name: 'Dashcam Road Damage Reporting Tools',
     description:
       'AI analyzing footage from garbage truck and municipal vehicle dashcams to automatically detect, geolocate, and log road damage for maintenance crews.',
     order: 8,
@@ -285,7 +285,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Legislative Bill Summarization Agents',
+    name: 'Plain-Language Legislative Bill Summarizers',
     description:
       'AI distilling thousand-page bills into plain-language summaries that explain fiscal impact and key policy changes for citizens and journalists.',
     order: 1,
@@ -297,7 +297,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Lobbying and Donation Money Maps',
+    name: 'Political Donor & Lobbying Influence Maps',
     description:
       'AI aggregating campaign finance and lobbying disclosures to produce interactive visualizations linking corporate donors to elected officials and specific votes.',
     order: 2,
@@ -308,7 +308,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Public Contract Anomaly Auditors',
+    name: 'Government Contract Fraud & Anomaly Detectors',
     description:
       'AI scanning public procurement data for statistical anomalies, patterns of bid-rigging, or conflicts of interest in how municipalities award construction and service contracts.',
     order: 3,
@@ -319,7 +319,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Elected-Official Voting Record Trackers',
+    name: 'Voting Record Trackers for Elected Officials',
     description:
       'AI monitoring legislative voting records and notifying constituents whenever their representative votes on topics they have flagged as personally important.',
     order: 4,
@@ -330,7 +330,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Assisted FOIA Request Portals',
+    name: 'Freedom of Information (FOIA) Request Assistants',
     description:
       'AI helping citizens draft legally precise Freedom of Information Act requests that are more likely to receive complete responses, lowering the barrier to accessing public records.',
     order: 5,
@@ -342,7 +342,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Local Zoning Decision Alerting Systems',
+    name: 'Local Zoning & Planning Decision Alert Tools',
     description:
       'AI monitoring municipal zoning boards and planning commissions to notify residents of proposed developments, variances, and hearings in their neighborhood.',
     order: 6,
@@ -353,7 +353,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Public Data API Aggregators',
+    name: 'Government Dataset Search & Access Tools',
     description:
       'AI normalizing and indexing heterogeneous government datasets into unified, searchable APIs that make civic data accessible to journalists, researchers, and developers.',
     order: 7,
@@ -364,7 +364,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Body-Cam Incident Scanners for Oversight',
+    name: 'Police Body Camera Incident Review Scanners',
     description:
       'AI scanning large volumes of body-camera footage to flag incidents warranting review by police oversight boards, surfacing patterns that manual review would miss.',
     order: 8,
@@ -377,7 +377,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'OER Quiz and Assessment Generators',
+    name: 'Open Textbook Quiz & Assessment Generators',
     description:
       'AI ingesting open textbooks to automatically generate extensive question banks, practice tests, and formative assessments aligned to chapter content.',
     order: 1,
@@ -388,7 +388,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'State-Standard Curriculum Alignment Tools',
+    name: 'Curriculum Alignment Checkers for State Standards',
     description:
       'AI analyzing open lesson plans and curricula to verify alignment with specific state or national educational standards, reducing compliance workload for teachers.',
     order: 2,
@@ -399,7 +399,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Teacher Coaching and Pedagogy Bots',
+    name: 'Teacher Coaching Bots',
     description:
       'AI coaching educators on evidence-based instructional techniques, suggesting classroom strategies based on student performance data and subject area.',
     order: 3,
@@ -411,7 +411,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'OER Accessibility Remediation Agents',
+    name: 'Open Educational Resource Accessibility Fixers',
     description:
       'AI scanning freely available textbooks and course materials to add alt-text, heading structure, and ARIA labels, making open educational resources usable by blind and low-vision students.',
     order: 4,
@@ -422,7 +422,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'In-Textbook Tutoring Overlays',
+    name: 'Embedded Tutoring Assistants for Digital Textbooks',
     description:
       'AI embedded directly within open digital textbooks that answers student questions in context, explains difficult concepts, and suggests related examples as they read.',
     order: 5,
@@ -433,7 +433,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Community Knowledge Base Builders',
+    name: 'Collaborative Lesson Plan Sharing & Discovery Tools',
     description:
       'AI helping teachers remix, annotate, and share open lesson plans through collaborative repositories, surfacing the most-used and highest-rated contributions.',
     order: 6,
@@ -444,7 +444,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Skill-Verified Open Credential Issuers',
+    name: 'Digital Badge & Micro-Credential Issuers',
     description:
       'AI assessing student mastery of OER-based content and automatically issuing verifiable digital badges and micro-credentials when competency thresholds are met.',
     order: 7,
@@ -455,7 +455,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Multilingual OER Content Adaptation Units',
+    name: 'Multilingual Open Course Adapters',
     description:
       'AI translating and culturally adapting open courseware such as MIT OpenCourseWare into dozens of languages, expanding global access to high-quality educational materials.',
     order: 8,
@@ -468,7 +468,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Adversarial LLM Red-Teaming Bots',
+    name: 'AI Model Safety Testing Bots',
     description:
       'Automated systems that continuously probe AI models with adversarial inputs to discover bias, safety failures, and jailbreak vulnerabilities before deployment.',
     order: 1,
@@ -479,7 +479,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'EU AI Act Compliance Report Generators',
+    name: 'EU AI Act Compliance Documentation Generators',
     description:
       'AI scanning AI systems to automatically generate the mandatory safety and conformity documentation required under the EU AI Act and similar regulatory frameworks.',
     order: 2,
@@ -490,7 +490,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Hiring and Lending Bias Fairness Auditors',
+    name: 'Bias & Fairness Auditors for Hiring & Lending AI',
     description:
       'AI evaluating predictive models used in hiring and credit decisions for statistically significant disparate impact across protected demographic groups.',
     order: 3,
@@ -501,7 +501,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Model Drift Monitoring Dashboards',
+    name: 'AI Model Performance Monitoring Dashboards',
     description:
       'AI alerting developers when a production model\'s outputs degrade, shift in distribution, or begin producing lower-quality responses, enabling timely retraining.',
     order: 4,
@@ -512,7 +512,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI Incident Disclosure Reporting Units',
+    name: 'AI Incident Reporting Platforms',
     description:
       'Centralized platforms for organizations to report AI-related harms, failures, and security incidents, supporting voluntary and mandatory disclosure regimes.',
     order: 5,
@@ -524,7 +524,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Global AI Regulatory Horizon Scanners',
+    name: 'AI Regulation Monitoring & Alert Tools',
     description:
       'AI monitoring legislative activity worldwide to alert organizations about upcoming AI regulations in new jurisdictions, enabling proactive compliance planning.',
     order: 6,
@@ -535,7 +535,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Third-Party AI Safety Certifiers',
+    name: 'Independent AI Safety Audit & Certification Services',
     description:
       'Independent AI auditing services that evaluate systems against published safety standards and issue verifiable certifications that vendors can display to enterprise buyers.',
     order: 7,
@@ -546,7 +546,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI Training Data Provenance Lookup Units',
+    name: 'AI Training Data Origin Lookup Tools',
     description:
       'AI tools enabling users to query how a specific model was trained, which datasets were used, and what licensing terms govern its outputs, supporting informed adoption decisions.',
     order: 8,
@@ -559,7 +559,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'C2PA Digital-Signature Content Generators',
+    name: 'Cryptographically Signed Content Publishing Tools',
     description:
       'AI tools enabling journalists and creators to cryptographically sign photos and videos at the point of capture using the C2PA standard, establishing a tamper-evident chain of custody.',
     order: 1,
@@ -571,7 +571,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Invisible Watermarking Suites',
+    name: 'Invisible Digital Watermarking Tools for Media',
     description:
       'AI embedding imperceptible steganographic codes into video and image content that survive re-encoding and social media uploads, allowing origin tracing after redistribution.',
     order: 2,
@@ -583,7 +583,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Provenance Chain Edit History Logs',
+    name: 'Content Edit History Audit Trails',
     description:
       'Publicly verifiable audit trails recording every edit made to an image or document, enabling any party to inspect the full modification history of a piece of content.',
     order: 3,
@@ -595,7 +595,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Made-with-AI Disclosure Compliance Agents',
+    name: 'AI-Generated Content Disclosure Tools',
     description:
       'AI scanning political advertisements and sponsored content to enforce mandatory synthetic-media disclosure tags, ensuring compliance with emerging electoral transparency laws.',
     order: 4,
@@ -607,7 +607,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Device-Level Capture Credential Embedders',
+    name: 'Camera-Level Content Authentication Tools',
     description:
       'AI operating at the device level to cryptographically sign photos and videos the moment they are captured, establishing authentic provenance before any editing can occur.',
     order: 5,
@@ -619,7 +619,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Content Authenticity Browser Extensions',
+    name: 'Content Authenticity & Verification Browser Extensions',
     description:
       'Browser tools that surface provenance metadata and authenticity signals for images encountered online, giving users a visual indicator of whether content has been verified.',
     order: 6,
@@ -631,7 +631,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Global Image Provenance Search Engines',
+    name: 'Image Origin & History Search Engines',
     description:
       'Reverse-search infrastructure that tracks the publication history and modification chain of any online image, enabling fact-checkers and investigators to trace content origins.',
     order: 7,
@@ -643,7 +643,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Synthetic Text Signature Embedders',
+    name: 'AI-Generated Text Watermarking Tools',
     description:
       'AI embedding statistically imperceptible patterns into AI-generated text, allowing downstream tools to identify machine-authored content even after light editing.',
     order: 8,
@@ -656,7 +656,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real-Time Deepfake Video Detection APIs',
+    name: 'Real-Time Deepfake Video Detection Tools',
     description:
       'Platform APIs enabling social networks and media publishers to scan uploaded video streams in real time and block synthetic face-swap content before it goes live.',
     order: 1,
@@ -668,7 +668,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI Audio Cloning Detectors',
+    name: 'AI Voice Clone Detectors',
     description:
       'AI enabling financial institutions and call centers to verify in real time whether a caller\'s voice is a human or an AI-generated voice clone, preventing fraud.',
     order: 2,
@@ -680,7 +680,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Academic AI-Text Scanners',
+    name: 'AI-Generated Text Detectors for Educators',
     description:
       'AI tools for educators that analyze student submissions to identify likely AI-generated content, providing probabilistic scores and stylistic evidence to inform review.',
     order: 3,
@@ -692,7 +692,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Political Ad Manipulation Checkers',
+    name: 'Political Ad Authenticity Checkers',
     description:
       'Consumer-facing tools allowing voters to upload political advertisements and receive an analysis of whether the content has been synthetically altered or is AI-generated.',
     order: 4,
@@ -703,7 +703,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'News Article Origin Trust Scorers',
+    name: 'News Article Credibility Scorers',
     description:
       'AI assigning credibility scores to news articles based on publisher history, source transparency, and content signals, helping readers evaluate reliability before sharing.',
     order: 5,
@@ -715,7 +715,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Courtroom-Ready Forensic Video Analyzers',
+    name: 'Forensic Video Authenticity Analyzers for Courts',
     description:
       'AI producing legally defensible forensic analysis reports that demonstrate whether video evidence submitted in court has been synthetically generated or tampered with.',
     order: 6,
@@ -727,7 +727,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Consumer Deepfake Call Alerts',
+    name: 'Deepfake Video Call Warning Apps',
     description:
       'Mobile applications that warn users during video calls if the person on screen appears to be an AI avatar or face-swapped deepfake, protecting against social engineering.',
     order: 7,
@@ -738,7 +738,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Synthetic Narrative Bot Detectors',
+    name: 'Coordinated Bot Network Detectors',
     description:
       'AI identifying coordinated networks of fake social media accounts engaged in inauthentic behavior, surfacing synthetic amplification campaigns to platform trust-and-safety teams.',
     order: 8,
@@ -751,7 +751,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Flood Displacement Prediction Models',
+    name: 'Flood Displacement Risk Prediction Tools',
     description:
       'AI forecasting which communities are at highest risk of displacement ahead of storms and flooding events, enabling pre-emptive evacuation orders by emergency management agencies.',
     order: 1,
@@ -762,7 +762,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Drought and Food Security Monitors',
+    name: 'Drought & Food Shortage Early Warning Tools',
     description:
       'AI analyzing satellite imagery and climate data to predict food shortages and drought conditions months in advance, enabling early humanitarian pre-positioning.',
     order: 2,
@@ -773,7 +773,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Refugee Crisis Conflict Risk Scanners',
+    name: 'Conflict Risk Scanners for Refugee Crisis Preparedness',
     description:
       'AI monitoring news, social media, and conflict databases to forecast where civilian displacement is likely, helping agencies prepare refugee response before crises escalate.',
     order: 3,
@@ -784,7 +784,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Seismic Earthquake Early Alert Systems',
+    name: 'Earthquake Early Warning Systems',
     description:
       'AI processing real-time seismic sensor networks to provide seconds of advance warning before destructive shaking arrives, allowing automated safety responses in infrastructure.',
     order: 4,
@@ -795,7 +795,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Epidemic Early Warning Surveillance Units',
+    name: 'Epidemic Outbreak Early Warning Systems',
     description:
       'AI monitoring pharmacy purchase data, search trends, and hospital admissions to detect the early statistical signatures of infectious disease outbreaks before official reporting.',
     order: 5,
@@ -806,7 +806,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Hospital Power Risk Predictive Models',
+    name: 'Hospital Power Failure Risk Predictors',
     description:
       'AI modeling grid vulnerability to identify which hospitals and critical facilities are at greatest risk of power failure during extreme weather or infrastructure stress events.',
     order: 6,
@@ -817,7 +817,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Satellite Change Detection Agents',
+    name: 'Satellite Imagery Change Detection Tools',
     description:
       'AI performing continuous analysis of satellite imagery to detect rapid changes indicative of new wildfires, floods, or infrastructure destruction, triggering immediate alerts.',
     order: 7,
@@ -828,7 +828,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Landslide Risk Mapping Agents',
+    name: 'Landslide & Mudslide Risk Mapping Tools',
     description:
       'AI combining topographic, geological, and rainfall data to produce high-resolution maps of landslide and mudslide risk, enabling municipalities to enforce building and evacuation policies.',
     order: 8,
@@ -841,7 +841,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Refugee Digital Identity Units',
+    name: 'Digital Identity Tools for Refugees',
     description:
       'AI helping displaced persons establish portable digital identities recognized across multiple aid agencies, enabling consistent access to services without physical documentation.',
     order: 1,
@@ -852,7 +852,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Biometric Beneficiary Verification Systems',
+    name: 'Biometric Aid Distribution Verification Tools',
     description:
       'AI using facial recognition and other biometrics to verify that cash transfers and aid distributions reach the intended recipient, reducing diversion in high-fraud environments.',
     order: 2,
@@ -863,7 +863,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Low-Connectivity Supply Chain Optimizers',
+    name: 'Offline Aid Delivery Route Optimizers',
     description:
       'AI computing optimal aid delivery routes and inventory allocation in conflict zones and disaster areas where internet connectivity is intermittent or unavailable.',
     order: 3,
@@ -874,7 +874,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Rare-Language Aid Worker Translators',
+    name: 'Aid Worker Translators for Rare Languages',
     description:
       'AI enabling aid workers to communicate with populations speaking low-resource languages that are underrepresented in commercial translation services, using community-contributed training data.',
     order: 4,
@@ -885,7 +885,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Secure Human Rights Documentation Tools',
+    name: 'Tamper-Proof War Crime Documentation Tools',
     description:
       'AI helping witnesses and journalists securely record and log potential war crimes with tamper-evident video and metadata, creating legally admissible records for future tribunals.',
     order: 5,
@@ -896,7 +896,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Resource-Limited Remote Medic Support',
+    name: 'Remote Medical Support Tools for Field Workers',
     description:
       'AI assisting field medics and community health workers in remote or under-resourced settings to triage patients and suggest diagnoses without access to laboratory facilities.',
     order: 6,
@@ -907,7 +907,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Refugee Aid Accountability Bots',
+    name: 'Refugee Aid Feedback & Accountability Bots',
     description:
       'AI-powered feedback channels allowing refugees and displaced persons to report complaints and concerns directly to UN agencies and aid organizations in their native language.',
     order: 7,
@@ -918,7 +918,7 @@ export const civicFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Satellite-Based Needs Assessment Agents',
+    name: 'Satellite Imagery Disaster Needs Assessment Tools',
     description:
       'AI analyzing satellite and aerial imagery of disaster-affected areas to estimate the number of displaced persons and quantify shelter, food, and medical supply requirements for response planning.',
     order: 8,

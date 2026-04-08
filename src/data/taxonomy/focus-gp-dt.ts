@@ -8,7 +8,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Inbox-Sorting Email Management Pilots',
+    name: 'Email Inbox Sorting & Summarizing Tools',
     description:
       'AI that goes beyond drafting to sort, thread, and summarize an entire inbox, surfacing only actionable messages.',
     order: 1,
@@ -20,7 +20,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '5-Thing Daily News Digest Generators',
+    name: 'Personalized Daily News Digest Generators',
     description:
       'AI reading hundreds of stories to surface the five most relevant headlines personalised to each user\'s interests.',
     order: 2,
@@ -32,7 +32,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Under-$50 Gift Shopping Advisors',
+    name: 'Personalized Gift Shopping Advisors',
     description:
       'AI that stores friend and family hobby profiles to suggest perfectly matched gifts within a given budget.',
     order: 3,
@@ -43,7 +43,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Ask-Your-Life Personal Second Brain',
+    name: 'Personal Second Brain for Notes & Decisions',
     description:
       'AI that indexes a user\'s past conversations, notes, and decisions so they can query anything they previously said or wrote.',
     order: 4,
@@ -54,7 +54,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Time-to-Renew Life Admin Assistants',
+    name: 'Document & Subscription Renewal Reminder Tools',
     description:
       'AI that monitors expiry dates for passports, insurance, subscriptions, and MOTs then proactively prompts renewal.',
     order: 5,
@@ -65,7 +65,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '10-Question Decision Making Analysts',
+    name: 'Structured Decision-Making Assistants',
     description:
       'AI that walks users through a structured Socratic dialogue to evaluate major life decisions such as career changes.',
     order: 6,
@@ -76,7 +76,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '30-Minute Routine Exercise Planners',
+    name: 'Calendar-Aware Exercise Routine Planners',
     description:
       'AI that inspects a user\'s calendar and suggests realistic workout windows with tailored routines that fit available time.',
     order: 7,
@@ -87,7 +87,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Text-in-English Language Comm Bridges',
+    name: 'Cross-Language Message Translation Tools',
     description:
       'AI that lets users compose messages in their native language and automatically delivers them in the recipient\'s language.',
     order: 8,
@@ -100,7 +100,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Step-by-Step Hands-Free Cooking Coaches',
+    name: 'Hands-Free Voice Cooking Coaches',
     description:
       'AI that reads recipes aloud and listens for ad-hoc ingredient questions so cooks never need to touch a screen.',
     order: 1,
@@ -111,7 +111,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'In-Car No-Screen Co-Pilots',
+    name: 'Hands-Free In-Car Voice Assistants',
     description:
       'AI that briefs drivers on their next meeting, traffic conditions, and messages entirely through voice while they drive.',
     order: 2,
@@ -122,7 +122,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Fridge-Ready Voice Grocery Managers',
+    name: 'Voice-Activated Grocery List Managers',
     description:
       'AI that listens for verbal cues near the fridge and automatically appends needed items to a shared shopping list.',
     order: 3,
@@ -133,7 +133,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Key-Finder Ambient Memory Takers',
+    name: 'Ambient Voice Memory Recorders',
     description:
       'AI that passively listens throughout the day and builds a searchable log of where items were placed or decisions made.',
     order: 4,
@@ -144,7 +144,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Zero-Lag Real-Time Translation Earbuds',
+    name: 'Real-Time Speech Translation Earbud Tools',
     description:
       'AI that provides instantaneous bidirectional speech translation through earbuds enabling fluid foreign-language conversation.',
     order: 5,
@@ -155,7 +155,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Daily-Check Voice Health Companions',
+    name: 'Daily Voice Health Check-In Companions',
     description:
       'AI that conducts a brief daily voice check-in about symptoms and logs responses for review by healthcare providers.',
     order: 6,
@@ -166,7 +166,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Unique-Story Sleep Audio Creators',
+    name: 'Personalized Bedtime Story Generators',
     description:
       'AI that generates personalised bedtime stories on demand based on each listener\'s stored interests and preferred themes.',
     order: 7,
@@ -177,7 +177,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Lights-Out Voice Smart Home Units',
+    name: 'Conversational Smart Home Control Tools',
     description:
       'AI that interprets natural conversational cues to trigger smart-home automations without explicit command syntax.',
     order: 8,
@@ -190,7 +190,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Action-Item Meeting Follow-Up Agents',
+    name: 'Meeting Action Item Extractors & Follow-Up Tools',
     description:
       'AI that listens to calls, extracts each participant\'s action items, and automatically emails them post-meeting.',
     order: 1,
@@ -202,7 +202,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '5-Email Executive Triage Units',
+    name: 'Executive Email Triage & Response Draft Tools',
     description:
       'AI that classifies an executive\'s inbox into urgent versus non-urgent tiers and drafts recommended responses.',
     order: 2,
@@ -213,7 +213,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'One-Go Travel and Logistics Agents',
+    name: 'All-in-One Travel Booking & Logistics Assistants',
     description:
       'AI that books flights, hotels, and dinner reservations in a single workflow from one natural-language request.',
     order: 3,
@@ -224,7 +224,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Document-Ready Board Prep Assistants',
+    name: 'Board Meeting Document Prep Assistants',
     description:
       'AI that assembles, formats, and verifies all supporting documents are ready ahead of quarterly board meetings.',
     order: 4,
@@ -235,7 +235,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Difficult-Memo Stakeholder Comm Drafters',
+    name: 'Sensitive Internal Communication Drafting Tools',
     description:
       'AI that helps executives craft sensitive internal communications with the right tone, clarity, and empathy.',
     order: 5,
@@ -246,7 +246,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'On-Track OKR Business Rhythm Trackers',
+    name: 'OKR Goal Progress Tracking & Reporting Tools',
     description:
       'AI that pings department leads for goal updates on a schedule and compiles a consolidated progress report for leadership.',
     order: 6,
@@ -257,7 +257,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Meeting-Move Calendar Conflict Optimizers',
+    name: 'Calendar Conflict Resolution & Optimization Tools',
     description:
       'AI that automatically reschedules conflicting calendar events across multiple attendees to protect high-priority blocks.',
     order: 7,
@@ -268,7 +268,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '5-Minute Shower Briefing Podcasts',
+    name: 'Personalized Daily Briefing Podcast Generators',
     description:
       'AI that generates a personalised audio summary of the executive\'s day ahead, delivered as a short podcast each morning.',
     order: 8,
@@ -281,7 +281,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '5-Minute TAM Market Sizing Tools',
+    name: 'Total Addressable Market Sizing Tools',
     description:
       'AI that ingests dozens of data sources to produce a bottoms-up total addressable market report in minutes.',
     order: 1,
@@ -292,7 +292,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '10-Page Investment Thesis Drafters',
+    name: 'Investment Thesis Report Generators',
     description:
       'AI that constructs a structured investment thesis for a specific company including bear and bull case scenarios.',
     order: 2,
@@ -304,7 +304,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '50-Firm Competitive Landscape Mappers',
+    name: 'Competitive Landscape Mapping Tools',
     description:
       'AI that scans the web to build a structured competitive grid showing positioning, pricing, and market share for all rivals.',
     order: 3,
@@ -315,7 +315,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Customer-Interview Top-3 Insight Extractors',
+    name: 'Customer Interview Insight Extractors',
     description:
       'AI that watches customer interview recordings at scale and surfaces the three most common pain points across all sessions.',
     order: 4,
@@ -327,7 +327,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Perfect-Question Survey Design Bots',
+    name: 'Survey Design & Results Explanation Tools',
     description:
       'AI that designs statistically valid survey instruments and explains the results in plain English for non-technical stakeholders.',
     order: 5,
@@ -338,7 +338,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: '3-Things Regulatory Filing Reviewers',
+    name: 'Regulatory Filing Key Clause Extractors',
     description:
       'AI that digests hundreds of pages of regulatory filings and extracts only the clauses with direct operational impact.',
     order: 6,
@@ -349,7 +349,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Churn-Predict Excel Formula Explainers',
+    name: 'Spreadsheet Formula Plain-Language Explainers',
     description:
       'AI that reads complex spreadsheet formulas and explains in plain language what each calculation is measuring or predicting.',
     order: 7,
@@ -360,7 +360,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Presentation-Ready Data Storyteller Bots',
+    name: 'Data to Presentation Chart Generators',
     description:
       'AI that ingests raw data tables and automatically selects and builds the five most insightful charts for a presentation.',
     order: 8,
@@ -373,7 +373,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Messy-Whiteboard to Jira Ticket Units',
+    name: 'Whiteboard Photo to Project Ticket Converters',
     description:
       'AI that photographs a whiteboard sketch and automatically creates structured project management tickets with descriptions.',
     order: 1,
@@ -385,7 +385,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Crumpled-Receipt to ERP Capture Bots',
+    name: 'Receipt Photo to Expense Entry Tools',
     description:
       'AI that reads physical receipts via camera and accurately enters expense data directly into accounting or ERP systems.',
     order: 2,
@@ -396,7 +396,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Plain-Language MRI Second Opinion Bots',
+    name: 'Medical Scan Report Plain-Language Explainers',
     description:
       'AI that interprets medical scan reports and explains findings in accessible language so patients can ask informed questions.',
     order: 3,
@@ -407,7 +407,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Visual Identity Search Assistants',
+    name: 'Photo-Based Object & Species Identification Tools',
     description:
       'AI that identifies rare objects, plants, or species from a photo and provides detailed provenance or care information.',
     order: 4,
@@ -418,7 +418,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Error-Screen Code Debugging Agents',
+    name: 'Screenshot Error Diagnosis & Fix Tools',
     description:
       'AI that analyses a screenshot of a crash or error message and provides a specific root-cause diagnosis and fix.',
     order: 5,
@@ -430,7 +430,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real Estate Photo Renovation Scanners',
+    name: 'Property Photo Renovation Age & Cost Estimators',
     description:
       'AI that analyses listing photos to estimate renovation age, quality, and likely upcoming capital expenditure needs.',
     order: 6,
@@ -441,7 +441,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Allergen-Highlight Menu Photo Scanners',
+    name: 'Restaurant Menu Allergen Photo Scanners',
     description:
       'AI that reads a photo of a physical restaurant menu and visually flags dishes containing specified allergens.',
     order: 7,
@@ -452,7 +452,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Blight-Detection Plant Health Photos',
+    name: 'Plant Disease & Health Diagnosis from Photos',
     description:
       'AI that analyses a photo of a plant to diagnose disease, pest damage, or nutrient deficiency and prescribes a remedy.',
     order: 8,
@@ -465,7 +465,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Incomplete Task Handoff Agents',
+    name: 'Cross-Device Task Handoff Tools',
     description:
       'AI that detects an in-progress task on one device and instantly resumes it in the appropriate app on the next device used.',
     order: 1,
@@ -476,7 +476,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Watch-to-Desktop Clipboard Intelligence',
+    name: 'Universal Cross-Device Clipboard Sync Tools',
     description:
       'AI that synchronises clipboard content across all devices so anything copied on a wearable is instantly pasteable on desktop.',
     order: 2,
@@ -487,7 +487,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Device-Aware Unified Alert Management',
+    name: 'Smart Notification Routing Across Devices',
     description:
       'AI that routes notifications only to the device a user is actively using, eliminating duplicate cross-device alert noise.',
     order: 3,
@@ -498,7 +498,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Tablet-to-IDE Screen Switching Units',
+    name: 'Seamless Cross-Device Content Transfer Tools',
     description:
       'AI that seamlessly transfers a coding tutorial video from a tablet to the developer\'s primary IDE environment.',
     order: 4,
@@ -509,7 +509,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Shared Interface Memory Layers',
+    name: 'Cross-Platform AI Conversation History Sync Tools',
     description:
       'AI that ports a user\'s conversation history and preferences between different assistant platforms transparently.',
     order: 5,
@@ -521,7 +521,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Private-Vault Sovereign Memory Layers',
+    name: 'Private User-Controlled Personal Memory Vaults',
     description:
       'A user-controlled private life database that plugs into any AI assistant, keeping personal context fully portable and private.',
     order: 6,
@@ -532,7 +532,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Zero-Friction OS-Agnostic Context Units',
+    name: 'Cross-Operating-System Work Context Preservers',
     description:
       'AI that preserves full work context when a user switches between different operating systems mid-task.',
     order: 7,
@@ -543,7 +543,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Multi-Agent Orchestration Hubs',
+    name: 'Multi-AI Agent Coordination Dashboards',
     description:
       'A unified dashboard for small teams to assign, monitor, and coordinate multiple specialised AI agents working in parallel.',
     order: 8,
@@ -556,7 +556,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Peer-Reviewed Medical Literature Search',
+    name: 'Medical Literature Search & Evidence Synthesizers',
     description:
       'AI search restricted to trusted academic sources that synthesises evidence for clinical professionals.',
     order: 1,
@@ -568,7 +568,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Internal-File Enterprise Knowledge Search',
+    name: 'Enterprise-Wide Internal Document Search Tools',
     description:
       'AI that searches across Slack, Drive, Notion, and email simultaneously to surface lost internal documents.',
     order: 2,
@@ -579,7 +579,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real-Time Market Event Synthesis',
+    name: 'Real-Time Financial Market Event Synthesizers',
     description:
       'AI that ingests dozens of live financial feeds simultaneously and generates a coherent explanation of market movements.',
     order: 3,
@@ -590,7 +590,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Photo-History Reverse Image Search',
+    name: 'Reverse Image History & Provenance Search Tools',
     description:
       'AI that finds and narrates the historical context and provenance of any photograph or artwork.',
     order: 4,
@@ -601,7 +601,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Codebase Function Search Assistants',
+    name: 'Intent-Based Code Function Search Tools',
     description:
       'AI that understands intent and searches million-line repositories to locate the exact function or module a developer needs.',
     order: 5,
@@ -613,7 +613,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Academic Prior Art Research Agents',
+    name: 'Exhaustive Academic Prior Art Research Tools',
     description:
       'AI for researchers and scientists that exhaustively maps every published paper on a specific molecule, compound, or hypothesis.',
     order: 6,
@@ -624,7 +624,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Intent-Based Shopping Search',
+    name: 'Purchase Intent Product Recommendation Search',
     description:
       'AI that interprets nuanced purchase intent and recommends the single best product match within a stated budget.',
     order: 7,
@@ -635,7 +635,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Conversational Legal Case Search',
+    name: 'Natural-Language Legal Case & Statute Search Tools',
     description:
       'AI that retrieves and summarises specific case law and statutes in response to natural-language legal queries.',
     order: 8,
@@ -649,7 +649,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Watching-Screen Task Assistant Bots',
+    name: 'Active Screen Context-Aware Task Assistants',
     description:
       'AI that monitors the active screen and proactively offers contextual help based on what the user is currently doing.',
     order: 1,
@@ -660,7 +660,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'File System Level Organizers',
+    name: 'Intelligent File Renaming & Organization Tools',
     description:
       'AI that reads file contents to automatically rename and re-folder documents into a logical taxonomy.',
     order: 2,
@@ -671,7 +671,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cross-App Orchestrators',
+    name: 'Cross-Application Data Transfer Automation Tools',
     description:
       'AI that automates data transfer between disparate applications such as copying spreadsheet rows into Slack messages.',
     order: 3,
@@ -682,7 +682,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Intelligent Paste Context Units',
+    name: 'Smart Clipboard Context Paste Tools',
     description:
       'AI that infers the type of copied content and automatically triggers the most appropriate application or action.',
     order: 4,
@@ -693,7 +693,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'OS-Level Meeting Transcript Archives',
+    name: 'Searchable Private Meeting Transcript Archives',
     description:
       'AI that records all video calls into a fully searchable private archive accessible only to the device owner.',
     order: 5,
@@ -704,7 +704,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Background Anomaly Detectors',
+    name: 'System Performance Anomaly Detectors',
     description:
       'AI that monitors system resources and pinpoints the exact process or configuration causing sluggish performance.',
     order: 6,
@@ -715,7 +715,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Native English Terminals',
+    name: 'Plain-English Command-Line Terminal Tools',
     description:
       'A command-line interface that accepts plain-English instructions and translates them into precise shell commands.',
     order: 7,
@@ -727,7 +727,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Sovereign On-Device Memory Layers',
+    name: 'Local On-Device Activity History Search Tools',
     description:
       'A local database that logs every user action and thought captured on the PC into a fully searchable private record.',
     order: 8,
@@ -741,7 +741,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Drawn-Line AR Navigation Overlay',
+    name: 'AR Navigation Overlay Tools for Smart Glasses',
     description:
       'AI that projects a directional line onto the physical street through AR glasses to guide navigation without a screen.',
     order: 1,
@@ -753,7 +753,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Audio Memory Recall Bots',
+    name: 'Wearable Ambient Conversation Memory Recorders',
     description:
       'AI worn in the ear that records ambient conversations and resurfaces names, facts, or promises from earlier in the day.',
     order: 2,
@@ -764,7 +764,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Biometric Stress Interpreters',
+    name: 'Wearable Stress Detection & Recovery Nudge Tools',
     description:
       'AI that reads wearable heart-rate and HRV data to detect elevated stress and nudge users toward recovery actions.',
     order: 3,
@@ -775,7 +775,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Real-Time Social Context Whispers',
+    name: 'In-Ear Social Context Recall Assistants',
     description:
       'AI that quietly surfaces remembered facts about a person the wearer is speaking with to aid rapport and recall.',
     order: 4,
@@ -786,7 +786,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Ghost-Swing Sports Coaching Glasses',
+    name: 'AR Sports Form Coaching Tools via Smart Glasses',
     description:
       'AI that overlays an AR ghost demonstrating ideal form in real time through smart glasses for sports technique correction.',
     order: 5,
@@ -797,7 +797,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Industrial Spatial AI Guides',
+    name: 'AR Repair Guidance Tools for Field Technicians',
     description:
       'AI that highlights the precise component to repair on complex machinery through an AR overlay for field technicians.',
     order: 6,
@@ -809,7 +809,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Foreign-Sign Smart Glass Reading Aids',
+    name: 'Real-Time Foreign Sign Translation via Smart Glasses',
     description:
       'AI that translates foreign-language signage and menus in real time through smart glasses as the wearer looks at them.',
     order: 7,
@@ -820,7 +820,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Ambient Thought Transcription Wearables',
+    name: 'Voice Thought Capture & Note Logging Wearables',
     description:
       'AI wearable that captures verbal thoughts spoken aloud and automatically appends them to the user\'s task or note list.',
     order: 8,
@@ -833,7 +833,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cross-System Knowledge Graph Builders',
+    name: 'Cross-Tool Project Knowledge Graph Builders',
     description:
       'AI that links data across Jira, Slack, and Confluence to surface the full story behind any project or incident.',
     order: 1,
@@ -845,7 +845,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Internal Expert Finder Routing',
+    name: 'Internal Subject Matter Expert Finder Tools',
     description:
       'AI that maps employee expertise from activity signals and routes knowledge queries to the best internal subject matter expert.',
     order: 2,
@@ -856,7 +856,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Contract Liability Knowledge Bases',
+    name: 'Searchable Contract Liability Knowledge Bases',
     description:
       'AI that indexes hundreds of contracts so legal and finance teams can ask plain-language questions about aggregate liability.',
     order: 3,
@@ -868,7 +868,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Technical Runbook Synthesis Agents',
+    name: 'Incident Log to Runbook Generators',
     description:
       'AI that reads messy incident logs and auto-generates step-by-step runbooks for resolving recurring technical issues.',
     order: 4,
@@ -880,7 +880,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Customer Insight Aggregators',
+    name: 'Social & Review Customer Sentiment Aggregators',
     description:
       'AI that monitors social media and review platforms to surface emerging product sentiment trends for product teams.',
     order: 5,
@@ -891,7 +891,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Role-Based Knowledge Access Controllers',
+    name: 'Role-Based Document Access Control Tools',
     description:
       'AI that enforces document-level access policies so sensitive data only surfaces to staff with authorised roles.',
     order: 6,
@@ -903,7 +903,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'M&A Due Diligence Synthesis Engines',
+    name: 'M&A Due Diligence Risk Summary Tools',
     description:
       'AI that reads all available documentation about an acquisition target and distils the top three material risks.',
     order: 7,
@@ -914,7 +914,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Product Sentiment Drop Alerters',
+    name: 'Customer Satisfaction Drop Alert Tools',
     description:
       'AI that tracks customer happiness signals across channels and alerts leadership when satisfaction declines measurably.',
     order: 8,
@@ -927,7 +927,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Academic Literature Summary Agents',
+    name: 'Multi-Paper Academic Literature Summary Tools',
     description:
       'AI that reads hundreds of academic papers and produces a structured summary highlighting consensus and open questions.',
     order: 1,
@@ -939,7 +939,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Red-Flag Investment Due Diligence Scouts',
+    name: 'Investor Due Diligence Risk Scanners',
     description:
       'AI that scans a startup\'s financial records, cap table, and public signals to surface every material risk for investors.',
     order: 2,
@@ -951,7 +951,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Multi-Country Policy Landscape Maps',
+    name: 'Cross-Country Regulatory Landscape Mapping Tools',
     description:
       'AI that surveys regulatory environments across jurisdictions and explains how each policy impacts a specific business model.',
     order: 3,
@@ -962,7 +962,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Investigative Journalism Pattern Tools',
+    name: 'Public Record Pattern Detection Tools for Journalists',
     description:
       'AI that scans leaked datasets and public records to identify statistical anomalies indicative of corruption or fraud.',
     order: 4,
@@ -973,7 +973,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Medical Literature Breakthrough Units',
+    name: 'New Medical Research Briefing Tools for Clinicians',
     description:
       'AI that monitors new publications weekly and briefs clinicians on studies most relevant to their specialty.',
     order: 5,
@@ -984,7 +984,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Patent Prior Art Search Agents',
+    name: 'Patent Prior Art Similarity Search Tools',
     description:
       'AI that assesses a proposed patent\'s similarity to existing filings and provides a percentage-similarity risk report.',
     order: 6,
@@ -995,7 +995,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Strategic Consulting Report Generators',
+    name: 'Market & Stakeholder Data to Strategy Report Generators',
     description:
       'AI that synthesises stakeholder interviews and market data into a structured strategic deck with clear recommendations.',
     order: 7,
@@ -1006,7 +1006,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Business-Signal Market TAM Research Bots',
+    name: 'Live Signal Market Size Research Tools',
     description:
       'AI that triangulates live commercial signals including job postings, funding rounds, and search trends to model market size.',
     order: 8,
@@ -1019,7 +1019,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Framework-Aware Autocomplete Engines',
+    name: 'Framework-Aware Code Autocomplete Tools',
     description:
       'AI that understands the current framework version and project patterns to suggest idiomatic, up-to-date completions.',
     order: 1,
@@ -1031,7 +1031,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Codebase Contextual Chat Assistants',
+    name: 'Natural-Language Codebase Question Answering Tools',
     description:
       'AI that answers natural-language questions about where specific logic lives within a large repository.',
     order: 2,
@@ -1043,7 +1043,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Inline Documentation Generators',
+    name: 'Auto-Generated Inline Code Documentation Tools',
     description:
       'AI that writes JSDoc, docstrings, or inline comments as the developer writes each function, keeping docs always current.',
     order: 3,
@@ -1054,7 +1054,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'One-Click Real-Time Bug Fixers',
+    name: 'Inline Real-Time Bug Detection & Fix Tools',
     description:
       'AI that underlines errors as they are typed and presents a single-click inline fix without leaving the editor.',
     order: 4,
@@ -1066,7 +1066,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Natural-Language SQL Query Generators',
+    name: 'Plain-English to SQL Query Generators',
     description:
       'AI that converts plain-English descriptions of data needs into syntactically correct, optimised SQL queries.',
     order: 5,
@@ -1078,7 +1078,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Firm-Naming Style Convention Enforcers',
+    name: 'Company Coding Standard Enforcement Tools',
     description:
       'AI that learns company-specific coding standards and flags or auto-corrects deviations as code is written.',
     order: 6,
@@ -1089,7 +1089,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Refactoring Impact Preview Tools',
+    name: 'Code Refactoring Side-Effect Preview Tools',
     description:
       'AI that shows all downstream side effects of a proposed variable rename or function signature change before it is applied.',
     order: 7,
@@ -1100,7 +1100,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Inline Unit Test Suggestion Units',
+    name: 'Auto-Generated Unit Test Suggestion Tools',
     description:
       'AI that automatically proposes a complete unit test for each new function as soon as the developer finishes writing it.',
     order: 8,
@@ -1113,7 +1113,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cross-Codebase Rename Agents',
+    name: 'Safe Cross-Repository Class & Variable Rename Tools',
     description:
       'AI that safely renames classes, interfaces, and variables across entire microservice repositories in a single operation.',
     order: 1,
@@ -1125,7 +1125,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Architecture Migration Tools',
+    name: 'Full-Repository Architecture Migration Tools',
     description:
       'AI that rewrites entire repositories to adopt new architectural patterns such as converting REST APIs to GraphQL.',
     order: 2,
@@ -1136,7 +1136,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Breaking-Change Dependency Upgrade Bots',
+    name: 'Dependency Upgrade Tools with Auto-Fix for Breaking Changes',
     description:
       'AI that upgrades major dependencies across a project and automatically fixes all breaking changes introduced.',
     order: 3,
@@ -1148,7 +1148,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Frontend-Backend Feature Sync Agents',
+    name: 'Full-Stack Feature Propagation Tools',
     description:
       'AI that propagates a new data field through the database schema, API contract, and UI components simultaneously.',
     order: 4,
@@ -1159,7 +1159,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Codebase Test Coverage Agents',
+    name: 'Test Coverage Gap Detection & Filling Tools',
     description:
       'AI that analyses a project\'s current test coverage gaps and writes the missing tests to reach a target threshold.',
     order: 5,
@@ -1170,7 +1170,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Security Vulnerability Remediation Agents',
+    name: 'Codebase Security Vulnerability Auto-Fix Tools',
     description:
       'AI that detects known security vulnerabilities across a codebase and opens ready-to-merge fix pull requests.',
     order: 6,
@@ -1182,7 +1182,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Code Harmonization Agents',
+    name: 'Cross-Team Code Pattern Consistency Tools',
     description:
       'AI that audits multiple teams\' code and refactors divergent implementations to share consistent design patterns.',
     order: 7,
@@ -1193,7 +1193,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Legacy Language Migration Agents',
+    name: 'Legacy Codebase Language Modernization Tools',
     description:
       'AI that translates legacy codebases from older languages into modern alternatives while preserving all business logic.',
     order: 8,
@@ -1206,7 +1206,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Jira-to-PR Feature Spec Agents',
+    name: 'Ticket to Pull Request Feature Implementation Agents',
     description:
       'AI that reads a ticket description and autonomously implements the feature, writing tests and opening a pull request.',
     order: 1,
@@ -1218,7 +1218,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Stack Trace Bug-Fix Analysts',
+    name: 'Stack Trace Bug Root Cause & Fix Tools',
     description:
       'AI that reads a crash stack trace, identifies the exact offending line, and proposes a targeted code fix.',
     order: 2,
@@ -1229,7 +1229,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'API Integration Code Units',
+    name: 'Third-Party API Integration Code Generators',
     description:
       'AI that reads third-party API documentation and writes idiomatic integration code with error handling included.',
     order: 3,
@@ -1240,7 +1240,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'ETL Data Pipeline Builders',
+    name: 'Plain-English ETL Data Pipeline Generators',
     description:
       'AI that constructs complete data extraction, transformation, and loading pipelines from a plain-English description.',
     order: 4,
@@ -1251,7 +1251,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Figma-to-React UI Component Bots',
+    name: 'Figma Design to React Component Generators',
     description:
       'AI that ingests a Figma URL and generates pixel-accurate React components with correct spacing and responsiveness.',
     order: 5,
@@ -1263,7 +1263,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Infrastructure-as-Code Generators',
+    name: 'Architecture Diagram to Terraform/CDK Config Generators',
     description:
       'AI that translates an architecture diagram or description into production-ready Terraform or CDK configuration files.',
     order: 6,
@@ -1274,7 +1274,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Safe Database Migration Agents',
+    name: 'Zero-Downtime Database Schema Migration Tools',
     description:
       'AI that plans and scripts zero-downtime database schema changes with rollback procedures included.',
     order: 7,
@@ -1285,7 +1285,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Vibe-to-Fullstack Engineer Agents',
+    name: 'Natural-Language Full-Stack App Builders',
     description:
       'AI agents that build complete fullstack applications from a loose natural-language description with no code required.',
     order: 8,
@@ -1299,7 +1299,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'PR Summary Generators',
+    name: 'Pull Request Description Generators',
     description:
       'AI that reads all commits in a pull request and writes a clear, concise description for the reviewer.',
     order: 1,
@@ -1311,7 +1311,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Logic-Error Automated Review Commenters',
+    name: 'Automated PR Logic Error & Security Review Tools',
     description:
       'AI that analyses PR diffs to detect logical errors, race conditions, and security antipatterns before human review.',
     order: 2,
@@ -1323,7 +1323,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'CI Failure Interpreters',
+    name: 'CI Pipeline Failure Plain-Language Explainers',
     description:
       'AI that reads CI pipeline logs and explains in plain English exactly why a specific test or build step failed.',
     order: 3,
@@ -1334,7 +1334,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Dependency Vulnerability Patchers',
+    name: 'PR Dependency Vulnerability Detection & Patch Tools',
     description:
       'AI that scans pull requests for newly introduced vulnerable packages and suggests patched version alternatives.',
     order: 4,
@@ -1346,7 +1346,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Edge Case Coverage Detectors',
+    name: 'PR Untested Code Path Detection Tools',
     description:
       'AI that flags pull requests where new code paths lack corresponding tests and recommends what to cover.',
     order: 5,
@@ -1357,7 +1357,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Semantic Performance Impact Analyzers',
+    name: 'Code Change Performance Impact Predictors',
     description:
       'AI that predicts the latency or throughput impact of a code change on the production system before merging.',
     order: 6,
@@ -1368,7 +1368,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Automated Review Responders',
+    name: 'Code Review Comment Auto-Implementation Tools',
     description:
       'AI that reads human code review comments and automatically implements the requested changes in a follow-up commit.',
     order: 7,
@@ -1379,7 +1379,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'PR-to-Release Note Bots',
+    name: 'Sprint PR to Product Changelog Generators',
     description:
       'AI that aggregates merged pull requests over a sprint and generates a consumer-facing product update changelog.',
     order: 8,
@@ -1392,7 +1392,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Unit Test Signature Generators',
+    name: 'Comprehensive Unit Test Suite Generators',
     description:
       'AI that generates a comprehensive suite of unit tests covering every input permutation for a given function signature.',
     order: 1,
@@ -1404,7 +1404,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Mutation Testing Agents',
+    name: 'Test Suite Strength Mutation Testing Tools',
     description:
       'AI that deliberately introduces small code mutations to verify whether the existing test suite detects them.',
     order: 2,
@@ -1415,7 +1415,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'API Contract Test Units',
+    name: 'OpenAPI Spec Contract Test Generators',
     description:
       'AI that generates contract tests from OpenAPI specifications and keeps them synchronised as the API evolves.',
     order: 3,
@@ -1426,7 +1426,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'User-Story E2E Test Script Builders',
+    name: 'User Story to End-to-End Test Script Generators',
     description:
       'AI that converts user stories or acceptance criteria into executable end-to-end test scripts for browser automation.',
     order: 4,
@@ -1437,7 +1437,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Property-Based Fuzzing Agents',
+    name: 'Randomized Input Fuzzing & Edge Case Finders',
     description:
       'AI that generates millions of randomised inputs to systematically find edge cases and crashes in application code.',
     order: 5,
@@ -1448,7 +1448,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Auto-Fix Test Maintenance Updaters',
+    name: 'Broken Test Auto-Update Tools',
     description:
       'AI that detects when UI or API changes have broken existing tests and automatically updates them to stay green.',
     order: 6,
@@ -1459,7 +1459,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Load Performance Scenario Bots',
+    name: 'High-Concurrency Load & Stress Test Generators',
     description:
       'AI that designs and executes high-concurrency load tests to identify where server infrastructure fails under stress.',
     order: 7,
@@ -1470,7 +1470,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI Visual Testing Agents',
+    name: 'Visual Regression Screenshot Testing Tools',
     description:
       'AI that compares production screenshots against baseline images to detect even single-pixel visual regressions.',
     order: 8,
@@ -1483,7 +1483,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Incident Postmortem Generators',
+    name: 'Blameless Incident Postmortem Report Generators',
     description:
       'AI that reads the Slack incident thread and monitoring data to draft a structured blameless postmortem report.',
     order: 1,
@@ -1494,7 +1494,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Root Cause Hypothesis Units',
+    name: 'Deployment & Log Correlation Root Cause Analyzers',
     description:
       'AI that correlates recent deployments, metric spikes, and log patterns to hypothesise probable incident causes.',
     order: 2,
@@ -1506,7 +1506,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Autonomous Runbook Executors',
+    name: 'Automated Pre-Approved Incident Remediation Tools',
     description:
       'AI that detects a known error condition and autonomously executes the pre-approved remediation steps without human input.',
     order: 3,
@@ -1517,7 +1517,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Anomaly Context Alerters',
+    name: 'Genuine Anomaly Alert Tools (Noise-Filtered)',
     description:
       'AI that suppresses expected baseline fluctuations and pages on-call engineers only when a metric deviation is genuinely anomalous.',
     order: 4,
@@ -1528,7 +1528,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'On-Call Noise Reducers',
+    name: 'Alert Grouping & On-Call Noise Reduction Tools',
     description:
       'AI that groups hundreds of related alerts triggered by a single root cause into one consolidated notification.',
     order: 5,
@@ -1539,7 +1539,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Automated Rollback Agents',
+    name: 'Deployment Error-Rate Triggered Rollback Tools',
     description:
       'AI that monitors key error-rate metrics after a deployment and triggers an automatic rollback if thresholds are breached.',
     order: 6,
@@ -1550,7 +1550,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Pre-Deployment Impact Analysts',
+    name: 'Deployment Change User Segment Impact Predictors',
     description:
       'AI that models which geographic regions or user segments a proposed deployment change is most likely to affect.',
     order: 7,
@@ -1561,7 +1561,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Native Observability Hubs',
+    name: 'Plain-English Performance Question Answering Tools',
     description:
       'AI-powered observability platform that answers plain-English performance questions by reasoning across all telemetry streams.',
     order: 8,
@@ -1575,7 +1575,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Commit-to-Changelog Auto-Pilots',
+    name: 'Git Commit to User-Facing Changelog Generators',
     description:
       'AI that translates raw technical git commits into readable user-facing release notes and changelogs.',
     order: 1,
@@ -1586,7 +1586,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Code-to-API Reference Sync Units',
+    name: 'Auto-Synced Code to API Reference Doc Tools',
     description:
       'AI that keeps developer-facing API reference documentation automatically synchronised with the live codebase.',
     order: 2,
@@ -1597,7 +1597,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Getting-Started Tutorial Bots',
+    name: 'Repository Getting-Started Guide Generators',
     description:
       'AI that reads a repository and generates a fully functional getting-started guide with realistic worked examples.',
     order: 3,
@@ -1608,7 +1608,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Multi-Language SDK Doc Bots',
+    name: 'Multi-Language SDK Code Example Generators',
     description:
       'AI that takes one canonical code example and generates equivalent SDK examples across five or more programming languages.',
     order: 4,
@@ -1619,7 +1619,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Architecture Decision Record Drafters',
+    name: 'Technology Decision to ADR Document Generators',
     description:
       'AI that interviews the team about a technology choice and drafts a structured ADR documenting the rationale.',
     order: 5,
@@ -1630,7 +1630,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Traffic-Watching OpenAPI Spec Generators',
+    name: 'API Traffic to OpenAPI Spec Generators',
     description:
       'AI that observes real API traffic to infer and generate accurate OpenAPI specifications for undocumented endpoints.',
     order: 6,
@@ -1641,7 +1641,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'README Hall of Fame Units',
+    name: 'Comprehensive Repository README Generators',
     description:
       'AI that analyses a project and generates a comprehensive README with badges, setup instructions, and usage examples.',
     order: 7,
@@ -1652,7 +1652,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'In-IDE Contextual Doc Assistants',
+    name: 'In-Editor Function Usage Reference Tools',
     description:
       'AI that surfaces all other locations in the codebase where a selected function or variable is used, inline in the editor.',
     order: 8,
@@ -1665,7 +1665,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Stale Documentation Detectors',
+    name: 'Outdated Documentation Detection & Flagging Tools',
     description:
       'AI that compares documentation content against the current codebase and flags pages that no longer reflect reality.',
     order: 1,
@@ -1676,7 +1676,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Support-to-Doc Insight Units',
+    name: 'Support Ticket Pattern to Documentation Gap Finders',
     description:
       'AI that analyses support ticket patterns to identify undocumented topics that are causing the most user confusion.',
     order: 2,
@@ -1687,7 +1687,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Incident-to-Runbook Step Converters',
+    name: 'Incident Resolution to Runbook Step Generators',
     description:
       'AI that captures the resolution steps from a fixed incident and automatically generates a runbook for future on-call use.',
     order: 3,
@@ -1698,7 +1698,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Role-Based Onboarding Doc Generators',
+    name: 'Role-Specific New Hire Onboarding Guide Generators',
     description:
       'AI that tailors day-one documentation to each new hire\'s role, generating engineer, designer, or PM-specific guides.',
     order: 4,
@@ -1709,7 +1709,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Search-Query Gap Analyzers',
+    name: 'Internal Knowledge Base Search Gap Analyzers',
     description:
       'AI that monitors internal knowledge-base searches and surfaces zero-result queries as documentation creation priorities.',
     order: 5,
@@ -1720,7 +1720,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Confluence Auto-Organizers',
+    name: 'Wiki Content Auto-Organization & Restructuring Tools',
     description:
       'AI that restructures a disorganised wiki by reading page content and moving pages into a logical searchable hierarchy.',
     order: 6,
@@ -1731,7 +1731,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Observed-Workflow Doc Units',
+    name: 'Screen-Observed Workflow to How-To Guide Generators',
     description:
       'AI that watches a senior engineer resolve an issue and automatically writes a step-by-step how-to guide from the session.',
     order: 7,
@@ -1742,7 +1742,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Team Process Audit Tools',
+    name: 'Meeting Notes & Decision Log Process Audit Tools',
     description:
       'AI that cross-references meeting notes and decision logs to verify that team processes are consistently documented.',
     order: 8,
@@ -1755,7 +1755,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Brand Landing Page Generators',
+    name: 'Logo & Mission to Marketing Landing Page Generators',
     description:
       'AI that takes a logo and mission statement and assembles a complete, on-brand marketing landing page.',
     order: 1,
@@ -1767,7 +1767,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Schema-to-Dashboard UI Builders',
+    name: 'Database Schema to Admin Dashboard Builders',
     description:
       'AI that reads a database schema and automatically constructs a functional admin dashboard with tables and filters.',
     order: 2,
@@ -1778,7 +1778,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Natural-Language Form Builders',
+    name: 'Plain-English to Multi-Step Web Form Builders',
     description:
       'AI that converts a plain-English description into a multi-step web form with validation, progress indicators, and logic.',
     order: 3,
@@ -1789,7 +1789,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Instant Admin Panel Generators',
+    name: 'Instant Backend Admin Panel Scaffolding Tools',
     description:
       'AI that scaffolds a fully functional backend admin panel for any new application in under a minute.',
     order: 4,
@@ -1801,7 +1801,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Onboarding Flow Builders',
+    name: 'User Onboarding Journey Builder Tools',
     description:
       'AI that constructs a complete user onboarding journey with tooltips, empty states, and progress tracking from a description.',
     order: 5,
@@ -1812,7 +1812,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Responsive HTML Email Template Units',
+    name: 'Brand-Consistent HTML Email Template Generators',
     description:
       'AI that generates brand-consistent HTML email templates that render correctly across all major email clients.',
     order: 6,
@@ -1823,7 +1823,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Design-Token Component Library Units',
+    name: 'Design Token to Full UI Component Library Generators',
     description:
       'AI that generates a complete set of UI components styled from a colour palette and typography token set.',
     order: 7,
@@ -1834,7 +1834,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Vibe Coding Platforms',
+    name: 'Conversational No-Code App Building Platforms',
     description:
       'Conversational platforms that allow non-technical users to speak or describe an application idea and have it built live.',
     order: 8,
@@ -1848,7 +1848,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Responsive Figma-to-React Engines',
+    name: 'Figma to Responsive React Component Generators',
     description:
       'AI that converts Figma designs into React components with full mobile responsiveness automatically applied.',
     order: 1,
@@ -1860,7 +1860,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Screenshot-to-Code Cloners',
+    name: 'Webpage Screenshot to HTML/CSS Code Generators',
     description:
       'AI that analyses a screenshot of any webpage and produces clean, deployable HTML and CSS that matches the original.',
     order: 2,
@@ -1871,7 +1871,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Flat-Image Component Extraction Units',
+    name: 'Static Image UI Component Extraction Tools',
     description:
       'AI that identifies discrete UI components within a static image and generates individual coded components for each.',
     order: 3,
@@ -1882,7 +1882,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Prototype-to-Production Upgraders',
+    name: 'MVP Codebase to Production-Ready Code Refactoring Tools',
     description:
       'AI that refactors a scrappy MVP codebase into a well-structured, scalable implementation ready for production traffic.',
     order: 4,
@@ -1893,7 +1893,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Animation Annotation Code Units',
+    name: 'Designer Animation Annotation to Code Generators',
     description:
       'AI that reads designer annotation notes describing motion behaviour and generates the corresponding animation code.',
     order: 5,
@@ -1904,7 +1904,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Pre-Code Figma Accessibility Auditors',
+    name: 'Pre-Development Figma Accessibility Audit Tools',
     description:
       'AI that analyses Figma files for contrast ratios, tap target sizes, and WCAG violations before a developer writes any code.',
     order: 6,
@@ -1915,7 +1915,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'Cross-Framework Component Porters',
+    name: 'UI Component Cross-Framework Translation Tools',
     description:
       'AI that translates UI components from one JavaScript framework to another while preserving all logic and styling.',
     order: 7,
@@ -1926,7 +1926,7 @@ export const gpDtFocusNodes: TaxonomyNode[] = [
     layerId: 'application',
     depth: 4,
     depthLabel: 'focus',
-    name: 'AI-Powered Code-to-Design Sync Units',
+    name: 'Bidirectional Code & Design File Sync Tools',
     description:
       'AI that bi-directionally synchronises design tool files when a developer changes a component\'s styling in code.',
     order: 8,
