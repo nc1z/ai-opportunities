@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { layerRoots } from '@/data/index'
 import { totalReferencesCount } from './SourcesPage'
-import peerlistBadge from '@/assets/peerlist-ai-opportunities.png'
+import peerlistBadge from '@/assets/peerlist-top-3-b.png'
 import producthuntBadge from '@/assets/producthunt-ai-opportunities.png'
 import devhuntBadge from '@/assets/devhunt-ai-opportunities.png'
 
@@ -84,7 +84,7 @@ export function HomePage() {
           <img
             src={peerlistBadge}
             alt="AI Opportunities — Open Source Explorer"
-            style={{ display: 'block', width: 'auto', height: '54px', border: 'none' }}
+            style={{ display: 'block', width: 'auto', height: '90px', border: 'none' }}
           />
         </a>
         <div className="h-8 w-px bg-zinc-200" />
