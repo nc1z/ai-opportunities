@@ -4,7 +4,6 @@ import { layerRoots } from '@/data/index'
 import { totalReferencesCount } from './SourcesPage'
 import peerlistBadge from '@/assets/peerlist-top-3-b.png'
 import producthuntBadge from '@/assets/producthunt-ai-opportunities.png'
-import devhuntBadge from '@/assets/devhunt-ai-opportunities.png'
 
 const STATS: { label: string; value: number }[] = [
   { label: 'Layer',   value: 5 },
@@ -98,20 +97,6 @@ export function HomePage() {
           <img
             src={producthuntBadge}
             alt="AI Opportunities - 2,500+ AI focus areas – open source &quot;what to build&quot; explorer | Product Hunt"
-            style={{ display: 'block', width: 'auto', height: '54px', border: 'none' }}
-          />
-        </a>
-        <div className="h-8 w-px bg-zinc-200" />
-        <a
-          href="https://devhunt.org/tool/ai-opportunities"
-          target="_blank"
-          rel="noreferrer"
-          className="shrink-0 outline-none"
-          style={{ border: 'none' }}
-        >
-          <img
-            src={devhuntBadge}
-            alt="AI Opportunities — DevHunt"
             style={{ display: 'block', width: 'auto', height: '54px', border: 'none' }}
           />
         </a>
