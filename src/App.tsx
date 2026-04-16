@@ -4,6 +4,8 @@ import { HomePage } from '@/pages/HomePage'
 import { NodePage } from '@/pages/NodePage'
 import { SourcesPage } from '@/pages/SourcesPage'
 import { AboutPage } from '@/pages/AboutPage'
+import { BlogIndexPage } from '@/pages/BlogIndexPage'
+import { AgentWorkflowArticle } from '@/pages/articles/AgentWorkflowArticle'
 import { GraphCanvas } from '@/components/graph/GraphCanvas'
 
 function GraphLayout() {
@@ -34,6 +36,8 @@ function App() {
           <Route path="/node/:nodeId" element={<NodePage />} />
           <Route path="/sources" element={<SourcesPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/blog" element={<BlogIndexPage />} />
+          <Route path="/blog/agent-workflow" element={<AgentWorkflowArticle />} />
         </Route>
       </Routes>
     </HashRouter>

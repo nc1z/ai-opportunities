@@ -39,6 +39,12 @@ export function NavHeader() {
             Graph
           </Link>
           <Link
+            to="/blog"
+            className="text-xs text-zinc-400 hover:text-zinc-700 transition-colors"
+          >
+            Blog
+          </Link>
+          <Link
             to="/about"
             className="text-xs text-zinc-400 hover:text-zinc-700 transition-colors"
           >
@@ -114,6 +120,13 @@ export function NavHeader() {
               <line x1="3.75" y1="13" x2="12.25" y2="13" />
             </svg>
             Graph
+          </Link>
+          <Link
+            to="/blog"
+            className="text-sm text-zinc-500 hover:text-zinc-800 transition-colors py-2"
+            onClick={() => setMenuOpen(false)}
+          >
+            Blog
           </Link>
           <Link
             to="/about"
